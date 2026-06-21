@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BLVD — Urban Footwear</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursorFollower"></div>
+
+  <!-- ======== NAV ======== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <div class="nav-left">
+        <a href="#featured">Drop</a>
+        <a href="#coleccion">Colección</a>
+        <a href="#marcas">Marcas</a>
+      </div>
+      <a href="#" class="nav-logo">BLV<span>D</span></a>
+      <div class="nav-right">
+        <a href="#lifestyle">Lifestyle</a>
+        <a href="#drops">Drops</a>
+        <a href="#contacto">Contacto</a>
+      </div>
+      <button class="nav-burger" id="navBurger" aria-label="Menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <button class="m-close" id="mobileClose">✕</button>
+    <a href="#featured"   class="m-link">Drop</a>
+    <a href="#coleccion"  class="m-link">Colección</a>
+    <a href="#marcas"     class="m-link">Marcas</a>
+    <a href="#drops"      class="m-link">Drops</a>
+    <a href="#contacto"   class="m-link">Contacto</a>
+  </div>
+
+  <!-- ======== HERO ======== -->
+  <section class="hero" id="hero">
+    <div class="hero-bg">
+      <img
+        src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=1920&q=85"
+        alt="" class="hero-bg-img" id="heroBgImg"
+        onerror="this.src='https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1920&q=85'"
+      >
+      <div class="hero-overlay"></div>
+    </div>
+    <div class="hero-ghost" aria-hidden="true">BLVD</div>
+    <div class="hero-center">
+      <div class="hero-season-tag"><span>✦</span> Nueva Temporada 2025</div>
+      <h1 class="hero-heading">
+        <span class="hh-line">MUÉVETE</span>
+        <span class="hh-line hh-outline">DIFERENTE.</span>
+      </h1>
+      <p class="hero-tagline">Tu identidad. A cada paso.</p>
+      <div class="hero-actions">
+        <a href="#featured" class="btn-pill btn-pill-white">Explorar colección</a>
+        <a href="#drops"    class="btn-pill btn-pill-ghost">Ver Drops ↗</a>
+      </div>
+    </div>
+    <div class="hero-angle-bar">
+      <div class="hab-left">
+        <div class="badge-360">360°</div>
+        <span class="hab-label">Explora cada ángulo</span>
+      </div>
+      <div class="hab-thumbs" id="heroThumbsBar">
+        <button class="h-thumb active" data-hero="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=1920&q=85">
+          <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=140&q=70" alt="">
+        </button>
+        <button class="h-thumb" data-hero="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1920&q=85">
+          <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=140&q=70" alt="">
+        </button>
+        <button class="h-thumb" data-hero="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=1920&q=85">
+          <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=140&q=70" alt="">
+        </button>
+        <button class="h-thumb" data-hero="https://images.unsplash.com/photo-1600185365483-26d0a4ea610e?auto=format&fit=crop&w=1920&q=85">
+          <img src="https://images.unsplash.com/photo-1600185365483-26d0a4ea610e?auto=format&fit=crop&w=140&q=70" alt="">
+        </button>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <div class="hs-line"><div class="hs-dot"></div></div>
+      <span>Scroll</span>
+    </div>
+  </section>
+
+  <!-- ======== 3D SHOE EXPERIENCE — Puma Temporada ======== -->
+  <section class="shoe3d-section" id="featured">
+    <div class="s3d-inner">
+
+      <div class="s3d-zone" id="shoe3dZone">
+        <div class="s3d-canvas" id="shoe3dCanvas">
+          <div class="s3d-img-wrap" id="shoe3dImgWrap">
+            <img
+              src="imagenes/7.png"
+              id="shoe3dImg" class="s3d-img" alt="Puma FAST-RB NITRO ELITE"
+              onerror="this.src='https://images.unsplash.com/photo-1605348532760-6753d2c43329?auto=format&fit=crop&w=900&q=90'"
+            >
+          </div>
+          <div class="s3d-floor-glow"></div>
+          <div class="s3d-floor-shadow"></div>
+        </div>
+        <div class="s3d-angles-row">
+          <div class="s3d-360-badge"><span>360</span><sup>°</sup></div>
+          <button class="s3d-angle active" data-img="imagenes/7.png" data-fallback="https://images.unsplash.com/photo-1605348532760-6753d2c43329?auto=format&fit=crop&w=900&q=80">
+            <img src="imagenes/7.png" alt="" onerror="this.src='https://images.unsplash.com/photo-1605348532760-6753d2c43329?auto=format&fit=crop&w=120&q=70'">
+          </button>
+          <button class="s3d-angle" data-img="imagenes/7-2.png" data-fallback="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=900&q=80">
+            <img src="imagenes/7-2.png" alt="" onerror="this.src='https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=120&q=70'">
+          </button>
+          <button class="s3d-angle" data-img="imagenes/7-3.png" data-fallback="https://images.unsplash.com/photo-1549298916-b41d501d3772?auto=format&fit=crop&w=900&q=80">
+            <img src="imagenes/7-3.png" alt="" onerror="this.src='https://images.unsplash.com/photo-1549298916-b41d501d3772?auto=format&fit=crop&w=120&q=70'">
+          </button>
+          <button class="s3d-angle" data-img="imagenes/7-4.png" data-fallback="https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?auto=format&fit=crop&w=900&q=80">
+            <img src="imagenes/7-4.png" alt="" onerror="this.src='https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?auto=format&fit=crop&w=120&q=70'">
+          </button>
+        </div>
+        <div class="s3d-hint">↑ Mueve el cursor para explorar</div>
+      </div>
+
+      <div class="s3d-info animate-on-scroll">
+        <div class="s3d-season">✦ Producto de Temporada 2025</div>
+        <div class="s3d-brand-lbl">Puma</div>
+        <h2 class="s3d-name">FAST-RB<br>NITRO</h2>
+        <div class="s3d-divider"></div>
+        <p class="s3d-desc">
+          Velocidad sin límites. La FAST-RB NITRO ELITE
+          combina espuma NITROFOAM™ de alta respuesta con
+          placa de carbono PWRPLATE — del asfalto a la calle
+          con la misma energía brutal. Tecnología de elite,
+          estética imparable.
+        </p>
+        <div class="s3d-actions">
+          <a href="#coleccion" class="btn-pill btn-pill-dark">Ver toda la colección →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== EDITORIAL BAND 1 — Urban Jump / Hombre con zapatillas ======== -->
+  <div class="editorial-band animate-on-scroll">
+    <div class="eb-bg">
+      <img
+        src="imagenes/6.png"
+        alt="Urban lifestyle sneakers" class="eb-img eb-img-top" loading="lazy"
+        onerror="this.src='https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=1920&q=85'"
+      >
+      <div class="eb-overlay"></div>
+    </div>
+    <div class="eb-content">
+      <div class="eb-eyebrow">BLVD — Urban Footwear</div>
+      <h2 class="eb-headline">MUEVE<br><em>LA CIUDAD.</em></h2>
+      <p class="eb-sub">Cada paso es una declaración de quién eres.</p>
+      <a href="#coleccion" class="btn-pill btn-pill-white">Explorar colección →</a>
+    </div>
+  </div>
+
+  <!-- ======== BESTSELLERS ======== -->
+  <section class="cards-section" id="marcas">
+    <div class="section-header animate-on-scroll" style="padding:0 60px">
+      <div class="section-label">Las favoritas</div>
+      <h2 class="section-title">Más Compradas</h2>
+    </div>
+    <div class="cards-grid" id="bestSellersGrid"></div>
+  </section>
+
+  <!-- ======== COLECCIÓN + FILTROS V2 ======== -->
+  <section class="cards-section collection-bg" id="coleccion">
+    <div class="section-header animate-on-scroll" style="padding:0 60px">
+      <div class="section-label">Catálogo Completo</div>
+      <h2 class="section-title">La Colección</h2>
+    </div>
+
+    <div class="filters-v2">
+      <div class="fv2-triggers">
+        <button class="fv2-btn" id="fv2BrandsBtn">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="1.5"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          Marcas <span class="fv2-arrow">▾</span>
+        </button>
+        <button class="fv2-btn" id="fv2SizesBtn">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="7" height="7" rx="1" stroke="currentColor" stroke-width="1.5"/><rect x="14" y="3" width="7" height="7" rx="1" stroke="currentColor" stroke-width="1.5"/><rect x="3" y="14" width="7" height="7" rx="1" stroke="currentColor" stroke-width="1.5"/><rect x="14" y="14" width="7" height="7" rx="1" stroke="currentColor" stroke-width="1.5"/></svg>
+          Tallas <span class="fv2-arrow">▾</span>
+        </button>
+        <span class="fv2-active-lbl" id="fv2ActiveLbl"></span>
+      </div>
+      <div class="fv2-panel" id="fv2BrandsPanel"></div>
+      <div class="fv2-panel" id="fv2SizesPanel"></div>
+    </div>
+
+    <div class="cards-grid" id="productsGrid"></div>
+    <div class="load-more-wrap">
+      <button class="load-more-btn" id="loadMoreBtn">Ver más referencias →</button>
+    </div>
+  </section>
+
+  <!-- ======== COLLAGE — Lifestyle aspiracional urbano ======== -->
+  <section class="collage-section" id="lifestyle">
+    <div class="section-header animate-on-scroll" style="padding:0 60px;margin-bottom:36px">
+      <div class="section-label">Lifestyle & Culture</div>
+      <h2 class="section-title">Muévete diferente.</h2>
+    </div>
+    <div class="collage-grid">
+      <!-- Grande izquierda: hombre saltando, zapatillas al frente -->
+      <div class="cg-item cg-big-v">
+        <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=900&q=90" alt="Urban Jump" loading="lazy">
+        <div class="cg-lbl">Urban Jump</div>
+      </div>
+      <!-- Top derecha 1: close-up sneaker colorway -->
+      <div class="cg-item cg-top-r1">
+        <img src="https://images.unsplash.com/photo-1552346154-21d32810aba3?auto=format&fit=crop&w=900&q=80" alt="Colorways" loading="lazy">
+        <div class="cg-lbl">Colorways</div>
+      </div>
+      <!-- Top derecha 2: persona urbana con zapatillas -->
+      <div class="cg-item cg-top-r2">
+        <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=900&q=85" alt="Street Style" loading="lazy">
+        <div class="cg-lbl">Street Style</div>
+      </div>
+      <!-- Panorámica media: editorial amplio con sneakers -->
+      <div class="cg-item cg-wide-mid">
+        <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=1200&q=90" alt="Culture" loading="lazy" style="object-position:center bottom">
+        <div class="cg-lbl">Culture</div>
+      </div>
+      <!-- Bot izquierda: hombre urban con zapatillas -->
+      <div class="cg-item cg-bot-l">
+        <img src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&w=900&q=85" alt="Urban Man" loading="lazy" style="object-position:center bottom">
+        <div class="cg-lbl">Urban Man</div>
+      </div>
+      <!-- Bot media: zapatilla detalle -->
+      <div class="cg-item cg-bot-m">
+        <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=900&q=80" alt="Sneaker Detail" loading="lazy">
+        <div class="cg-lbl">Detail</div>
+      </div>
+      <!-- Bot derecha: lifestyle sneakers -->
+      <div class="cg-item cg-bot-r">
+        <img src="https://images.unsplash.com/photo-1556906781-9a414e2a9c86?auto=format&fit=crop&w=900&q=80" alt="Lifestyle" loading="lazy">
+        <div class="cg-lbl">Lifestyle</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== TRIPTYCH — 3 Paneles estilo Mattelsa ======== -->
+  <section class="triptych-section">
+    <!-- Panel izquierdo: HOMBRE de frente, sneakers bien visibles -->
+    <div class="tri-panel tri-left animate-on-scroll">
+      <div class="tri-label">
+        <span class="tri-cat">URBAN / HOMBRE</span>
+        <a href="#coleccion" class="tri-see-more">VER COLECCIÓN</a>
+      </div>
+      <img src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&w=900&q=90&crop=bottom" alt="Urban Hombre" loading="lazy" style="object-position:center bottom">
+    </div>
+    <!-- Panel centro: editorial, ángulo bajo mostrando zapatillas -->
+    <div class="tri-panel tri-center">
+      <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=1200&q=90" alt="Feature Editorial" loading="lazy" style="object-position:center center">
+      <div class="tri-center-overlay">
+        <div class="tri-c-text">
+          <div class="tri-c-subbrand">BLVD — Urban Premium</div>
+          <h2 class="tri-c-heading">SNEAKERS <em>Premium</em><span class="tri-c-num">001.</span></h2>
+          <p class="tri-c-drop">NEW DROP / OUT NOW</p>
+          <a href="#drops" class="btn-pill btn-pill-white" style="margin-top:16px;font-size:11px;padding:10px 22px">Ver Drops ↗</a>
+        </div>
+      </div>
+    </div>
+    <!-- Panel derecho: MUJER estilo urbano, zapatillas visibles -->
+    <div class="tri-panel tri-right animate-on-scroll">
+      <div class="tri-label">
+        <span class="tri-cat">STREET / MUJER</span>
+        <a href="#coleccion" class="tri-see-more">VER COLECCIÓN</a>
+      </div>
+      <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=900&q=90" alt="Street Mujer" loading="lazy" style="object-position:center bottom">
+    </div>
+  </section>
+
+  <!-- ======== WHY — Infografía visual ======== -->
+  <section class="why-section">
+    <div class="why-header animate-on-scroll">
+      <div class="section-label light">Nuestra promesa</div>
+      <h2 class="section-title why-title">Por qué BLVD.</h2>
+    </div>
+    <div class="why-inner">
+
+      <div class="why-card animate-on-scroll" style="--delay:0s">
+        <div class="why-card-icon">
+          <svg viewBox="0 0 80 80" fill="none">
+            <circle cx="40" cy="40" r="36" fill="rgba(28,111,255,0.12)" stroke="var(--blue)" stroke-width="1.5"/>
+            <circle cx="40" cy="40" r="22" fill="rgba(28,111,255,0.08)" stroke="rgba(28,111,255,0.4)" stroke-width="1"/>
+            <path d="M28 40l9 9 18-18" stroke="var(--blue)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="why-card-step">01</div>
+        <h3 class="why-card-title">Diseño<br>Urbano</h3>
+        <p class="why-card-desc">Tendencias globales filtradas por el pulso de la ciudad. Cada par lleva la energía de las calles.</p>
+        <div class="why-card-stat"><span class="wcs-num">200+</span><span class="wcs-lbl">Estilos disponibles</span></div>
+      </div>
+
+      <div class="why-card animate-on-scroll" style="--delay:0.15s">
+        <div class="why-card-icon">
+          <svg viewBox="0 0 80 80" fill="none">
+            <circle cx="40" cy="40" r="36" fill="rgba(28,111,255,0.12)" stroke="var(--blue)" stroke-width="1.5"/>
+            <circle cx="40" cy="40" r="22" fill="rgba(28,111,255,0.08)" stroke="rgba(28,111,255,0.4)" stroke-width="1"/>
+            <path d="M40 20v8M40 52v8M20 40h8M52 40h8" stroke="var(--blue)" stroke-width="2" stroke-linecap="round"/>
+            <circle cx="40" cy="40" r="6" fill="var(--blue)"/>
+          </svg>
+        </div>
+        <div class="why-card-step">02</div>
+        <h3 class="why-card-title">Comodidad<br>Real</h3>
+        <p class="why-card-desc">Tecnología de punta en cada suela. Del amanecer a la madrugada sin compromiso.</p>
+        <div class="why-card-stat"><span class="wcs-num">100%</span><span class="wcs-lbl">Confort garantizado</span></div>
+      </div>
+
+      <div class="why-card animate-on-scroll" style="--delay:0.3s">
+        <div class="why-card-icon">
+          <svg viewBox="0 0 80 80" fill="none">
+            <circle cx="40" cy="40" r="36" fill="rgba(28,111,255,0.12)" stroke="var(--blue)" stroke-width="1.5"/>
+            <circle cx="40" cy="40" r="22" fill="rgba(28,111,255,0.08)" stroke="rgba(28,111,255,0.4)" stroke-width="1"/>
+            <polygon points="40,22 45,34 58,34 48,42 52,54 40,46 28,54 32,42 22,34 35,34" fill="rgba(28,111,255,0.3)" stroke="var(--blue)" stroke-width="1.5" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="why-card-step">03</div>
+        <h3 class="why-card-title">Calidad<br>Premium</h3>
+        <p class="why-card-desc">Autenticidad 100% garantizada. Lo que llevas habla antes que tú. Solo lo mejor.</p>
+        <div class="why-card-stat"><span class="wcs-num">15</span><span class="wcs-lbl">Marcas premium</span></div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ======== DROPS ======== -->
+  <section class="drops-section" id="drops">
+    <div class="drops-glow"></div>
+    <div class="drops-grid">
+      <div class="drops-text animate-on-scroll">
+        <div class="section-label light">Ediciones Limitadas</div>
+        <h2 class="drops-h">Drops<br><span class="drops-outline">Exclusivos.</span></h2>
+        <p class="drops-sub">No son zapatillas. Son declaraciones.<br>Pocas unidades. Sin segunda oportunidad.</p>
+        <div class="drop-scarcity"><span class="blink-dot"></span>Solo quedan <strong>12 pares</strong> disponibles</div>
+        <div class="countdown" id="countdown">
+          <div class="c-unit"><div class="c-box"><span id="countDays">07</span></div><div class="c-lbl">Días</div></div>
+          <div class="c-sep">:</div>
+          <div class="c-unit"><div class="c-box"><span id="countHours">00</span></div><div class="c-lbl">Horas</div></div>
+          <div class="c-sep">:</div>
+          <div class="c-unit"><div class="c-box"><span id="countMins">00</span></div><div class="c-lbl">Min</div></div>
+          <div class="c-sep">:</div>
+          <div class="c-unit"><div class="c-box"><span id="countSecs">00</span></div><div class="c-lbl">Seg</div></div>
+        </div>
+        <a href="#" class="btn-pill btn-pill-white">Notifícame del próximo Drop →</a>
+      </div>
+      <div class="drops-card-wrap animate-on-scroll" style="--delay:0.2s">
+        <div class="drop-card-dark">
+          <span class="drop-card-badge">DROP EXCLUSIVO</span>
+          <img src="https://images.unsplash.com/photo-1600185365483-26d0a4ea610e?auto=format&fit=crop&w=700&q=80" alt="" class="drop-card-img" loading="lazy">
+          <div class="drop-card-info">
+            <div class="dci-brand">Jordan × BLVD</div>
+            <div class="dci-name">Jordan 1 Shadow Edition</div>
+            <div class="dci-price">$850.000 COP</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== STATS ======== -->
+  <section class="stats-section">
+    <div class="stats-row">
+      <div class="stat animate-on-scroll" data-target="50"><div class="stat-num"><span class="stat-count">0</span><span class="stat-sym">+</span></div><div class="stat-lbl">Marcas</div></div>
+      <div class="stat-line"></div>
+      <div class="stat animate-on-scroll" data-target="500"><div class="stat-num"><span class="stat-count">0</span><span class="stat-sym">+</span></div><div class="stat-lbl">Referencias</div></div>
+      <div class="stat-line"></div>
+      <div class="stat animate-on-scroll" data-target="10000"><div class="stat-num"><span class="stat-count">0</span><span class="stat-sym">+</span></div><div class="stat-lbl">Clientes</div></div>
+    </div>
+  </section>
+
+  <!-- ======== AUTÉNTICO ======== -->
+  <section class="authentic-section">
+    <div class="auth-marquee-wrap">
+      <div class="auth-marquee">
+        <span class="aw solid">AUTÉNTICO</span><span class="aw-dot">✦</span>
+        <span class="aw outline">ORIGINAL</span><span class="aw-dot">✦</span>
+        <span class="aw solid">PREMIUM</span><span class="aw-dot">✦</span>
+        <span class="aw outline">URBANO</span><span class="aw-dot">✦</span>
+        <span class="aw solid">AUTÉNTICO</span><span class="aw-dot">✦</span>
+        <span class="aw outline">ORIGINAL</span><span class="aw-dot">✦</span>
+        <span class="aw solid">PREMIUM</span><span class="aw-dot">✦</span>
+        <span class="aw outline">URBANO</span><span class="aw-dot">✦</span>
+      </div>
+    </div>
+    <div class="auth-bottom">
+      <p class="auth-line">Cada paso es una declaración.</p>
+      <a href="#coleccion" class="btn-pill btn-pill-dark">Explorar la colección →</a>
+    </div>
+  </section>
+
+  <!-- ======== FOOTER ======== -->
+  <footer class="footer" id="contacto">
+    <div class="footer-body">
+      <div class="footer-top">
+        <div class="ft-brand">
+          <div class="ft-logo">BLV<span>D</span></div>
+          <p class="ft-tag">Muévete diferente.<br>Tu identidad. A cada paso.</p>
+          <div class="ft-socials">
+            <a href="#" class="ft-social" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="1.5"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/></svg></a>
+            <a href="#" class="ft-social" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="none"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+            <a href="#" class="ft-social" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="none"><path d="M21 12a9 9 0 1 1-9-9 9 9 0 0 1 9 9z" stroke="currentColor" stroke-width="1.5"/><path d="M9 10c0 3 2 5 5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></a>
+          </div>
+        </div>
+        <div class="ft-nav">
+          <div class="ft-col"><h4>Marcas</h4><a href="#">Nike</a><a href="#">Jordan</a><a href="#">Adidas</a><a href="#">New Balance</a><a href="#">Puma</a></div>
+          <div class="ft-col"><h4>Skate</h4><a href="#">Vans</a><a href="#">Etnies</a><a href="#">DC Shoes</a><a href="#">Converse</a></div>
+          <div class="ft-col"><h4>Info</h4><a href="#">Envíos</a><a href="#">Devoluciones</a><a href="#">Guía de Tallas</a><a href="#">Contacto</a></div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="ft-scan-line"></div>
+        <div class="ft-bottom-row">
+          <span>© 2025 BLVD. Todos los derechos reservados.</span>
+          <span>Hecho para quienes caminan diferente. ✦</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ======== MODAL OSCURO — Estilo imagen 1 (SneakSpeaks) ======== -->
+  <div class="modal-overlay" id="modalOverlay" role="dialog" aria-modal="true">
+    <div class="modal-box">
+      <button class="modal-x" id="modalClose" aria-label="Cerrar">✕</button>
+      <div class="modal-layout">
+
+        <!-- Galería izquierda: zapatilla desbordada + thumbnails -->
+        <div class="modal-gallery">
+          <div class="modal-shoe-stage">
+            <img src="" alt="" id="modalMainImg" class="modal-main-img">
+            <div class="modal-shoe-glow"></div>
+          </div>
+          <div class="modal-angles-row">
+            <div class="m-360-badge"><span>360</span><sup>°</sup></div>
+            <div class="modal-thumbs-row" id="modalThumbs"></div>
+          </div>
+        </div>
+
+        <!-- Info derecha -->
+        <div class="modal-details">
+          <div class="md-brand" id="mdBrand"></div>
+          <h2 class="md-name" id="mdName"></h2>
+          <div class="md-price" id="mdPrice"></div>
+          <div class="md-sep"></div>
+          <div class="md-sizes-lbl">Selecciona tu talla (EU)</div>
+          <div class="md-sizes" id="mdSizes"></div>
+          <button class="btn-pill btn-pill-blue md-cta">Agregar al carrito →</button>
+          <div class="md-sep"></div>
+          <div class="md-tags" id="mdTags"></div>
+          <div class="md-perks">
+            <div class="perk"><span class="perk-dot">✦</span> Envío gratis en pedidos +$300.000</div>
+            <div class="perk"><span class="perk-dot">✦</span> Autenticidad 100% garantizada</div>
+            <div class="perk"><span class="perk-dot">✦</span> Devoluciones gratis en 30 días</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
