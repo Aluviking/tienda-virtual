@@ -1,0 +1,17 @@
+{
+  "name": "blvd-urban-footwear",
+  "version": "1.0.0",
+  "description": "BLVD Urban Footwear — Tienda Virtual",
+  "scripts": {
+    "dev": "npx serve . -p 5173 -s",
+    "start": "npx serve . -p 3000 -s",
+    "lint": "eslint js/main.js api/subscribe.js",
+    "build": "npm run lint"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.49.4"
+  },
+  "devDependencies": {
+    "eslint": "^8.57.1"
+  }
+}

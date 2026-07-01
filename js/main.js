@@ -1,175 +1,356 @@
 /* =====================================================
-   BLVD — Main JavaScript
+   UnderShoes — Main JavaScript
    ===================================================== */
 
 /* -------------------- PRODUCTOS -------------------- */
 const PRODUCTS = [
   {
-    id: 1, brand: "Nike", name: "Air Max Pulse", price: 489000,
-    sizes: [36,37,38,39,40,41,42], tags: ["Running","Premium","Bestseller"],
+    id: 16, brand: "Jordan", name: "Retro 4 All Black", price: 280000,
+    sizesWomen: [36,37,38,39], sizesMen: [40,41,42,43,44],
+    tags: ["Lifestyle","Exclusivo","Limited"],
+    description: "Silueta oscura total en el icónico Air Jordan 4. Diseño monocromático que fusiona elegancia y actitud callejera. Envío gratis · Con caja y obsequio incluido · Garantía incluida.",
     imgs: [
-      "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=900&q=80",
-      "https://images.unsplash.com/photo-1549298916-b41d501d3772?auto=format&fit=crop&w=900&q=80",
-      "https://images.unsplash.com/photo-1600185365483-26d0a4ea610e?auto=format&fit=crop&w=900&q=80",
-    ]
+      "IMG/💥RETRO 4 ALL BLACK 💥36-39💥40-44💥/💥RETRO 4 ALL BLACK 💥36-39💥40-44💥.png",
+      "IMG/💥RETRO 4 ALL BLACK 💥36-39💥40-44💥/💥RETRO 4 ALL BLACK 💥36-39💥40-44💥 parte lateral.png",
+      "IMG/💥RETRO 4 ALL BLACK 💥36-39💥40-44💥/💥RETRO 4 ALL BLACK 💥36-39💥40-44💥 parte atras.png",
+    ],
+    video: "IMG/💥RETRO 4 ALL BLACK 💥36-39💥40-44💥/video.mp4"
   },
   {
-    id: 2, brand: "Nike", name: "Pegasus 41", price: 420000,
-    sizes: [37,38,39,40,41,42,43], tags: ["Road","Diario"],
+    id: 17, brand: "Jordan", name: "Retro 4 Thunderbolt", price: 280000,
+    sizesWomen: [36,37,38,39], sizesMen: [40,41,42,43,44],
+    tags: ["Lifestyle","Exclusivo","Limited"],
+    description: "Colores eléctricos en la silueta más legendaria del baloncesto. Energía pura en cada paso. Envío gratis · Con caja y obsequio incluido · Garantía incluida.",
     imgs: [
-      "https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?auto=format&fit=crop&w=900&q=80",
-      "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=900&q=80",
-    ]
+      "IMG/🔥JORDAN RETRO 4 THUNDERBOLT🔥36-39🔥40-44🔥/🔥JORDAN RETRO 4 THUNDERBOLT🔥36-39🔥40-44🔥.png",
+      "IMG/🔥JORDAN RETRO 4 THUNDERBOLT🔥36-39🔥40-44🔥/🔥JORDAN RETRO 4 THUNDERBOLT🔥36-39🔥40-44🔥 parte lateral.png",
+      "IMG/🔥JORDAN RETRO 4 THUNDERBOLT🔥36-39🔥40-44🔥/🔥JORDAN RETRO 4 THUNDERBOLT🔥36-39🔥40-44🔥 parte atras.png",
+    ],
+    video: "IMG/🔥JORDAN RETRO 4 THUNDERBOLT🔥36-39🔥40-44🔥/video.mp4"
   },
   {
-    id: 3, brand: "Jordan", name: "Jordan 1 Retro High", price: 750000,
-    sizes: [38,39,40,41,42,43,44], tags: ["Basketball","Icon","Limited"],
+    id: 18, brand: "Jordan", name: "Retro 4 Olive", price: 280000,
+    sizesWomen: [36,37,38,39], sizesMen: [36,37,38,39],
+    tags: ["Lifestyle","Exclusivo","Limited"],
+    description: "Paleta militar en el clásico Air Jordan 4. Un colorway atemporal con carácter urbano que nunca pasa de moda. Envío gratis · Con caja y obsequio incluido · Garantía incluida.",
     imgs: [
-      "https://images.unsplash.com/photo-1600185365483-26d0a4ea610e?auto=format&fit=crop&w=900&q=80",
-      "https://images.unsplash.com/photo-1565814636199-ae8133055c1c?auto=format&fit=crop&w=900&q=80",
-    ]
+      "IMG/🔥JORDAN RETRO 4 🔥36-39🔥/🔥JORDAN RETRO 4 🔥36-39🔥.png",
+      "IMG/🔥JORDAN RETRO 4 🔥36-39🔥/🔥JORDAN RETRO 4 🔥36-39🔥 parte lateral.png",
+      "IMG/🔥JORDAN RETRO 4 🔥36-39🔥/🔥JORDAN RETRO 4 🔥36-39🔥 parte tracera.png",
+    ],
+    video: "IMG/🔥JORDAN RETRO 4 🔥36-39🔥/video.mp4"
   },
   {
-    id: 4, brand: "Jordan", name: "Jordan 4 Black Cat", price: 890000,
-    sizes: [39,40,41,42,43,44], tags: ["Lifestyle","Exclusivo","Limited"],
+    id: 19, brand: "Jordan", name: "Retro 4 Military", price: 280000,
+    sizesWomen: [40,41,42,43,44], sizesMen: [40,41,42,43,44],
+    tags: ["Lifestyle","Exclusivo","Limited"],
+    description: "El Air Jordan 4 en su versión más icónica. Tono military que marcó historia en las canchas y se tomó las calles. Envío gratis · Con caja y obsequio incluido · Garantía incluida.",
     imgs: [
-      "https://images.unsplash.com/photo-1552346154-21d32810aba3?auto=format&fit=crop&w=900&q=80",
-      "https://images.unsplash.com/photo-1600185365483-26d0a4ea610e?auto=format&fit=crop&w=900&q=80",
-    ]
+      "IMG/🔥RETRO 4 MILITARY 🔥40-44🔥/🔥RETRO 4 MILITARY 🔥40-44🔥.png",
+      "IMG/🔥RETRO 4 MILITARY 🔥40-44🔥/🔥RETRO 4 MILITARY 🔥40-44🔥 parte lateral.png",
+      "IMG/🔥RETRO 4 MILITARY 🔥40-44🔥/🔥RETRO 4 MILITARY 🔥40-44🔥 parte atras.png",
+    ],
+    video: "IMG/🔥RETRO 4 MILITARY 🔥40-44🔥/video.mp4"
   },
   {
-    id: 5, brand: "Adidas", name: "Ultraboost 24", price: 560000,
-    sizes: [36,37,38,39,40,41,42,43], tags: ["Running","Boost","Premium"],
+    id: 20, brand: "Jordan", name: "Retro 4 Panda", price: 280000,
+    sizesWomen: [40,41,42,43,44], sizesMen: [40,41,42,43,44],
+    tags: ["Lifestyle","Exclusivo","Limited"],
+    description: "Blanco y negro perfecto en el Air Jordan 4. Clean, minimalista y siempre vigente. El tenis que combina con todo. Envío gratis · Con caja y obsequio incluido · Garantía incluida.",
     imgs: [
-      "https://images.unsplash.com/photo-1585298723682-7115561c51b7?auto=format&fit=crop&w=900&q=80",
-      "https://images.unsplash.com/photo-1549298916-b41d501d3772?auto=format&fit=crop&w=900&q=80",
-    ]
+      "IMG/🔥RETRO 4 🐼 🔥40-44🔥/🔥RETRO 4 🐼 🔥40-44🔥.png",
+      "IMG/🔥RETRO 4 🐼 🔥40-44🔥/🔥RETRO 4 🐼 🔥40-44🔥 parte lateral.png",
+      "IMG/🔥RETRO 4 🐼 🔥40-44🔥/🔥RETRO 4 🐼 🔥40-44🔥 parte atras.png",
+    ],
+    video: "IMG/🔥RETRO 4 🐼 🔥40-44🔥/video.mp4"
   },
   {
-    id: 6, brand: "Adidas", name: "Samba OG", price: 360000,
-    sizes: [36,37,38,39,40,41,42], tags: ["Lifestyle","Classic","Bestseller"],
+    id: 21, brand: "Jordan", name: "Retro 3 El Vuelo", price: 280000,
+    sizesWomen: [36,37,38,39], sizesMen: [40,41,42,43,44,45],
+    tags: ["Lifestyle","Exclusivo","Limited"],
+    description: "El Air Jordan 3 que le dio alas a una leyenda. Icono del juego redefinido para las calles, con la comodidad y el estilo que solo Jordan da. Envío gratis · Con caja y obsequio incluido · Garantía incluida.",
     imgs: [
-      "https://images.unsplash.com/photo-1556906781-9a414e2a9c86?auto=format&fit=crop&w=900&q=80",
-      "https://images.unsplash.com/photo-1575537302964-96cd47c06b1b?auto=format&fit=crop&w=900&q=80",
-    ]
+      "IMG/🔥JORDAN RETRO 3 EL VUELO 🔥36-39🔥40-45🔥/🔥JORDAN RETRO 3 EL VUELO 🔥36-39🔥40-45🔥.png",
+      "IMG/🔥JORDAN RETRO 3 EL VUELO 🔥36-39🔥40-45🔥/🔥JORDAN RETRO 3 EL VUELO 🔥36-39🔥40-45🔥 PARTE LATERAL.png",
+      "IMG/🔥JORDAN RETRO 3 EL VUELO 🔥36-39🔥40-45🔥/🔥JORDAN RETRO 3 EL VUELO 🔥36-39🔥40-45🔥 PARTE ATRAS.png",
+    ],
+    video: "IMG/🔥JORDAN RETRO 3 EL VUELO 🔥36-39🔥40-45🔥/video.mp4"
   },
   {
-    id: 7, brand: "New Balance", name: "Fresh Foam 1080v13", price: 620000,
-    sizes: [38,39,40,41,42,43,44,45], tags: ["Running","Cushion","Performance"],
+    id: 22, brand: "Jordan", name: "Retro 3 Medium Olive", price: 280000,
+    sizesWomen: [36,37,38,39], sizesMen: [40,41,42,43,44],
+    tags: ["Lifestyle","Exclusivo","Limited"],
+    description: "Tonos tierra que equilibran lo natural y lo urbano. El AJ3 en su expresión más terrosa, ideal para un look auténtico y versátil. Envío gratis · Con caja y obsequio incluido · Garantía incluida.",
     imgs: [
-      "https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?auto=format&fit=crop&w=900&q=80",
-      "https://images.unsplash.com/photo-1549298916-b41d501d3772?auto=format&fit=crop&w=900&q=80",
-    ]
+      "IMG/🔥RETRO 3 MÉDIUM OLIVE 🔥36-39🔥40-44🔥/🔥RETRO 3 MÉDIUM OLIVE 🔥36-39🔥40-44🔥.png",
+      "IMG/🔥RETRO 3 MÉDIUM OLIVE 🔥36-39🔥40-44🔥/🔥RETRO 3 MÉDIUM OLIVE 🔥36-39🔥40-44🔥 parte lateral.png",
+      "IMG/🔥RETRO 3 MÉDIUM OLIVE 🔥36-39🔥40-44🔥/🔥RETRO 3 MÉDIUM OLIVE 🔥36-39🔥40-44🔥 parte atras.png",
+    ],
+    video: "IMG/🔥RETRO 3 MÉDIUM OLIVE 🔥36-39🔥40-44🔥/video.mp4"
   },
   {
-    id: 8, brand: "New Balance", name: "NB 574", price: 280000,
-    sizes: [36,37,38,39,40,41,42], tags: ["Lifestyle","Classic"],
+    id: 23, brand: "Jordan", name: "Retro 3 Vintage Floral", price: 280000,
+    sizesWomen: [36,37,38,39], sizesMen: [36,37,38,39],
+    tags: ["Lifestyle","Exclusivo","Limited"],
+    description: "Feminidad y estilo urbano en un Air Jordan 3. Detalles florales vintage que hacen historia en el streetwear femenino. Envío gratis · Con caja y obsequio incluido · Garantía incluida.",
     imgs: [
-      "https://images.unsplash.com/photo-1607522370275-f14206abe5d3?auto=format&fit=crop&w=900&q=80",
-      "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=900&q=80",
-    ]
+      "IMG/🔥RETRO 3 VINTAGE FLORAL 🔥36-39🔥/🔥RETRO 3 VINTAGE FLORAL 🔥36-39🔥.png",
+      "IMG/🔥RETRO 3 VINTAGE FLORAL 🔥36-39🔥/🔥RETRO 3 VINTAGE FLORAL 🔥36-39🔥 parte lateral.png",
+      "IMG/🔥RETRO 3 VINTAGE FLORAL 🔥36-39🔥/🔥RETRO 3 VINTAGE FLORAL 🔥36-39🔥 parte atras.png",
+    ],
+    video: "IMG/🔥RETRO 3 VINTAGE FLORAL 🔥36-39🔥/video.mp4"
   },
   {
-    id: 9, brand: "Puma", name: "RS-X Efekt", price: 320000,
-    sizes: [36,37,38,39,40,41,42], tags: ["Lifestyle","Retro","Chunky"],
+    id: 24, brand: "Jordan", name: "Retro 3 Sail Rust Pink", price: 280000,
+    sizesWomen: [36,37,38,39], sizesMen: [36,37,38,39],
+    tags: ["Lifestyle","Exclusivo","Limited"],
+    description: "Tonos cálidos de rust y sail que contrastan con la silueta clásica del AJ3. Suavidad y actitud en un solo tenis. Envío gratis · Con caja y obsequio incluido · Garantía incluida.",
     imgs: [
-      "https://images.unsplash.com/photo-1605348532760-6753d2c43329?auto=format&fit=crop&w=900&q=80",
-      "https://images.unsplash.com/photo-1600185365483-26d0a4ea610e?auto=format&fit=crop&w=900&q=80",
-    ]
+      "IMG/🔥RETRO 3 SAIL RUST PINK 🔥36-39🔥/🔥RETRO 3 SAIL RUST PINK 🔥36-39🔥.png",
+      "IMG/🔥RETRO 3 SAIL RUST PINK 🔥36-39🔥/🔥RETRO 3 SAIL RUST PINK 🔥36-39🔥 parte lateral.png",
+      "IMG/🔥RETRO 3 SAIL RUST PINK 🔥36-39🔥/🔥RETRO 3 SAIL RUST PINK 🔥36-39🔥 parte atras.png",
+    ],
+    video: "IMG/🔥RETRO 3 SAIL RUST PINK 🔥36-39🔥/video.mp4"
   },
   {
-    id: 10, brand: "Puma", name: "Suede Classic XXI", price: 240000,
-    sizes: [36,37,38,39,40,41,42,43], tags: ["Classic","Lifestyle","Urban"],
+    id: 25, brand: "Jordan", name: "Retro 3 A Ma Maniére", price: 280000,
+    sizesWomen: [36,37,38,39,40], sizesMen: [40,41,42,43,44,45],
+    tags: ["Lifestyle","Exclusivo","Limited"],
+    description: "La colaboración de lujo más codiciada del Air Jordan 3. Materiales premium y detalles exclusivos de la boutique A Ma Maniére. Alta costura en las calles. Envío gratis · Con caja y obsequio incluido · Garantía incluida.",
     imgs: [
-      "https://images.unsplash.com/photo-1556906781-9a414e2a9c86?auto=format&fit=crop&w=900&q=80",
-      "https://images.unsplash.com/photo-1549298916-b41d501d3772?auto=format&fit=crop&w=900&q=80",
-    ]
+      "IMG/🔥RETRO 3 AMAMMANIERE 🔥36-40🔥40-45🔥/🔥RETRO 3 AMAMMANIERE 🔥36-40🔥40-45🔥.png",
+      "IMG/🔥RETRO 3 AMAMMANIERE 🔥36-40🔥40-45🔥/🔥RETRO 3 AMAMMANIERE 🔥36-40🔥40-45🔥 parte lateral.png",
+      "IMG/🔥RETRO 3 AMAMMANIERE 🔥36-40🔥40-45🔥/🔥RETRO 3 AMAMMANIERE 🔥36-40🔥40-45🔥 parte atras.png",
+    ],
   },
   {
-    id: 11, brand: "Vans", name: "Old Skool Pro", price: 240000,
-    sizes: [36,37,38,39,40,41,42,43], tags: ["Skate","Lifestyle","Classic"],
+    id: 26, brand: "Jordan", name: "Retro 3 Rising Sun", price: 280000,
+    sizesWomen: [40,41,42,43,44], sizesMen: [40,41,42,43,44],
+    tags: ["Lifestyle","Exclusivo","Limited"],
+    description: "Inspirado en el sol naciente japonés. Una edición con identidad cultural única que mezcla la estética oriental con el ADN legendario del Jordan 3. Envío gratis · Con caja y obsequio incluido · Garantía incluida.",
     imgs: [
-      "https://images.unsplash.com/photo-1575537302964-96cd47c06b1b?auto=format&fit=crop&w=900&q=80",
-      "https://images.unsplash.com/photo-1556906781-9a414e2a9c86?auto=format&fit=crop&w=900&q=80",
-    ]
+      "IMG/🔥RETRO 3 RISING SUN 🔥40-44🔥/🔥RETRO 3 RISING SUN 🔥40-44🔥.png",
+      "IMG/🔥RETRO 3 RISING SUN 🔥40-44🔥/🔥RETRO 3 RISING SUN 🔥40-44🔥 parte lateral.png",
+      "IMG/🔥RETRO 3 RISING SUN 🔥40-44🔥/🔥RETRO 3 RISING SUN 🔥40-44🔥 parte atras.png",
+    ],
   },
   {
-    id: 12, brand: "Vans", name: "Era 59 Skate", price: 210000,
-    sizes: [36,37,38,39,40,41,42], tags: ["Skate","Diario","Street"],
+    id: 27, brand: "Jordan", name: "Retro 3 San Valentín Days", price: 280000,
+    sizesWomen: [36,37,38,39], sizesMen: [36,37,38,39],
+    tags: ["Lifestyle","Exclusivo","Limited"],
+    description: "Un Air Jordan 3 dedicado al amor con detalles en rojo y blanco. La edición más romántica del catálogo Jordan, perfecta para regalar o lucir. Envío gratis · Con caja y obsequio incluido · Garantía incluida.",
     imgs: [
-      "https://images.unsplash.com/photo-1518894781321-630e638d0742?auto=format&fit=crop&w=900&q=80",
-      "https://images.unsplash.com/photo-1575537302964-96cd47c06b1b?auto=format&fit=crop&w=900&q=80",
-    ]
+      "IMG/🔥RETRO 3 SAN VALENTÍN DAYS 🔥36-39🔥/🔥RETRO 3 SAN VALENTÍN DAYS 🔥36-39🔥.png",
+      "IMG/🔥RETRO 3 SAN VALENTÍN DAYS 🔥36-39🔥/🔥RETRO 3 SAN VALENTÍN DAYS 🔥36-39🔥 parte lateral.png",
+      "IMG/🔥RETRO 3 SAN VALENTÍN DAYS 🔥36-39🔥/🔥RETRO 3 SAN VALENTÍN DAYS 🔥36-39🔥 parte atras.png",
+    ],
   },
   {
-    id: 13, brand: "Converse", name: "Chuck Taylor All Star", price: 220000,
-    sizes: [36,37,38,39,40,41,42,43,44], tags: ["Lifestyle","Icon","Atemporal"],
+    id: 28, brand: "Jordan", name: "Retro 3 Eminem", price: 280000,
+    sizesWomen: [36,37,38,39], sizesMen: [40,41,42,43,44],
+    tags: ["Lifestyle","Exclusivo","Limited"],
+    description: "Una de las colaboraciones más raras en la historia de Jordan Brand. Eminem x AJ3, edición de colección que pocos tienen y todos quieren. Envío gratis · Con caja y obsequio incluido · Garantía incluida.",
     imgs: [
-      "https://images.unsplash.com/photo-1518894781321-630e638d0742?auto=format&fit=crop&w=900&q=80",
-      "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=900&q=80",
-    ]
+      "IMG/🔥RETRO 3 EMINEM 🔥36-39🔥40-44🔥/🔥RETRO 3 EMINEM 🔥36-39🔥40-44🔥.png",
+      "IMG/🔥RETRO 3 EMINEM 🔥36-39🔥40-44🔥/🔥RETRO 3 EMINEM 🔥36-39🔥40-44🔥 parte lateral.png",
+      "IMG/🔥RETRO 3 EMINEM 🔥36-39🔥40-44🔥/🔥RETRO 3 EMINEM 🔥36-39🔥40-44🔥 parte atras.png",
+    ],
   },
   {
-    id: 14, brand: "Etnies", name: "Marana Skate", price: 280000,
-    sizes: [38,39,40,41,42,43,44], tags: ["Skate","Street","Performance"],
+    id: 29, brand: "Jordan", name: "Retro 3 Travis Scott", price: 280000,
+    sizesWomen: [36,37,38,39,40], sizesMen: [40,41,42,43,44,45],
+    tags: ["Lifestyle","Exclusivo","Limited"],
+    description: "La collab más hyped de Travis Scott con Jordan Brand. El Cactus Jack en la silueta del AJ3, sinónimo de exclusividad máxima y cultura pop. Envío gratis · Con caja y obsequio incluido · Garantía incluida.",
     imgs: [
-      "https://images.unsplash.com/photo-1494496195158-c3becb4f2475?auto=format&fit=crop&w=900&q=80",
-      "https://images.unsplash.com/photo-1575537302964-96cd47c06b1b?auto=format&fit=crop&w=900&q=80",
-    ]
+      "IMG/🔥RETRO 3 TRAVIS SCOTT🔥36-40🔥40-45🔥/🔥RETRO 3 TRAVIS SCOTT🔥36-40🔥40-45🔥.png",
+      "IMG/🔥RETRO 3 TRAVIS SCOTT🔥36-40🔥40-45🔥/🔥RETRO 3 TRAVIS SCOTT🔥36-40🔥40-45🔥 parte lateral.png",
+      "IMG/🔥RETRO 3 TRAVIS SCOTT🔥36-40🔥40-45🔥/🔥RETRO 3 TRAVIS SCOTT🔥36-40🔥40-45🔥 parte atras.png",
+    ],
   },
   {
-    id: 15, brand: "DC Shoes", name: "Court Graffik", price: 260000,
-    sizes: [37,38,39,40,41,42,43], tags: ["Skate","Urban","Street"],
+    id: 30, brand: "Jordan", name: "Retro 3 Muslin", price: 280000,
+    sizesWomen: [36,37,38,39,40], sizesMen: [40,41,42,43,44,45],
+    tags: ["Lifestyle","Exclusivo","Limited"],
+    description: "Colorway crudo y natural en el AJ3. Tonos arena y muslin que hacen de este tenis un must-have atemporal para cualquier guardarropa. Envío gratis · Con caja y obsequio incluido · Garantía incluida.",
     imgs: [
-      "https://images.unsplash.com/photo-1494496195158-c3becb4f2475?auto=format&fit=crop&w=900&q=80",
-      "https://images.unsplash.com/photo-1556906781-9a414e2a9c86?auto=format&fit=crop&w=900&q=80",
-    ]
+      "IMG/🔥JORDAN RETRO 3 MUSLIN 🔥36-40🔥40-45🔥/🔥JORDAN RETRO 3 MUSLIN 🔥36-40🔥40-45🔥.png",
+      "IMG/🔥JORDAN RETRO 3 MUSLIN 🔥36-40🔥40-45🔥/🔥JORDAN RETRO 3 MUSLIN 🔥36-40🔥40-45🔥  parte lateral.png",
+      "IMG/🔥JORDAN RETRO 3 MUSLIN 🔥36-40🔥40-45🔥/🔥JORDAN RETRO 3 MUSLIN 🔥36-40🔥40-45🔥  parte atras.png",
+    ],
+  },
+  {
+    id: 31, brand: "Jordan", name: "Retro 3 Año del Tigre", price: 280000,
+    sizesWomen: [36,37,38,39,40], sizesMen: [40,41,42,43,44,45],
+    tags: ["Lifestyle","Exclusivo","Limited"],
+    description: "Edición limitada inspirada en el zodiaco chino. Fusiona la silueta icónica del AJ3 con detalles exclusivos del Año del Tigre. Cultura, identidad y estilo asiático en cada paso. Envío gratis · Con caja y obsequio incluido · Garantía incluida.",
+    imgs: [
+      "IMG/🔥RETRO 3 AÑO DEL TIGRE 🔥36-40🔥40-45🔥/🔥RETRO 3 AÑO DEL TIGRE 🔥36-40🔥40-45🔥.png",
+      "IMG/🔥RETRO 3 AÑO DEL TIGRE 🔥36-40🔥40-45🔥/🔥RETRO 3 AÑO DEL TIGRE 🔥36-40🔥40-45🔥 parte lateral.png",
+      "IMG/🔥RETRO 3 AÑO DEL TIGRE 🔥36-40🔥40-45🔥/🔥RETRO 3 AÑO DEL TIGRE 🔥36-40🔥40-45🔥 parte atras.png",
+    ],
+    video: "IMG/🔥RETRO 3 AÑO DEL TIGRE 🔥36-40🔥40-45🔥/video.mp4"
+  },
+  {
+    id: 32, brand: "Jordan", name: "Retro 3 Black Cement", price: 280000,
+    sizesWomen: [36,37,38,39,40], sizesMen: [40,41,42,43,44,45],
+    tags: ["Lifestyle","Exclusivo","Limited"],
+    description: "El colorway original y más legendario del Air Jordan 3. El tenis que revolucionó el juego en 1988 y sigue siendo referencia del sneaker culture. Envío gratis · Con caja y obsequio incluido · Garantía incluida.",
+    imgs: [
+      "IMG/🔥RETRO 3 BLACK CEMENT🔥36-40🔥40-45🔥/🔥RETRO 3 BLACK CEMENT🔥36-40🔥40-45🔥.png",
+      "IMG/🔥RETRO 3 BLACK CEMENT🔥36-40🔥40-45🔥/🔥RETRO 3 BLACK CEMENT🔥36-40🔥40-45🔥 parte lateral.png",
+    ],
+  },
+  {
+    id: 33, brand: "Jordan", name: "Retro 3 Black History", price: 280000,
+    sizesWomen: [36,37,38,39,40], sizesMen: [40,41,42,43,44,45],
+    tags: ["Lifestyle","Exclusivo","Limited"],
+    description: "Edición especial en honor al Black History Month. El AJ3 con un mensaje cultural profundo y un diseño poderoso que rinde tributo a la herencia afroamericana. Envío gratis · Con caja y obsequio incluido · Garantía incluida.",
+    imgs: [
+      "IMG/🔥RETRO 3 BLACK HISTORY 🔥36-40🔥40-45🔥/🔥RETRO 3 BLACK HISTORY 🔥36-40🔥40-45🔥.png",
+      "IMG/🔥RETRO 3 BLACK HISTORY 🔥36-40🔥40-45🔥/🔥RETRO 3 BLACK HISTORY 🔥36-40🔥40-45🔥 parte lateral.png",
+      "IMG/🔥RETRO 3 BLACK HISTORY 🔥36-40🔥40-45🔥/🔥RETRO 3 BLACK HISTORY 🔥36-40🔥40-45🔥 parte atras.png",
+    ],
+  },
+  {
+    id: 34, brand: "Jordan", name: "Retro 3 Fear Pack", price: 280000,
+    sizesWomen: [36,37,38,39,40], sizesMen: [40,41,42,43,44,45],
+    tags: ["Lifestyle","Exclusivo","Limited"],
+    description: "Parte del icónico Fear Pack de Jordan Brand. Uno de los sets más codiciados de la historia, con detalles oscuros y una energía que pocos tenis transmiten. Envío gratis · Con caja y obsequio incluido · Garantía incluida.",
+    imgs: [
+      "IMG/🔥RETRO 3 FEAR PACK 🔥36-40🔥40-45🔥/🔥RETRO 3 FEAR PACK 🔥36-40🔥40-45🔥.png",
+      "IMG/🔥RETRO 3 FEAR PACK 🔥36-40🔥40-45🔥/🔥RETRO 3 FEAR PACK 🔥36-40🔥40-45🔥 parte lateral.png",
+      "IMG/🔥RETRO 3 FEAR PACK 🔥36-40🔥40-45🔥/🔥RETRO 3 FEAR PACK 🔥36-40🔥40-45🔥 parte atras.png",
+    ],
+  },
+  {
+    id: 35, brand: "Jordan", name: "Retro 3 J Balvin", price: 280000,
+    sizesWomen: [36,37,38,39,40], sizesMen: [40,41,42,43,44,45],
+    tags: ["Lifestyle","Exclusivo","Limited"],
+    description: "La collab de J Balvin con Jordan Brand en el AJ3. Colores vibrantes que fusionan el reggaetón, la cultura latina y el mundo sneaker en un solo tenis. Envío gratis · Con caja y obsequio incluido · Garantía incluida.",
+    imgs: [
+      "IMG/🔥RETRO 3 J BALVIN 🔥36-40🔥40-45🔥/🔥RETRO 3 J BALVIN 🔥36-40🔥40-45🔥.png",
+      "IMG/🔥RETRO 3 J BALVIN 🔥36-40🔥40-45🔥/🔥RETRO 3 J BALVIN 🔥36-40🔥40-45🔥 parte lateral.png",
+      "IMG/🔥RETRO 3 J BALVIN 🔥36-40🔥40-45🔥/🔥RETRO 3 J BALVIN 🔥36-40🔥40-45🔥 parte atras.png",
+    ],
+  },
+  {
+    id: 36, brand: "Jordan", name: "Retro 3 KAWS", price: 280000,
+    sizesWomen: [36,37,38,39,40], sizesMen: [40,41,42,43,44,45],
+    tags: ["Lifestyle","Exclusivo","Limited"],
+    description: "El artista urbano más cotizado del mundo se une al AJ3. Una obra de arte que se usa en los pies. KAWS x Jordan, collab que define una generación. Envío gratis · Con caja y obsequio incluido · Garantía incluida.",
+    imgs: [
+      "IMG/🔥RETRO 3 KAWS 🔥36-40🔥40-45🔥/🔥RETRO 3 KAWS 🔥36-40🔥40-45🔥.png",
+      "IMG/🔥RETRO 3 KAWS 🔥36-40🔥40-45🔥/🔥RETRO 3 KAWS 🔥36-40🔥40-45🔥 parte lateral.png",
+      "IMG/🔥RETRO 3 KAWS 🔥36-40🔥40-45🔥/🔥RETRO 3 KAWS 🔥36-40🔥40-45🔥 parte atras.png",
+    ],
+  },
+  {
+    id: 37, brand: "Jordan", name: "Retro 3 Korea", price: 280000,
+    sizesWomen: [40,41,42,43,44,45], sizesMen: [40,41,42,43,44,45],
+    tags: ["Lifestyle","Exclusivo","Limited"],
+    description: "Edición especial inspirada en la cultura coreana. Detalles únicos que mezclan el ADN del AJ3 con la estética del K-Style. Rare y difícil de conseguir. Envío gratis · Con caja y obsequio incluido · Garantía incluida.",
+    imgs: [
+      "IMG/🔥RETRO 3 KOREA 🔥40-45🔥/🔥RETRO 3 KOREA 🔥40-45🔥.png",
+      "IMG/🔥RETRO 3 KOREA 🔥40-45🔥/🔥RETRO 3 KOREA 🔥40-45🔥 parte lateral.png",
+      "IMG/🔥RETRO 3 KOREA 🔥40-45🔥/🔥RETRO 3 KOREA 🔥40-45🔥 parte atras.png",
+    ],
+  },
+  {
+    id: 38, brand: "Jordan", name: "Retro 3 Lucky Short", price: 280000,
+    sizesWomen: [36,37,38,39,40], sizesMen: [40,41,42,43,44,45],
+    tags: ["Lifestyle","Exclusivo","Limited"],
+    description: "Paleta verde jade que evoca suerte y exclusividad. Un AJ3 diferente a todo lo que has visto, con una energía fresca y única en el street style. Envío gratis · Con caja y obsequio incluido · Garantía incluida.",
+    imgs: [
+      "IMG/🔥RETRO 3 LUCKY SHORT 🔥36-40🔥40-45🔥/🔥RETRO 3 LUCKY SHORT 🔥36-40🔥40-45🔥.png",
+      "IMG/🔥RETRO 3 LUCKY SHORT 🔥36-40🔥40-45🔥/🔥RETRO 3 LUCKY SHORT 🔥36-40🔥40-45🔥 parte lateral.png",
+      "IMG/🔥RETRO 3 LUCKY SHORT 🔥36-40🔥40-45🔥/🔥RETRO 3 LUCKY SHORT 🔥36-40🔥40-45🔥 parte atras.png",
+    ],
+  },
+  {
+    id: 39, brand: "Jordan", name: "Retro 3 Nina Channel", price: 280000,
+    sizesWomen: [36,37,38,39,40], sizesMen: [40,41,42,43,44,45],
+    tags: ["Lifestyle","Exclusivo","Limited"],
+    description: "Elegancia y moda en el Air Jordan 3. Influenciado por el mundo de la alta costura con detalles sofisticados que elevan la silueta clásica a otro nivel. Envío gratis · Con caja y obsequio incluido · Garantía incluida.",
+    imgs: [
+      "IMG/🔥RETRO 3 NINA CHANNEL 🔥36-40🔥40-45🔥/🔥RETRO 3 NINA CHANNEL 🔥36-40🔥40-45🔥.png",
+      "IMG/🔥RETRO 3 NINA CHANNEL 🔥36-40🔥40-45🔥/🔥RETRO 3 NINA CHANNEL 🔥36-40🔥40-45🔥 parte lateral.png",
+      "IMG/🔥RETRO 3 NINA CHANNEL 🔥36-40🔥40-45🔥/🔥RETRO 3 NINA CHANNEL 🔥36-40🔥40-45🔥 parte atres.png",
+    ],
+  },
+  {
+    id: 40, brand: "Jordan", name: "Retro 3 Off Noir", price: 280000,
+    sizesWomen: [36,37,38,39,40], sizesMen: [40,41,42,43,44,45],
+    tags: ["Lifestyle","Exclusivo","Limited"],
+    description: "Tonos oscuros y suaves que definen el lujo urbano. El AJ3 en su versión más misteriosa y sofisticada, para quienes saben que menos es más. Envío gratis · Con caja y obsequio incluido · Garantía incluida.",
+    imgs: [
+      "IMG/🔥RETRO 3 OFF NOIR 🔥36-40🔥40-45🔥/🔥RETRO 3 OFF NOIR 🔥36-40🔥40-45🔥.png",
+      "IMG/🔥RETRO 3 OFF NOIR 🔥36-40🔥40-45🔥/🔥RETRO 3 OFF NOIR 🔥36-40🔥40-45🔥 parte lateral.png",
+      "IMG/🔥RETRO 3 OFF NOIR 🔥36-40🔥40-45🔥/🔥RETRO 3 OFF NOIR 🔥36-40🔥40-45🔥 parte atras.png",
+    ],
+  },
+  {
+    id: 41, brand: "Jordan", name: "Retro 3 Pine Green", price: 280000,
+    sizesWomen: [40,41,42,43,44,45], sizesMen: [40,41,42,43,44,45],
+    tags: ["Lifestyle","Exclusivo","Limited"],
+    description: "Verde bosque profundo en la silueta más icónica de Jordan. Un colorway natural y fresco que conecta con lo auténtico y destaca en cualquier look. Envío gratis · Con caja y obsequio incluido · Garantía incluida.",
+    imgs: [
+      "IMG/🔥RETRO 3 PINE GREEN 🔥40-45🔥/🔥RETRO 3 PINE GREEN 🔥40-45🔥.png",
+      "IMG/🔥RETRO 3 PINE GREEN 🔥40-45🔥/🔥RETRO 3 PINE GREEN 🔥40-45🔥 parte lateral.png",
+      "IMG/🔥RETRO 3 PINE GREEN 🔥40-45🔥/🔥RETRO 3 PINE GREEN 🔥40-45🔥 parte atras.png",
+    ],
+  },
+  {
+    id: 42, brand: "Jordan", name: "Retro 3 Pure White", price: 280000,
+    sizesWomen: [36,37,38,39,40], sizesMen: [40,41,42,43,44,45],
+    tags: ["Lifestyle","Exclusivo","Limited"],
+    description: "Blanco puro en el Air Jordan 3. Minimalismo total para quienes dejan hablar el silencio con estilo. Limpio, versátil y eterno. Envío gratis · Con caja y obsequio incluido · Garantía incluida.",
+    imgs: [
+      "IMG/🔥RETRO 3 PURE WHITE 🔥36-40🔥40-45🔥/🔥RETRO 3 PURE WHITE 🔥36-40🔥40-45🔥.png",
+      "IMG/🔥RETRO 3 PURE WHITE 🔥36-40🔥40-45🔥/🔥RETRO 3 PURE WHITE 🔥36-40🔥40-45🔥 parte lateral.png",
+      "IMG/🔥RETRO 3 PURE WHITE 🔥36-40🔥40-45🔥/🔥RETRO 3 PURE WHITE 🔥36-40🔥40-45🔥 parte atras.png",
+    ],
+  },
+  {
+    id: 43, brand: "Jordan", name: "Retro 3 Rare Air", price: 280000,
+    sizesWomen: [36,37,38,39,40], sizesMen: [40,41,42,43,44,45],
+    tags: ["Lifestyle","Exclusivo","Limited"],
+    description: "El espíritu original del AJ3 en una versión de edición limitada. Rare Air porque lo que llevas en los pies no lo tiene cualquiera. Exclusivo por naturaleza. Envío gratis · Con caja y obsequio incluido · Garantía incluida.",
+    imgs: [
+      "IMG/🔥RETRO 3 RARE AIR 🔥36-40🔥40-45🔥/🔥RETRO 3 RARE AIR 🔥36-40🔥40-45🔥.png",
+      "IMG/🔥RETRO 3 RARE AIR 🔥36-40🔥40-45🔥/🔥RETRO 3 RARE AIR 🔥36-40🔥40-45🔥 parte lateral.png",
+      "IMG/🔥RETRO 3 RARE AIR 🔥36-40🔥40-45🔥/🔥RETRO 3 RARE AIR 🔥36-40🔥40-45🔥 parte atras.png",
+    ],
+  },
+  {
+    id: 44, brand: "Jordan", name: "Retro 3 Travis Black", price: 280000,
+    sizesWomen: [36,37,38,39,40], sizesMen: [40,41,42,43,44,45],
+    tags: ["Lifestyle","Exclusivo","Limited"],
+    description: "La versión más oscura de la collab Travis Scott x Jordan. Cactus Jack en negro total. Exclusividad y actitud en su máxima expresión. Envío gratis · Con caja y obsequio incluido · Garantía incluida.",
+    imgs: [
+      "IMG/🔥RETRO 3 TRAVIS BLACK 🔥36-40🔥40-45🔥/🔥RETRO 3 TRAVIS BLACK 🔥36-40🔥40-45🔥.png",
+      "IMG/🔥RETRO 3 TRAVIS BLACK 🔥36-40🔥40-45🔥/🔥RETRO 3 TRAVIS BLACK 🔥36-40🔥40-45🔥 parte lateral.png",
+      "IMG/🔥RETRO 3 TRAVIS BLACK 🔥36-40🔥40-45🔥/🔥RETRO 3 TRAVIS BLACK 🔥36-40🔥40-45🔥 parte atras.png",
+    ],
+  },
+  {
+    id: 45, brand: "Jordan", name: "Retro 3 Violet Ore", price: 280000,
+    sizesWomen: [36,37,38,39], sizesMen: [36,37,38,39],
+    tags: ["Lifestyle","Exclusivo","Limited"],
+    description: "Tono violeta mineral en la silueta clásica del AJ3. Un colorway único que mezcla feminidad y actitud urbana. Difícil de encontrar y fácil de amar. Envío gratis · Con caja y obsequio incluido · Garantía incluida.",
+    imgs: [
+      "IMG/🔥RETRO 3 VIOLET ORE 🔥36-39🔥/🔥RETRO 3 VIOLET ORE 🔥36-39🔥.png",
+      "IMG/🔥RETRO 3 VIOLET ORE 🔥36-39🔥/🔥RETRO 3 VIOLET ORE 🔥36-39🔥 parte lateral.png",
+      "IMG/🔥RETRO 3 VIOLET ORE 🔥36-39🔥/🔥RETRO 3 VIOLET ORE 🔥36-39🔥 parte atras.png",
+    ],
   },
 ];
 
 function formatPrice(p) {
+  if (p == null) return 'Consultar precio';
   return '$' + p.toLocaleString('es-CO') + ' COP';
 }
 
 /* -------------------- CURSOR — mix-blend-mode:difference (visible en cualquier fondo) ---- */
-function initCursor() {
-  const dot  = document.getElementById('cursor');
-  const ring = document.getElementById('cursorFollower');
-  if (!dot || !ring) return;
-
-  /* Ocultar en móvil (sin puntero) */
-  if (window.matchMedia('(pointer: coarse)').matches) {
-    dot.style.display = 'none';
-    ring.style.display = 'none';
-    return;
-  }
-
-  let mx = 0, my = 0, rx = 0, ry = 0;
-  document.addEventListener('mousemove', e => {
-    mx = e.clientX; my = e.clientY;
-    dot.style.left = mx + 'px'; dot.style.top = my + 'px';
-  });
-
-  (function track() {
-    rx += (mx - rx) * 0.1; ry += (my - ry) * 0.1;
-    ring.style.left = rx + 'px'; ring.style.top = ry + 'px';
-    requestAnimationFrame(track);
-  })();
-
-  /* Escala al hover sobre elementos interactivos */
-  document.querySelectorAll('a,button,.product-card,.s3d-angle,.h-thumb,.tri-panel,.why-card,.cg-item').forEach(el => {
-    el.addEventListener('mouseenter', () => {
-      dot.style.transform   = 'translate(-50%,-50%) scale(3)';
-      ring.style.transform  = 'translate(-50%,-50%) scale(1.5)';
-      ring.style.opacity    = '0.6';
-    });
-    el.addEventListener('mouseleave', () => {
-      dot.style.transform  = 'translate(-50%,-50%) scale(1)';
-      ring.style.transform = 'translate(-50%,-50%) scale(1)';
-      ring.style.opacity   = '1';
-    });
-  });
-}
 
 /* -------------------- NAVBAR -------------------- */
 function initNavbar() {
@@ -202,31 +383,97 @@ function initHeroAngles() {
   const thumbs = document.querySelectorAll('.h-thumb');
   const bgImg  = document.getElementById('heroBgImg');
   if (!thumbs.length || !bgImg) return;
+
+  function isMobile() { return window.innerWidth <= 768; }
+  let autoTimer = null;
+
+  function setHero(btn, animate) {
+    const src = (isMobile() && btn.dataset.heroMobile) ? btn.dataset.heroMobile : btn.dataset.hero;
+    if (animate) {
+      bgImg.style.opacity = '0';
+      setTimeout(() => { bgImg.src = src; bgImg.style.opacity = '1'; }, 380);
+    } else {
+      bgImg.src = src;
+    }
+    thumbs.forEach(t => t.classList.remove('active'));
+    btn.classList.add('active');
+  }
+
+  function nextSlide() {
+    const list = Array.from(thumbs);
+    const currentIdx = list.findIndex(t => t.classList.contains('active'));
+    const next = list[(currentIdx + 1) % list.length];
+    setHero(next, true);
+  }
+
+  function startAuto() {
+    clearInterval(autoTimer);
+    autoTimer = setInterval(nextSlide, 4500);
+  }
+
+  // Actualiza los <img> de cada thumbnail según el dispositivo
+  function updateThumbPreviews() {
+    const mobile = isMobile();
+    thumbs.forEach(btn => {
+      const img = btn.querySelector('img');
+      if (!img) return;
+      const src = (mobile && btn.dataset.heroMobile) ? btn.dataset.heroMobile : btn.dataset.hero;
+      img.src = src;
+    });
+  }
+
+  // Imagen inicial según dispositivo
+  const firstActive = document.querySelector('.h-thumb.active') || thumbs[0];
+  updateThumbPreviews();
+  if (firstActive) setHero(firstActive, false);
+
+  // Click manual reinicia el timer
   thumbs.forEach(btn => {
     btn.addEventListener('click', () => {
-      bgImg.style.opacity = '0';
-      setTimeout(() => { bgImg.src = btn.dataset.hero; bgImg.style.opacity = '1'; }, 380);
-      thumbs.forEach(t => t.classList.remove('active'));
-      btn.classList.add('active');
+      setHero(btn, true);
+      startAuto();
     });
   });
+
+  // Al cambiar tamaño de pantalla, actualizar previews y imagen activa
+  window.addEventListener('resize', () => {
+    updateThumbPreviews();
+    const active = document.querySelector('.h-thumb.active');
+    if (active) setHero(active, false);
+  });
+
+  // Iniciar auto-rotación
+  startAuto();
 }
 
 /* -------------------- SHOE EXPERIENCE — Estático, sin animación -------------------- */
 function initShoe3D() {
-  const canvas  = document.getElementById('shoe3dCanvas');
-  const wrap    = document.getElementById('shoe3dImgWrap');
-  const mainImg = document.getElementById('shoe3dImg');
-  const angles  = document.querySelectorAll('.s3d-angle');
+  const canvas   = document.getElementById('shoe3dCanvas');
+  const wrap     = document.getElementById('shoe3dImgWrap');
+  const mainImg  = document.getElementById('shoe3dImg');
+  const video    = document.getElementById('shoe3dVideo');
+  const videoBtn = document.getElementById('shoe3dVideoBtn');
+  const angles   = document.querySelectorAll('.s3d-angle:not(.s3d-angle-vid)');
   if (!wrap || !mainImg) return;
 
-  /* Hover suave — solo levanta el tenis un poco al pasar el mouse */
+  /* Hover suave — levanta el tenis al pasar el mouse */
   if (canvas) {
     canvas.addEventListener('mouseenter', () => {
-      wrap.style.transform = 'rotate(-12deg) translateX(-2%) scale(1.13) translateY(-8px)';
+      wrap.style.transform = 'scale(1.10) translateY(-8px)';
     });
     canvas.addEventListener('mouseleave', () => {
-      wrap.style.transform = 'rotate(-12deg) translateX(-2%) scale(1.08)';
+      wrap.style.transform = '';
+    });
+  }
+
+  /* Botón de video */
+  if (videoBtn && video) {
+    videoBtn.addEventListener('click', () => {
+      mainImg.style.display = 'none';
+      video.style.display = 'block';
+      video.play();
+      angles.forEach(a => a.classList.remove('active'));
+      videoBtn.classList.add('active');
     });
   }
 
@@ -236,6 +483,10 @@ function initShoe3D() {
       const src      = btn.dataset.img;
       const fallback = btn.dataset.fallback;
       if (!src) return;
+      /* ocultar video si estaba activo */
+      if (video) { video.pause(); video.style.display = 'none'; }
+      if (videoBtn) videoBtn.classList.remove('active');
+      mainImg.style.display = '';
       mainImg.classList.add('changing');
       setTimeout(() => {
         mainImg.src = src;
@@ -261,8 +512,7 @@ function createCard(product) {
   const card = document.createElement('div');
   card.className = 'product-card';
 
-  const img = product.imgs?.[0] ||
-    'https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=600&q=70';
+  const img = product.imgs?.[0] || '';
 
   card.innerHTML = `
     <div class="pc-img-wrap">
@@ -270,7 +520,8 @@ function createCard(product) {
         src="${img}"
         alt="${product.name}"
         loading="lazy"
-        onerror="this.src='https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=600&q=70'"
+        decoding="async"
+        onerror="this.style.opacity='0'"
       >
       <div class="pc-hover-overlay">
         <span class="pcr-brand">${product.brand}</span>
@@ -294,9 +545,9 @@ function renderGrid(container, products) {
 function initBestSellers() {
   const grid = document.getElementById('bestSellersGrid');
   if (!grid) return;
-  const best = PRODUCTS.filter(p =>
-    p.tags.includes('Bestseller') || p.tags.includes('Limited') || p.tags.includes('Icon')
-  ).slice(0, 4);
+  // Los 4 más exclusivos y codiciados del catálogo
+  const topIds = [29, 28, 25, 36]; // Travis Scott, Eminem, A Ma Maniére, KAWS
+  const best = topIds.map(id => PRODUCTS.find(p => p.id === id)).filter(Boolean);
   renderGrid(grid, best.length ? best : PRODUCTS.slice(0, 4));
 }
 
@@ -311,13 +562,13 @@ function initFiltersV2() {
   const loadMoreBtn = document.getElementById('loadMoreBtn');
   if (!brandsBtn || !sizesBtn || !grid) return;
 
-  const PAGE = 6;
+  const PAGE = 60;
   let activeBrand = 'all', activeSize = 'all';
   let currentFiltered = PRODUCTS;
   let visibleCount = PAGE;
 
   const brands = [...new Set(PRODUCTS.map(p => p.brand))];
-  const sizes  = [...new Set(PRODUCTS.flatMap(p => p.sizes))].sort((a,b) => a - b);
+  const sizes  = [...new Set(PRODUCTS.flatMap(p => [...(p.sizesWomen||[]), ...(p.sizesMen||[])]))].sort((a,b) => a - b);
 
   function makePill(label, value, type, isActive) {
     const btn = document.createElement('button');
@@ -327,10 +578,14 @@ function initFiltersV2() {
       if (type === 'brand') activeBrand = value;
       else activeSize = value;
       const parent = type === 'brand' ? brandsPanel : sizesPanel;
+      const triggerBtn = type === 'brand' ? brandsBtn : sizesBtn;
       parent.querySelectorAll('.fpill').forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
       updateActiveLbl();
       applyFilters();
+      /* Auto-cerrar panel después de seleccionar */
+      parent.classList.remove('open');
+      triggerBtn.classList.remove('active');
     });
     return btn;
   }
@@ -383,7 +638,7 @@ function initFiltersV2() {
   function applyFilters() {
     currentFiltered = PRODUCTS.filter(p => {
       const brandOk = activeBrand === 'all' || p.brand === activeBrand;
-      const sizeOk  = activeSize  === 'all' || p.sizes.includes(+activeSize);
+      const sizeOk  = activeSize  === 'all' || (p.sizesWomen||[]).includes(+activeSize) || (p.sizesMen||[]).includes(+activeSize);
       return brandOk && sizeOk;
     });
     visibleCount = PAGE;
@@ -398,11 +653,11 @@ function initFiltersV2() {
         renderPaged();
         document.getElementById('coleccion')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
       } else {
-        /* Expandir — mostrar 6 más */
-        visibleCount += PAGE;
+        /* Expandir — mostrar todos */
+        visibleCount = currentFiltered.length;
         renderPaged();
         setTimeout(() => {
-          grid.children[visibleCount - PAGE]?.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+          grid.children[PAGE]?.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
         }, 80);
       }
     });
@@ -411,8 +666,310 @@ function initFiltersV2() {
   renderPaged();
 }
 
+/* -------------------- CARRITO — LocalStorage -------------------- */
+let currentModalProduct = null;
+let currentModalQty = 1;
+
+
+function getCart() {
+  try { return JSON.parse(localStorage.getItem('blvd_cart') || '[]'); }
+  catch { return []; }
+}
+function saveCart(cart) {
+  localStorage.setItem('blvd_cart', JSON.stringify(cart));
+}
+
+function addToCart(product, size, qty = 1) {
+  const cart = getCart();
+  const idx = cart.findIndex(i => i.id === product.id && i.size === size);
+  if (idx > -1) {
+    cart[idx].qty += qty;
+  } else {
+    cart.push({
+      id: product.id, brand: product.brand, name: product.name,
+      price: product.price, size: size,
+      img: product.imgs?.[0] || '', qty: qty
+    });
+  }
+  saveCart(cart);
+  updateCartCount();
+  renderCart();
+}
+
+function removeFromCart(id, size) {
+  saveCart(getCart().filter(i => !(i.id === id && i.size === size)));
+  updateCartCount();
+  renderCart();
+}
+
+function updateCartCount() {
+  const total = getCart().reduce((s, i) => s + i.qty, 0);
+  const badge = document.getElementById('cartCount');
+  if (!badge) return;
+  badge.textContent = total;
+  if (total > 0) badge.classList.add('visible');
+  else badge.classList.remove('visible');
+}
+
+function renderCart() {
+  const cart     = getCart();
+  const itemsEl  = document.getElementById('cartItems');
+  const footerEl = document.getElementById('cartFooter');
+  const emptyEl  = document.getElementById('cartEmpty');
+  const totalEl  = document.getElementById('cartTotal');
+  if (!itemsEl) return;
+
+  if (cart.length === 0) {
+    itemsEl.innerHTML = '';
+    if (footerEl) footerEl.style.display = 'none';
+    if (emptyEl)  emptyEl.classList.add('visible');
+    return;
+  }
+
+  if (footerEl) footerEl.style.display = 'flex';
+  if (emptyEl)  emptyEl.classList.remove('visible');
+
+  itemsEl.innerHTML = '';
+  let total = 0;
+  cart.forEach(item => {
+    total += item.price * item.qty;
+    const div = document.createElement('div');
+    div.className = 'cart-item';
+    div.innerHTML = `
+      <img class="ci-img" src="${item.img}" alt="${item.name}"
+        loading="lazy" decoding="async" onerror="this.style.display='none'">
+      <div class="ci-info">
+        <div class="ci-brand">${item.brand}</div>
+        <div class="ci-name">${item.name}</div>
+        <div class="ci-size">Talla EU ${item.size}${item.qty > 1 ? ' × ' + item.qty : ''}</div>
+      </div>
+      <div class="cart-item-right">
+        <div class="ci-price">${formatPrice(item.price * item.qty)}</div>
+        <button class="ci-del" aria-label="Eliminar">✕</button>
+      </div>`;
+    div.querySelector('.ci-del').addEventListener('click', () => removeFromCart(item.id, item.size));
+    itemsEl.appendChild(div);
+  });
+
+  if (totalEl) totalEl.textContent = formatPrice(total);
+}
+
+function openCart() {
+  document.getElementById('cartPanel')?.classList.add('open');
+  document.getElementById('cartOverlay')?.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeCart() {
+  document.getElementById('cartPanel')?.classList.remove('open');
+  document.getElementById('cartOverlay')?.classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+function showToast(msg) {
+  let toast = document.getElementById('blvdToast');
+  if (!toast) {
+    toast = document.createElement('div');
+    toast.id = 'blvdToast';
+    toast.className = 'blvd-toast';
+    document.body.appendChild(toast);
+  }
+  toast.textContent = msg;
+  toast.classList.add('show');
+  clearTimeout(toast._t);
+  toast._t = setTimeout(() => toast.classList.remove('show'), 2800);
+}
+
+function buildWACartMsg() {
+  const cart = getCart();
+  if (!cart.length) return null;
+  let total = 0;
+  let msg = `¡Hola UnderShoes! 🔥\n\n`;
+  msg += `Quiero pagar ya estos artículos:\n\n`;
+  cart.forEach(item => {
+    total += item.price * item.qty;
+    msg += `👟 *${item.brand} ${item.name}*\n`;
+    msg += `   Talla: ${item.size}`;
+    if (item.qty > 1) msg += ` | Cantidad: ×${item.qty}`;
+    msg += ` | ${formatPrice(item.price * item.qty)}\n\n`;
+  });
+  msg += `💰 *TOTAL: ${formatPrice(total)} COP*\n\n`;
+  msg += `¡Estoy listo para pagar! ¿Cómo procedo? 🙌`;
+  return msg;
+}
+
+function openWACart() {
+  const msg = buildWACartMsg();
+  if (!msg) { showToast('Tu carrito está vacío'); return; }
+  window.open(`https://wa.me/${BLVD_WA}?text=${encodeURIComponent(msg)}`, '_blank');
+}
+
+function initCart() {
+  document.getElementById('cartNavBtn')?.addEventListener('click', openCart);
+  document.getElementById('cartClose')?.addEventListener('click', closeCart);
+  document.getElementById('cartOverlay')?.addEventListener('click', closeCart);
+  document.getElementById('cartContinueBtn')?.addEventListener('click', closeCart);
+  document.getElementById('cartEmptyExplore')?.addEventListener('click', () => {
+    closeCart();
+    document.getElementById('coleccion')?.scrollIntoView({ behavior: 'smooth' });
+  });
+  /* Botón Pagar por WhatsApp */
+  document.getElementById('cartCheckoutWA')?.addEventListener('click', openWACart);
+  /* Botón flotante WhatsApp */
+  document.getElementById('waFloatBtn')?.addEventListener('click', e => {
+    e.preventDefault();
+    const msg = buildWACartMsg();
+    const text = msg || '¡Hola UnderShoes! 👟 Quiero conocer más sobre sus productos.';
+    window.open(`https://wa.me/${BLVD_WA}?text=${encodeURIComponent(text)}`, '_blank');
+  });
+  /* Link WhatsApp footer */
+  document.getElementById('ftWaLink')?.addEventListener('click', e => {
+    e.preventDefault();
+    window.open(`https://wa.me/${BLVD_WA}?text=${encodeURIComponent('¡Hola UnderShoes! 👟 Quiero ver el catálogo y hacer un pedido.')}`, '_blank');
+  });
+  updateCartCount();
+  renderCart();
+}
+
+/* -------------------- MOBILE PRODUCT LANDING -------------------- */
+let currentMobProduct = null;
+let currentMobQty = 1;
+let currentMobSize = null;
+
+function updateMobCta() {
+  const cta = document.getElementById('mobProdCta');
+  if (!cta) return;
+  if (currentMobSize) {
+    cta.textContent = 'Agregar al carrito →';
+    cta.classList.add('ready');
+  } else {
+    cta.textContent = 'Selecciona una talla';
+    cta.classList.remove('ready');
+  }
+}
+
+function openMobProduct(product) {
+  currentMobProduct = product;
+  currentMobQty = 1;
+  currentMobSize = null;
+
+  /* Cabecera */
+  const headerBrand = document.getElementById('mobProdHeaderBrand');
+  if (headerBrand) headerBrand.textContent = product.brand;
+
+  /* Imagen principal */
+  const img = document.getElementById('mobProdImg');
+  if (img) { img.src = product.imgs?.[0] || ''; img.alt = product.name; img.style.opacity = '1'; }
+
+  /* Thumbnails */
+  const thumbsEl = document.getElementById('mobProdThumbs');
+  if (thumbsEl) {
+    thumbsEl.innerHTML = '';
+    (product.imgs || []).forEach((src, i) => {
+      const btn = document.createElement('button');
+      btn.className = 'mob-thumb-btn' + (i === 0 ? ' active' : '');
+      btn.innerHTML = `<img src="${src}" alt="" onerror="this.style.display='none'">`;
+      btn.addEventListener('click', () => {
+        if (img) { img.style.opacity = '0'; setTimeout(() => { img.src = src; img.style.opacity = '1'; }, 180); }
+        thumbsEl.querySelectorAll('.mob-thumb-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+      });
+      thumbsEl.appendChild(btn);
+    });
+  }
+
+  /* Info */
+  const brandEl = document.getElementById('mobProdBrand');
+  const nameEl  = document.getElementById('mobProdName');
+  const priceEl = document.getElementById('mobProdPrice');
+  if (brandEl) brandEl.textContent = product.brand;
+  if (nameEl)  nameEl.textContent  = product.name;
+  if (priceEl) priceEl.textContent = formatPrice(product.price);
+
+  /* Qty */
+  currentMobQty = 1;
+  const qtyVal = document.getElementById('mobQtyVal');
+  if (qtyVal) qtyVal.textContent = '1';
+
+  /* Tallas con etiqueta de género mejorada */
+  const sizesEl = document.getElementById('mobProdSizes');
+  if (sizesEl) {
+    sizesEl.innerHTML = '';
+    const hasBoth = product.sizesWomen?.length && product.sizesMen?.length;
+    const addGroup = (sizes, label, genderClass) => {
+      if (!sizes?.length) return;
+      if (label) {
+        const lbl = document.createElement('div');
+        lbl.className = 'mob-size-gender-lbl ' + (genderClass || '');
+        lbl.innerHTML = `<span class="mob-size-gender-dot"></span>${label}`;
+        sizesEl.appendChild(lbl);
+      }
+      sizes.forEach(s => {
+        const btn = document.createElement('button');
+        btn.className = 'mob-size-btn';
+        btn.textContent = s;
+        btn.addEventListener('click', () => {
+          sizesEl.querySelectorAll('.mob-size-btn').forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          currentMobSize = s;
+          updateMobCta();
+        });
+        sizesEl.appendChild(btn);
+      });
+    };
+    addGroup(product.sizesWomen, hasBoth ? 'Mujer' : null, 'women');
+    addGroup(product.sizesMen,   hasBoth ? 'Hombre' : null, 'men');
+  }
+
+  updateMobCta();
+  /* Reset scroll del wrapper al abrir */
+  const scroll = document.getElementById('mobProdScroll');
+  if (scroll) scroll.scrollTop = 0;
+  const panel = document.getElementById('mobProduct');
+  if (panel) {
+    panel.classList.add('open');
+    panel.setAttribute('aria-hidden', 'false');
+  }
+  document.body.style.overflow = 'hidden';
+  document.body.classList.add('mob-prod-open');
+}
+
+function closeMobProduct() {
+  const panel = document.getElementById('mobProduct');
+  if (panel) { panel.classList.remove('open'); panel.setAttribute('aria-hidden', 'true'); }
+  document.body.style.overflow = '';
+  document.body.classList.remove('mob-prod-open');
+  currentMobProduct = null;
+  currentMobSize = null;
+}
+
+function initMobProduct() {
+  document.getElementById('mobProdBack')?.addEventListener('click', closeMobProduct);
+  document.getElementById('mobProdClose')?.addEventListener('click', closeMobProduct);
+
+  document.getElementById('mobQtyMinus')?.addEventListener('click', () => {
+    if (currentMobQty > 1) { currentMobQty--; const v = document.getElementById('mobQtyVal'); if (v) v.textContent = currentMobQty; }
+  });
+  document.getElementById('mobQtyPlus')?.addEventListener('click', () => {
+    currentMobQty++; const v = document.getElementById('mobQtyVal'); if (v) v.textContent = currentMobQty;
+  });
+
+  document.getElementById('mobProdCta')?.addEventListener('click', () => {
+    if (!currentMobSize) { showToast('Selecciona una talla primero'); return; }
+    addToCart(currentMobProduct, currentMobSize, currentMobQty);
+    showToast(`${currentMobProduct.name} agregado al carrito`);
+    closeMobProduct();
+  });
+}
+
 /* -------------------- MODAL OSCURO (imagen 1 reference) -------------------- */
 function openModal(product) {
+  /* En móvil usar la landing de producto dedicada */
+  if (window.innerWidth <= 768) { openMobProduct(product); return; }
+  currentModalProduct = product;
+  currentModalQty = 1;
+  const qtyVal = document.getElementById('mdQtyVal');
+  if (qtyVal) qtyVal.textContent = '1';
   const overlay  = document.getElementById('modalOverlay');
   const mainImg  = document.getElementById('modalMainImg');
   const thumbRow = document.getElementById('modalThumbs');
@@ -421,40 +978,85 @@ function openModal(product) {
   document.getElementById('mdBrand').textContent = product.brand;
   document.getElementById('mdName').textContent  = product.name;
   document.getElementById('mdPrice').textContent = formatPrice(product.price);
+  const descEl = document.getElementById('mdDesc');
+  if (descEl) { descEl.textContent = product.description || ''; descEl.style.display = product.description ? 'block' : 'none'; }
 
-  /* Imagen principal — desbordada, angled (imagen 1 style) */
-  mainImg.src = product.imgs?.[0] || '';
+  const imgs = product.imgs || [];
+  const videoWrap = document.getElementById('modalVideoWrap');
+  const videoEl   = document.getElementById('modalVideo');
+
+  /* Resetear estado video */
+  if (videoWrap) videoWrap.style.display = 'none';
+  if (videoEl)   { videoEl.pause(); videoEl.src = ''; }
+  mainImg.style.display = '';
+
+  /* Imagen principal */
+  mainImg.src = imgs[0] || '';
   mainImg.alt = product.name;
   mainImg.classList.add('entering');
   setTimeout(() => mainImg.classList.remove('entering'), 600);
 
-  /* Thumbnails 360° */
+  /* Thumbnails */
   thumbRow.innerHTML = '';
-  (product.imgs || []).forEach((src, i) => {
+  imgs.forEach((src, i) => {
     const btn = document.createElement('button');
     btn.className = 'modal-thumb-btn' + (i === 0 ? ' active' : '');
     btn.innerHTML = `<img src="${src}" alt="">`;
     btn.addEventListener('click', () => {
+      /* Volver a imagen — ocultar video */
+      if (videoWrap) videoWrap.style.display = 'none';
+      if (videoEl)   videoEl.pause();
+      mainImg.style.display = '';
+      /* Cambio inmediato + restart animación sobre la imagen nueva */
+      mainImg.src = src;
+      mainImg.classList.remove('entering');
+      void mainImg.offsetWidth; // fuerza reflow para reiniciar animación
       mainImg.classList.add('entering');
-      setTimeout(() => { mainImg.src = src; mainImg.classList.remove('entering'); }, 350);
+      setTimeout(() => mainImg.classList.remove('entering'), 500);
       thumbRow.querySelectorAll('.modal-thumb-btn').forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
     });
     thumbRow.appendChild(btn);
   });
 
-  /* Tallas */
+  /* Thumbnail de video (si el producto tiene video) */
+  if (product.video && videoWrap && videoEl) {
+    const vBtn = document.createElement('button');
+    vBtn.className = 'modal-thumb-btn modal-thumb-video-btn';
+    vBtn.innerHTML = `<span class="vthumb-icon">▶</span>`;
+    vBtn.title = 'Ver video';
+    vBtn.addEventListener('click', () => {
+      mainImg.style.display = 'none';
+      videoEl.src = product.video;
+      videoWrap.style.display = 'block';
+      videoEl.play();
+      thumbRow.querySelectorAll('.modal-thumb-btn').forEach(b => b.classList.remove('active'));
+      vBtn.classList.add('active');
+    });
+    thumbRow.appendChild(vBtn);
+  }
+
+  /* Tallas Mujer / Hombre */
   const sizesEl = document.getElementById('mdSizes');
   sizesEl.innerHTML = '';
-  (product.sizes || []).forEach(s => {
-    const btn = document.createElement('button');
-    btn.className = 'md-size-btn'; btn.textContent = s;
-    btn.addEventListener('click', () => {
-      sizesEl.querySelectorAll('.md-size-btn').forEach(b => b.classList.remove('selected'));
-      btn.classList.add('selected');
+  const addSizeGroup = (label, sizes) => {
+    if (!sizes || sizes.length === 0) return;
+    const lbl = document.createElement('div');
+    lbl.className = 'md-size-gender-lbl';
+    lbl.textContent = label;
+    sizesEl.appendChild(lbl);
+    sizes.forEach(s => {
+      const btn = document.createElement('button');
+      btn.className = 'md-size-btn'; btn.textContent = s;
+      btn.addEventListener('click', () => {
+        sizesEl.querySelectorAll('.md-size-btn').forEach(b => b.classList.remove('selected'));
+        btn.classList.add('selected');
+      });
+      sizesEl.appendChild(btn);
     });
-    sizesEl.appendChild(btn);
-  });
+  };
+  addSizeGroup('Mujer', product.sizesWomen);
+  addSizeGroup('Hombre', product.sizesMen);
 
   /* Tags */
   document.getElementById('mdTags').innerHTML =
@@ -465,8 +1067,12 @@ function openModal(product) {
 }
 
 function closeModal() {
-  const overlay = document.getElementById('modalOverlay');
+  const overlay  = document.getElementById('modalOverlay');
+  const videoEl  = document.getElementById('modalVideo');
+  const videoWrap = document.getElementById('modalVideoWrap');
   if (overlay) overlay.classList.remove('open');
+  if (videoEl)  { videoEl.pause(); videoEl.src = ''; }
+  if (videoWrap) videoWrap.style.display = 'none';
   document.body.style.overflow = '';
 }
 
@@ -481,15 +1087,59 @@ function initModal() {
     if (e.target === e.currentTarget) closeModal();
   });
   document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+
+  /* Qty buttons */
+  document.getElementById('mdQtyMinus')?.addEventListener('click', () => {
+    if (currentModalQty > 1) {
+      currentModalQty--;
+      document.getElementById('mdQtyVal').textContent = currentModalQty;
+    }
+  });
+  document.getElementById('mdQtyPlus')?.addEventListener('click', () => {
+    currentModalQty++;
+    document.getElementById('mdQtyVal').textContent = currentModalQty;
+  });
+
+  /* Agregar al carrito — con validación de talla */
+  document.querySelector('.md-cta')?.addEventListener('click', () => {
+    if (!currentModalProduct) return;
+    const selectedBtn = document.querySelector('.md-size-btn.selected');
+    if (!selectedBtn) {
+      const sizesEl = document.getElementById('mdSizes');
+      sizesEl?.classList.add('shake-anim');
+      setTimeout(() => sizesEl?.classList.remove('shake-anim'), 400);
+      const lbl = document.querySelector('.md-sizes-lbl');
+      if (lbl) {
+        const orig = lbl.textContent;
+        lbl.textContent = '⚠ Selecciona una talla primero';
+        lbl.style.color = '#ff5555';
+        setTimeout(() => { lbl.textContent = orig; lbl.style.color = ''; }, 2500);
+      }
+      return;
+    }
+    addToCart(currentModalProduct, +selectedBtn.textContent, currentModalQty);
+    showToast(`${currentModalProduct.name} — Talla ${selectedBtn.textContent} ×${currentModalQty} agregado`);
+    closeModal();
+    setTimeout(openCart, 350);
+  });
 }
 
 /* -------------------- COUNTDOWN -------------------- */
+/* Cambia esta fecha para el próximo lanzamiento */
+const LAUNCH_DATE = new Date('2026-07-08T23:59:59');
+
 function initCountdown() {
-  const target = new Date();
-  target.setDate(target.getDate() + 7);
+  const target = LAUNCH_DATE;
+  const wrap = document.getElementById('countdown');
+  const lbl  = document.querySelector('.du-timer-lbl');
+
   function tick() {
     const diff = target - new Date();
-    if (diff <= 0) return;
+    if (diff <= 0) {
+      if (wrap) wrap.style.display = 'none';
+      if (lbl)  lbl.textContent = '¡Ya disponible!';
+      return;
+    }
     const d = Math.floor(diff / 86400000);
     const h = Math.floor((diff % 86400000) / 3600000);
     const m = Math.floor((diff % 3600000) / 60000);
@@ -531,9 +1181,189 @@ function initStats() {
   document.querySelectorAll('.stat[data-target]').forEach(el => io.observe(el));
 }
 
+/* -------------------- CHECKOUT -------------------- */
+const BLVD_WA = '573025958035';
+
+function openCheckout() {
+  const cart = getCart();
+  if (cart.length === 0) return;
+
+  /* Poblar resumen */
+  const summary = document.getElementById('checkoutSummary');
+  const totalEl = document.getElementById('checkoutTotal');
+  if (summary) {
+    let total = 0;
+    summary.innerHTML = '';
+    cart.forEach(item => {
+      total += item.price * item.qty;
+      const div = document.createElement('div');
+      div.className = 'ck-item';
+      div.innerHTML = `
+        <span class="ck-item-name">${item.brand} ${item.name} — T.${item.size}${item.qty > 1 ? ' ×' + item.qty : ''}</span>
+        <span class="ck-item-price">${formatPrice(item.price * item.qty)}</span>`;
+      summary.appendChild(div);
+    });
+    if (totalEl) totalEl.textContent = formatPrice(total);
+  }
+
+  /* Reset a step 1 */
+  const form = document.getElementById('checkoutForm');
+  const succ = document.getElementById('checkoutSuccess');
+  if (form) { form.style.display = ''; }
+  if (succ) { succ.style.display = 'none'; }
+  ['ckName','ckPhone','ckCity','ckAddress'].forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.value = '';
+  });
+
+  closeCart();
+  document.getElementById('checkoutOverlay')?.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeCheckout() {
+  document.getElementById('checkoutOverlay')?.classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+function submitCheckout() {
+  const name    = document.getElementById('ckName')?.value.trim();
+  const phone   = document.getElementById('ckPhone')?.value.trim();
+  const city    = document.getElementById('ckCity')?.value.trim();
+  const address = document.getElementById('ckAddress')?.value.trim();
+
+  if (!name || !phone || !city || !address) {
+    showToast('Por favor completa todos los campos');
+    /* Marcar campos vacíos */
+    ['ckName','ckPhone','ckCity','ckAddress'].forEach(id => {
+      const el = document.getElementById(id);
+      if (el && !el.value.trim()) el.style.borderColor = '#ff5555';
+      else if (el) el.style.borderColor = '';
+    });
+    return;
+  }
+
+  /* Construir mensaje WhatsApp */
+  const cart = getCart();
+  let msg = `¡Hola UnderShoes! 🔥 Quiero confirmar este pedido:\n\n`;
+  let total = 0;
+  cart.forEach(item => {
+    total += item.price * item.qty;
+    msg += `• ${item.brand} ${item.name} — Talla ${item.size}${item.qty > 1 ? ' ×' + item.qty : ''} — ${formatPrice(item.price * item.qty)}\n`;
+  });
+  msg += `\n*Total: ${formatPrice(total)}*\n\n`;
+  msg += `📋 *Datos de entrega:*\n`;
+  msg += `Nombre: ${name}\n`;
+  msg += `Teléfono: ${phone}\n`;
+  msg += `Ciudad: ${city}\n`;
+  msg += `Dirección: ${address}`;
+
+  const waLink = `https://wa.me/${BLVD_WA}?text=${encodeURIComponent(msg)}`;
+  const waBtn = document.getElementById('checkoutWA');
+  if (waBtn) waBtn.href = waLink;
+
+  /* Mostrar éxito */
+  const form = document.getElementById('checkoutForm');
+  const succ = document.getElementById('checkoutSuccess');
+  if (form) form.style.display = 'none';
+  if (succ) succ.style.display = 'flex';
+
+  /* Limpiar carrito */
+  saveCart([]);
+  updateCartCount();
+  renderCart();
+}
+
+function initCheckout() {
+  document.getElementById('checkoutClose')?.addEventListener('click', closeCheckout);
+  document.getElementById('checkoutDone')?.addEventListener('click',  closeCheckout);
+  document.getElementById('checkoutOverlay')?.addEventListener('click', e => {
+    if (e.target === e.currentTarget) closeCheckout();
+  });
+  document.getElementById('checkoutSubmit')?.addEventListener('click', submitCheckout);
+  /* "Finalizar Compra" en el panel del carrito */
+  document.querySelector('.cart-checkout-btn')?.addEventListener('click', openCheckout);
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeCheckout(); });
+}
+
+/* -------------------- NOTIFY MODAL (LANZAMIENTOS) -------------------- */
+function openEmailModal() {
+  document.getElementById('emailModalOverlay')?.classList.add('open');
+  document.body.style.overflow = 'hidden';
+  setTimeout(() => document.getElementById('emName')?.focus(), 200);
+}
+
+function closeEmailModal() {
+  document.getElementById('emailModalOverlay')?.classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+function initEmailModal() {
+  document.getElementById('notifyDropBtn')?.addEventListener('click', openEmailModal);
+  document.getElementById('emailModalClose')?.addEventListener('click', closeEmailModal);
+  document.getElementById('emailModalOverlay')?.addEventListener('click', e => {
+    if (e.target === e.currentTarget) closeEmailModal();
+  });
+  document.getElementById('emSubmit')?.addEventListener('click', async () => {
+    const name  = document.getElementById('emName')?.value.trim();
+    const email = document.getElementById('emEmail')?.value.trim();
+    const phone = document.getElementById('emPhone')?.value.trim();
+    if (!name) {
+      showToast('Por favor ingresa tu nombre');
+      document.getElementById('emName')?.focus();
+      return;
+    }
+    if (!email || !email.includes('@')) {
+      showToast('Por favor ingresa un correo válido');
+      document.getElementById('emEmail')?.focus();
+      return;
+    }
+    if (!phone) {
+      showToast('Por favor ingresa tu número de WhatsApp');
+      document.getElementById('emPhone')?.focus();
+      return;
+    }
+
+    const btn = document.getElementById('emSubmit');
+    const original = btn.textContent;
+    btn.textContent = 'Guardando…';
+    btn.disabled = true;
+
+    try {
+      const res = await fetch('/api/subscribe', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name, email, phone }),
+      });
+      const data = await res.json();
+      if (!res.ok) {
+        showToast(data.error || 'Error al registrar. Intenta de nuevo.');
+      } else {
+        showToast('Registrado. Te avisamos en el próximo lanzamiento');
+        closeEmailModal();
+        ['emName','emEmail','emPhone'].forEach(id => {
+          const el = document.getElementById(id);
+          if (el) el.value = '';
+        });
+      }
+    } catch {
+      showToast('Sin conexión. Intenta de nuevo.');
+    } finally {
+      btn.textContent = original;
+      btn.disabled = false;
+    }
+  });
+  /* Enter en cualquier campo → enviar */
+  ['emName','emEmail','emPhone'].forEach(id => {
+    document.getElementById(id)?.addEventListener('keydown', e => {
+      if (e.key === 'Enter') document.getElementById('emSubmit')?.click();
+    });
+  });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeEmailModal(); });
+}
+
 /* -------------------- INIT -------------------- */
 document.addEventListener('DOMContentLoaded', () => {
-  initCursor();
   initNavbar();
   initHeroAngles();
   initShoe3D();
@@ -543,4 +1373,8 @@ document.addEventListener('DOMContentLoaded', () => {
   initModal();
   initCountdown();
   initStats();
+  initCart();
+  initCheckout();
+  initEmailModal();
+  initMobProduct();
 });

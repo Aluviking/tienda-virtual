@@ -3,31 +3,37 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BLVD — Urban Footwear</title>
+  <title>UnderShoes — Urban Footwear</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Preload hero LCP image -->
+  <link rel="preload" as="image" href="IMG/BANNERS/BANNERS HERO 5.png" media="(min-width: 769px)" fetchpriority="high">
+  <link rel="preload" as="image" href="IMG/BANNERS/BANNERS HERO MOBIL 5.png" media="(max-width: 768px)" fetchpriority="high">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-
-  <div class="cursor" id="cursor"></div>
-  <div class="cursor-follower" id="cursorFollower"></div>
 
   <!-- ======== NAV ======== -->
   <nav class="navbar" id="navbar">
     <div class="nav-inner">
       <div class="nav-left">
-        <a href="#featured">Drop</a>
+        <a href="#featured">Destacado</a>
         <a href="#coleccion">Colección</a>
         <a href="#marcas">Marcas</a>
       </div>
-      <a href="#" class="nav-logo">BLV<span>D</span></a>
+      <a href="#hero" class="nav-logo">Under<span>Shoes</span></a>
       <div class="nav-right">
-        <a href="#lifestyle">Lifestyle</a>
-        <a href="#drops">Drops</a>
-        <a href="#contacto">Contacto</a>
+        <a href="#drops">Lanzamientos</a>
       </div>
+      <button class="cart-nav-btn" id="cartNavBtn" aria-label="Ver carrito">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+          <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <line x1="3" y1="6" x2="21" y2="6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          <path d="M16 10a4 4 0 01-8 0" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span class="cart-count" id="cartCount">0</span>
+      </button>
       <button class="nav-burger" id="navBurger" aria-label="Menú">
         <span></span><span></span><span></span>
       </button>
@@ -36,34 +42,34 @@
 
   <div class="mobile-menu" id="mobileMenu">
     <button class="m-close" id="mobileClose">✕</button>
-    <a href="#featured"   class="m-link">Drop</a>
+    <a href="#featured"   class="m-link">Destacado</a>
     <a href="#coleccion"  class="m-link">Colección</a>
     <a href="#marcas"     class="m-link">Marcas</a>
-    <a href="#drops"      class="m-link">Drops</a>
-    <a href="#contacto"   class="m-link">Contacto</a>
+    <a href="#drops"      class="m-link">Lanzamientos</a>
   </div>
 
   <!-- ======== HERO ======== -->
   <section class="hero" id="hero">
     <div class="hero-bg">
       <img
-        src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=1920&q=85"
+        src="IMG/BANNERS/BANNERS HERO 5.png"
         alt="" class="hero-bg-img" id="heroBgImg"
-        onerror="this.src='https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1920&q=85'"
+        fetchpriority="high" decoding="async"
+        onerror="this.style.display='none'"
       >
       <div class="hero-overlay"></div>
     </div>
-    <div class="hero-ghost" aria-hidden="true">BLVD</div>
+    <div class="hero-ghost" aria-hidden="true">UNDERSHOES</div>
     <div class="hero-center">
-      <div class="hero-season-tag"><span>✦</span> Nueva Temporada 2025</div>
+      <div class="hero-season-tag">Nueva Temporada 2025</div>
       <h1 class="hero-heading">
         <span class="hh-line">MUÉVETE</span>
-        <span class="hh-line hh-outline">DIFERENTE.</span>
+        <span class="hh-line hh-outline">DIFERENTE</span>
       </h1>
-      <p class="hero-tagline">Tu identidad. A cada paso.</p>
+      <p class="hero-tagline">Tu identidad · A cada paso</p>
       <div class="hero-actions">
         <a href="#featured" class="btn-pill btn-pill-white">Explorar colección</a>
-        <a href="#drops"    class="btn-pill btn-pill-ghost">Ver Drops ↗</a>
+        <a href="#drops"    class="btn-pill btn-pill-ghost">Ver Lanzamientos ↗</a>
       </div>
     </div>
     <div class="hero-angle-bar">
@@ -72,23 +78,22 @@
         <span class="hab-label">Explora cada ángulo</span>
       </div>
       <div class="hab-thumbs" id="heroThumbsBar">
-        <button class="h-thumb active" data-hero="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=1920&q=85">
-          <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=140&q=70" alt="">
+        <button class="h-thumb" data-hero="IMG/BANNERS/BANNERS HERO 1.png" data-hero-mobile="IMG/BANNERS/BANNERS HERO MOBIL 1.png">
+          <img src="IMG/BANNERS/BANNERS HERO 1.png" alt="" loading="lazy" decoding="async" onerror="this.style.display='none'">
         </button>
-        <button class="h-thumb" data-hero="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1920&q=85">
-          <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=140&q=70" alt="">
+        <button class="h-thumb" data-hero="IMG/BANNERS/BANNERS HERO 2.png" data-hero-mobile="IMG/BANNERS/BANNERS HERO MOBIL 2.png">
+          <img src="IMG/BANNERS/BANNERS HERO 2.png" alt="" loading="lazy" decoding="async" onerror="this.style.display='none'">
         </button>
-        <button class="h-thumb" data-hero="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=1920&q=85">
-          <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=140&q=70" alt="">
+        <button class="h-thumb" data-hero="IMG/BANNERS/BANNERS HERO 3.png" data-hero-mobile="IMG/BANNERS/BANNERS HERO MOBIL 3.png">
+          <img src="IMG/BANNERS/BANNERS HERO 3.png" alt="" loading="lazy" decoding="async" onerror="this.style.display='none'">
         </button>
-        <button class="h-thumb" data-hero="https://images.unsplash.com/photo-1600185365483-26d0a4ea610e?auto=format&fit=crop&w=1920&q=85">
-          <img src="https://images.unsplash.com/photo-1600185365483-26d0a4ea610e?auto=format&fit=crop&w=140&q=70" alt="">
+        <button class="h-thumb" data-hero="IMG/BANNERS/BANNERS HERO 4.png" data-hero-mobile="IMG/BANNERS/BANNERS HERO MOBIL 4.png">
+          <img src="IMG/BANNERS/BANNERS HERO 4.png" alt="" loading="lazy" decoding="async" onerror="this.style.display='none'">
+        </button>
+        <button class="h-thumb active" data-hero="IMG/BANNERS/BANNERS HERO 5.png" data-hero-mobile="IMG/BANNERS/BANNERS HERO MOBIL 5.png">
+          <img src="IMG/BANNERS/BANNERS HERO 5.png" alt="" decoding="async" onerror="this.style.display='none'">
         </button>
       </div>
-    </div>
-    <div class="hero-scroll">
-      <div class="hs-line"><div class="hs-dot"></div></div>
-      <span>Scroll</span>
     </div>
   </section>
 
@@ -100,43 +105,46 @@
         <div class="s3d-canvas" id="shoe3dCanvas">
           <div class="s3d-img-wrap" id="shoe3dImgWrap">
             <img
-              src="imagenes/7.png"
-              id="shoe3dImg" class="s3d-img" alt="Puma FAST-RB NITRO ELITE"
-              onerror="this.src='https://images.unsplash.com/photo-1605348532760-6753d2c43329?auto=format&fit=crop&w=900&q=90'"
+              src="IMG/🔥RETRO 3 AÑO DEL TIGRE 🔥36-40🔥40-45🔥/🔥RETRO 3 AÑO DEL TIGRE 🔥36-40🔥40-45🔥.png"
+              id="shoe3dImg" class="s3d-img" alt="Jordan Retro 3 Año del Tigre"
+              onerror="this.style.display='none'"
             >
+            <video
+              id="shoe3dVideo" class="s3d-img"
+              src="IMG/🔥RETRO 3 AÑO DEL TIGRE 🔥36-40🔥40-45🔥/video.mp4"
+              playsinline loop muted
+              style="display:none;"
+            ></video>
           </div>
           <div class="s3d-floor-glow"></div>
           <div class="s3d-floor-shadow"></div>
         </div>
         <div class="s3d-angles-row">
           <div class="s3d-360-badge"><span>360</span><sup>°</sup></div>
-          <button class="s3d-angle active" data-img="imagenes/7.png" data-fallback="https://images.unsplash.com/photo-1605348532760-6753d2c43329?auto=format&fit=crop&w=900&q=80">
-            <img src="imagenes/7.png" alt="" onerror="this.src='https://images.unsplash.com/photo-1605348532760-6753d2c43329?auto=format&fit=crop&w=120&q=70'">
+          <button class="s3d-angle active" data-img="IMG/🔥RETRO 3 AÑO DEL TIGRE 🔥36-40🔥40-45🔥/🔥RETRO 3 AÑO DEL TIGRE 🔥36-40🔥40-45🔥.png" data-fallback="">
+            <img src="IMG/🔥RETRO 3 AÑO DEL TIGRE 🔥36-40🔥40-45🔥/🔥RETRO 3 AÑO DEL TIGRE 🔥36-40🔥40-45🔥.png" alt="" loading="lazy" decoding="async" onerror="this.style.display='none'">
           </button>
-          <button class="s3d-angle" data-img="imagenes/7-2.png" data-fallback="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=900&q=80">
-            <img src="imagenes/7-2.png" alt="" onerror="this.src='https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=120&q=70'">
+          <button class="s3d-angle" data-img="IMG/🔥RETRO 3 AÑO DEL TIGRE 🔥36-40🔥40-45🔥/🔥RETRO 3 AÑO DEL TIGRE 🔥36-40🔥40-45🔥 parte lateral.png" data-fallback="">
+            <img src="IMG/🔥RETRO 3 AÑO DEL TIGRE 🔥36-40🔥40-45🔥/🔥RETRO 3 AÑO DEL TIGRE 🔥36-40🔥40-45🔥 parte lateral.png" alt="" loading="lazy" decoding="async" onerror="this.style.display='none'">
           </button>
-          <button class="s3d-angle" data-img="imagenes/7-3.png" data-fallback="https://images.unsplash.com/photo-1549298916-b41d501d3772?auto=format&fit=crop&w=900&q=80">
-            <img src="imagenes/7-3.png" alt="" onerror="this.src='https://images.unsplash.com/photo-1549298916-b41d501d3772?auto=format&fit=crop&w=120&q=70'">
+          <button class="s3d-angle" data-img="IMG/🔥RETRO 3 AÑO DEL TIGRE 🔥36-40🔥40-45🔥/🔥RETRO 3 AÑO DEL TIGRE 🔥36-40🔥40-45🔥 parte atras.png" data-fallback="">
+            <img src="IMG/🔥RETRO 3 AÑO DEL TIGRE 🔥36-40🔥40-45🔥/🔥RETRO 3 AÑO DEL TIGRE 🔥36-40🔥40-45🔥 parte atras.png" alt="" loading="lazy" decoding="async" onerror="this.style.display='none'">
           </button>
-          <button class="s3d-angle" data-img="imagenes/7-4.png" data-fallback="https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?auto=format&fit=crop&w=900&q=80">
-            <img src="imagenes/7-4.png" alt="" onerror="this.src='https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?auto=format&fit=crop&w=120&q=70'">
-          </button>
+          <button class="s3d-angle s3d-angle-vid" id="shoe3dVideoBtn" title="Ver video">▶</button>
         </div>
         <div class="s3d-hint">↑ Mueve el cursor para explorar</div>
       </div>
 
       <div class="s3d-info animate-on-scroll">
-        <div class="s3d-season">✦ Producto de Temporada 2025</div>
-        <div class="s3d-brand-lbl">Puma</div>
-        <h2 class="s3d-name">FAST-RB<br>NITRO</h2>
+        <div class="s3d-season">Edición Especial Asiática</div>
+        <div class="s3d-brand-lbl">Jordan</div>
+        <h2 class="s3d-name">RETRO 3<br>AÑO DEL TIGRE</h2>
         <div class="s3d-divider"></div>
         <p class="s3d-desc">
-          Velocidad sin límites. La FAST-RB NITRO ELITE
-          combina espuma NITROFOAM™ de alta respuesta con
-          placa de carbono PWRPLATE — del asfalto a la calle
-          con la misma energía brutal. Tecnología de elite,
-          estética imparable.
+          Inspirada en el zodiaco oriental, esta edición limitada
+          fusiona la silueta icónica del Retro 3 con detalles
+          exclusivos del Año del Tigre. Cultura, identidad y estilo
+          en cada paso.
         </p>
         <div class="s3d-actions">
           <a href="#coleccion" class="btn-pill btn-pill-dark">Ver toda la colección →</a>
@@ -149,15 +157,15 @@
   <div class="editorial-band animate-on-scroll">
     <div class="eb-bg">
       <img
-        src="imagenes/6.png"
-        alt="Urban lifestyle sneakers" class="eb-img eb-img-top" loading="lazy"
-        onerror="this.src='https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=1920&q=85'"
+        src="IMG/BANNERS/BANNERS 1.png"
+        alt="BLVD Urban Footwear" class="eb-img eb-img-top" loading="lazy"
+        onerror="this.style.display='none'"
       >
       <div class="eb-overlay"></div>
     </div>
     <div class="eb-content">
-      <div class="eb-eyebrow">BLVD — Urban Footwear</div>
-      <h2 class="eb-headline">MUEVE<br><em>LA CIUDAD.</em></h2>
+      <div class="eb-eyebrow">UnderShoes — Urban Footwear</div>
+      <h2 class="eb-headline">MUEVE<br><em>LA CIUDAD</em></h2>
       <p class="eb-sub">Cada paso es una declaración de quién eres.</p>
       <a href="#coleccion" class="btn-pill btn-pill-white">Explorar colección →</a>
     </div>
@@ -201,198 +209,92 @@
     </div>
   </section>
 
-  <!-- ======== COLLAGE — Lifestyle aspiracional urbano ======== -->
-  <section class="collage-section" id="lifestyle">
-    <div class="section-header animate-on-scroll" style="padding:0 60px;margin-bottom:36px">
-      <div class="section-label">Lifestyle & Culture</div>
-      <h2 class="section-title">Muévete diferente.</h2>
-    </div>
-    <div class="collage-grid">
-      <!-- Grande izquierda: hombre saltando, zapatillas al frente -->
-      <div class="cg-item cg-big-v">
-        <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=900&q=90" alt="Urban Jump" loading="lazy">
-        <div class="cg-lbl">Urban Jump</div>
-      </div>
-      <!-- Top derecha 1: close-up sneaker colorway -->
-      <div class="cg-item cg-top-r1">
-        <img src="https://images.unsplash.com/photo-1552346154-21d32810aba3?auto=format&fit=crop&w=900&q=80" alt="Colorways" loading="lazy">
-        <div class="cg-lbl">Colorways</div>
-      </div>
-      <!-- Top derecha 2: persona urbana con zapatillas -->
-      <div class="cg-item cg-top-r2">
-        <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=900&q=85" alt="Street Style" loading="lazy">
-        <div class="cg-lbl">Street Style</div>
-      </div>
-      <!-- Panorámica media: editorial amplio con sneakers -->
-      <div class="cg-item cg-wide-mid">
-        <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=1200&q=90" alt="Culture" loading="lazy" style="object-position:center bottom">
-        <div class="cg-lbl">Culture</div>
-      </div>
-      <!-- Bot izquierda: hombre urban con zapatillas -->
-      <div class="cg-item cg-bot-l">
-        <img src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&w=900&q=85" alt="Urban Man" loading="lazy" style="object-position:center bottom">
-        <div class="cg-lbl">Urban Man</div>
-      </div>
-      <!-- Bot media: zapatilla detalle -->
-      <div class="cg-item cg-bot-m">
-        <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=900&q=80" alt="Sneaker Detail" loading="lazy">
-        <div class="cg-lbl">Detail</div>
-      </div>
-      <!-- Bot derecha: lifestyle sneakers -->
-      <div class="cg-item cg-bot-r">
-        <img src="https://images.unsplash.com/photo-1556906781-9a414e2a9c86?auto=format&fit=crop&w=900&q=80" alt="Lifestyle" loading="lazy">
-        <div class="cg-lbl">Lifestyle</div>
-      </div>
-    </div>
-  </section>
 
-  <!-- ======== TRIPTYCH — 3 Paneles estilo Mattelsa ======== -->
-  <section class="triptych-section">
-    <!-- Panel izquierdo: HOMBRE de frente, sneakers bien visibles -->
-    <div class="tri-panel tri-left animate-on-scroll">
-      <div class="tri-label">
-        <span class="tri-cat">URBAN / HOMBRE</span>
-        <a href="#coleccion" class="tri-see-more">VER COLECCIÓN</a>
-      </div>
-      <img src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&w=900&q=90&crop=bottom" alt="Urban Hombre" loading="lazy" style="object-position:center bottom">
+  <!-- ======== DROPS UNIFICADO ======== -->
+  <section class="drops-unified" id="drops">
+    <div class="du-header animate-on-scroll">
+      <div class="section-label light">Ediciones Limitadas</div>
+      <h2 class="drops-h">Lanzamientos <span class="drops-outline">Exclusivos</span></h2>
+      <p class="drops-sub">Pares únicos que no vuelven. Pocas unidades disponibles, sin reposición</p>
     </div>
-    <!-- Panel centro: editorial, ángulo bajo mostrando zapatillas -->
-    <div class="tri-panel tri-center">
-      <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=1200&q=90" alt="Feature Editorial" loading="lazy" style="object-position:center center">
-      <div class="tri-center-overlay">
-        <div class="tri-c-text">
-          <div class="tri-c-subbrand">BLVD — Urban Premium</div>
-          <h2 class="tri-c-heading">SNEAKERS <em>Premium</em><span class="tri-c-num">001.</span></h2>
-          <p class="tri-c-drop">NEW DROP / OUT NOW</p>
-          <a href="#drops" class="btn-pill btn-pill-white" style="margin-top:16px;font-size:11px;padding:10px 22px">Ver Drops ↗</a>
-        </div>
-      </div>
-    </div>
-    <!-- Panel derecho: MUJER estilo urbano, zapatillas visibles -->
-    <div class="tri-panel tri-right animate-on-scroll">
-      <div class="tri-label">
-        <span class="tri-cat">STREET / MUJER</span>
-        <a href="#coleccion" class="tri-see-more">VER COLECCIÓN</a>
-      </div>
-      <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=900&q=90" alt="Street Mujer" loading="lazy" style="object-position:center bottom">
-    </div>
-  </section>
+    <div class="du-grid">
 
-  <!-- ======== WHY — Infografía visual ======== -->
-  <section class="why-section">
-    <div class="why-header animate-on-scroll">
-      <div class="section-label light">Nuestra promesa</div>
-      <h2 class="section-title why-title">Por qué BLVD.</h2>
-    </div>
-    <div class="why-inner">
-
-      <div class="why-card animate-on-scroll" style="--delay:0s">
-        <div class="why-card-icon">
-          <svg viewBox="0 0 80 80" fill="none">
-            <circle cx="40" cy="40" r="36" fill="rgba(28,111,255,0.12)" stroke="var(--blue)" stroke-width="1.5"/>
-            <circle cx="40" cy="40" r="22" fill="rgba(28,111,255,0.08)" stroke="rgba(28,111,255,0.4)" stroke-width="1"/>
-            <path d="M28 40l9 9 18-18" stroke="var(--blue)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </div>
-        <div class="why-card-step">01</div>
-        <h3 class="why-card-title">Diseño<br>Urbano</h3>
-        <p class="why-card-desc">Tendencias globales filtradas por el pulso de la ciudad. Cada par lleva la energía de las calles.</p>
-        <div class="why-card-stat"><span class="wcs-num">200+</span><span class="wcs-lbl">Estilos disponibles</span></div>
-      </div>
-
-      <div class="why-card animate-on-scroll" style="--delay:0.15s">
-        <div class="why-card-icon">
-          <svg viewBox="0 0 80 80" fill="none">
-            <circle cx="40" cy="40" r="36" fill="rgba(28,111,255,0.12)" stroke="var(--blue)" stroke-width="1.5"/>
-            <circle cx="40" cy="40" r="22" fill="rgba(28,111,255,0.08)" stroke="rgba(28,111,255,0.4)" stroke-width="1"/>
-            <path d="M40 20v8M40 52v8M20 40h8M52 40h8" stroke="var(--blue)" stroke-width="2" stroke-linecap="round"/>
-            <circle cx="40" cy="40" r="6" fill="var(--blue)"/>
-          </svg>
-        </div>
-        <div class="why-card-step">02</div>
-        <h3 class="why-card-title">Comodidad<br>Real</h3>
-        <p class="why-card-desc">Tecnología de punta en cada suela. Del amanecer a la madrugada sin compromiso.</p>
-        <div class="why-card-stat"><span class="wcs-num">100%</span><span class="wcs-lbl">Confort garantizado</span></div>
-      </div>
-
-      <div class="why-card animate-on-scroll" style="--delay:0.3s">
-        <div class="why-card-icon">
-          <svg viewBox="0 0 80 80" fill="none">
-            <circle cx="40" cy="40" r="36" fill="rgba(28,111,255,0.12)" stroke="var(--blue)" stroke-width="1.5"/>
-            <circle cx="40" cy="40" r="22" fill="rgba(28,111,255,0.08)" stroke="rgba(28,111,255,0.4)" stroke-width="1"/>
-            <polygon points="40,22 45,34 58,34 48,42 52,54 40,46 28,54 32,42 22,34 35,34" fill="rgba(28,111,255,0.3)" stroke="var(--blue)" stroke-width="1.5" stroke-linejoin="round"/>
-          </svg>
-        </div>
-        <div class="why-card-step">03</div>
-        <h3 class="why-card-title">Calidad<br>Premium</h3>
-        <p class="why-card-desc">Autenticidad 100% garantizada. Lo que llevas habla antes que tú. Solo lo mejor.</p>
-        <div class="why-card-stat"><span class="wcs-num">15</span><span class="wcs-lbl">Marcas premium</span></div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ======== DROPS ======== -->
-  <section class="drops-section" id="drops">
-    <div class="drops-glow"></div>
-    <div class="drops-grid">
-      <div class="drops-text animate-on-scroll">
-        <div class="section-label light">Ediciones Limitadas</div>
-        <h2 class="drops-h">Drops<br><span class="drops-outline">Exclusivos.</span></h2>
-        <p class="drops-sub">No son zapatillas. Son declaraciones.<br>Pocas unidades. Sin segunda oportunidad.</p>
-        <div class="drop-scarcity"><span class="blink-dot"></span>Solo quedan <strong>12 pares</strong> disponibles</div>
-        <div class="countdown" id="countdown">
-          <div class="c-unit"><div class="c-box"><span id="countDays">07</span></div><div class="c-lbl">Días</div></div>
-          <div class="c-sep">:</div>
-          <div class="c-unit"><div class="c-box"><span id="countHours">00</span></div><div class="c-lbl">Horas</div></div>
-          <div class="c-sep">:</div>
-          <div class="c-unit"><div class="c-box"><span id="countMins">00</span></div><div class="c-lbl">Min</div></div>
-          <div class="c-sep">:</div>
-          <div class="c-unit"><div class="c-box"><span id="countSecs">00</span></div><div class="c-lbl">Seg</div></div>
-        </div>
-        <a href="#" class="btn-pill btn-pill-white">Notifícame del próximo Drop →</a>
-      </div>
-      <div class="drops-card-wrap animate-on-scroll" style="--delay:0.2s">
+      <!-- Card 1 — Drop BLVD -->
+      <div class="du-card animate-on-scroll">
         <div class="drop-card-dark">
-          <span class="drop-card-badge">DROP EXCLUSIVO</span>
-          <img src="https://images.unsplash.com/photo-1600185365483-26d0a4ea610e?auto=format&fit=crop&w=700&q=80" alt="" class="drop-card-img" loading="lazy">
+          <span class="drop-card-badge">LANZAMIENTO</span>
+          <img src="IMG/BANNERS/BANNERS 2.png" alt="Drop BLVD" class="drop-card-img" loading="lazy" onerror="this.style.display='none'">
           <div class="drop-card-info">
-            <div class="dci-brand">Jordan × BLVD</div>
+            <div class="dci-brand">Jordan × UnderShoes</div>
             <div class="dci-name">Jordan 1 Shadow Edition</div>
-            <div class="dci-price">$850.000 COP</div>
+            <div class="dci-price">$280.000 COP</div>
           </div>
         </div>
+        <button class="btn-pill btn-pill-white du-cta" id="notifyDropBtn">Notifícame →</button>
+      </div>
+
+      <!-- Card 2 — Travis Scott (featured) -->
+      <div class="du-card du-card-feat animate-on-scroll" style="--delay:0.12s">
+        <div class="drop-card-dark">
+          <span class="drop-card-badge">COLLAB EXCLUSIVA</span>
+          <img src="IMG/🔥RETRO 3 TRAVIS SCOTT🔥36-40🔥40-45🔥/🔥RETRO 3 TRAVIS SCOTT🔥36-40🔥40-45🔥.png" alt="Jordan Retro 3 Travis Scott" class="drop-card-img" loading="lazy" onerror="this.style.display='none'">
+          <div class="drop-card-info">
+            <div class="dci-brand">Jordan × Travis Scott</div>
+            <div class="dci-name">Retro 3 Cactus Jack</div>
+            <div class="dci-price">$280.000 COP</div>
+          </div>
+        </div>
+        <button class="btn-pill btn-pill-white du-cta" onclick="openProductById(29)">Ver producto →</button>
+      </div>
+
+      <!-- Card 3 — Eminem -->
+      <div class="du-card animate-on-scroll" style="--delay:0.24s">
+        <div class="drop-card-dark">
+          <span class="drop-card-badge">RAREZA HISTÓRICA</span>
+          <img src="IMG/🔥RETRO 3 EMINEM 🔥36-39🔥40-44🔥/🔥RETRO 3 EMINEM 🔥36-39🔥40-44🔥.png" alt="Jordan Retro 3 Eminem" class="drop-card-img" loading="lazy" onerror="this.style.display='none'">
+          <div class="drop-card-info">
+            <div class="dci-brand">Jordan × Eminem</div>
+            <div class="dci-name">Retro 3 Slim Shady</div>
+            <div class="dci-price">$280.000 COP</div>
+          </div>
+        </div>
+        <button class="btn-pill btn-pill-white du-cta" onclick="openProductById(28)">Ver producto →</button>
+      </div>
+
+    </div>
+
+    <!-- Countdown -->
+    <div class="du-bottom animate-on-scroll">
+      <span class="du-timer-lbl">Próximo lanzamiento en</span>
+      <div class="countdown" id="countdown">
+        <div class="c-unit"><div class="c-box"><span id="countDays">07</span></div><div class="c-lbl">Días</div></div>
+        <div class="c-sep">:</div>
+        <div class="c-unit"><div class="c-box"><span id="countHours">00</span></div><div class="c-lbl">Horas</div></div>
+        <div class="c-sep">:</div>
+        <div class="c-unit"><div class="c-box"><span id="countMins">00</span></div><div class="c-lbl">Min</div></div>
+        <div class="c-sep">:</div>
+        <div class="c-unit"><div class="c-box"><span id="countSecs">00</span></div><div class="c-lbl">Seg</div></div>
       </div>
     </div>
   </section>
 
-  <!-- ======== STATS ======== -->
-  <section class="stats-section">
-    <div class="stats-row">
-      <div class="stat animate-on-scroll" data-target="50"><div class="stat-num"><span class="stat-count">0</span><span class="stat-sym">+</span></div><div class="stat-lbl">Marcas</div></div>
-      <div class="stat-line"></div>
-      <div class="stat animate-on-scroll" data-target="500"><div class="stat-num"><span class="stat-count">0</span><span class="stat-sym">+</span></div><div class="stat-lbl">Referencias</div></div>
-      <div class="stat-line"></div>
-      <div class="stat animate-on-scroll" data-target="10000"><div class="stat-num"><span class="stat-count">0</span><span class="stat-sym">+</span></div><div class="stat-lbl">Clientes</div></div>
-    </div>
-  </section>
 
   <!-- ======== AUTÉNTICO ======== -->
   <section class="authentic-section">
     <div class="auth-marquee-wrap">
       <div class="auth-marquee">
-        <span class="aw solid">AUTÉNTICO</span><span class="aw-dot">✦</span>
-        <span class="aw outline">ORIGINAL</span><span class="aw-dot">✦</span>
-        <span class="aw solid">PREMIUM</span><span class="aw-dot">✦</span>
-        <span class="aw outline">URBANO</span><span class="aw-dot">✦</span>
-        <span class="aw solid">AUTÉNTICO</span><span class="aw-dot">✦</span>
-        <span class="aw outline">ORIGINAL</span><span class="aw-dot">✦</span>
-        <span class="aw solid">PREMIUM</span><span class="aw-dot">✦</span>
-        <span class="aw outline">URBANO</span><span class="aw-dot">✦</span>
+        <span class="aw solid">AUTÉNTICO</span><span class="aw-dot">·</span>
+        <span class="aw outline">ORIGINAL</span><span class="aw-dot">·</span>
+        <span class="aw solid">PREMIUM</span><span class="aw-dot">·</span>
+        <span class="aw outline">URBANO</span><span class="aw-dot">·</span>
+        <span class="aw solid">AUTÉNTICO</span><span class="aw-dot">·</span>
+        <span class="aw outline">ORIGINAL</span><span class="aw-dot">·</span>
+        <span class="aw solid">PREMIUM</span><span class="aw-dot">·</span>
+        <span class="aw outline">URBANO</span><span class="aw-dot">·</span>
       </div>
     </div>
     <div class="auth-bottom">
-      <p class="auth-line">Cada paso es una declaración.</p>
+      <p class="auth-line">Cada paso es una declaración</p>
       <a href="#coleccion" class="btn-pill btn-pill-dark">Explorar la colección →</a>
     </div>
   </section>
@@ -402,8 +304,8 @@
     <div class="footer-body">
       <div class="footer-top">
         <div class="ft-brand">
-          <div class="ft-logo">BLV<span>D</span></div>
-          <p class="ft-tag">Muévete diferente.<br>Tu identidad. A cada paso.</p>
+          <div class="ft-logo">Under<span>Shoes</span></div>
+          <p class="ft-tag">Zapatillas Jordan auténticas<br>Tu par te está esperando</p>
           <div class="ft-socials">
             <a href="#" class="ft-social" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="1.5"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/></svg></a>
             <a href="#" class="ft-social" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="none"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
@@ -411,20 +313,45 @@
           </div>
         </div>
         <div class="ft-nav">
-          <div class="ft-col"><h4>Marcas</h4><a href="#">Nike</a><a href="#">Jordan</a><a href="#">Adidas</a><a href="#">New Balance</a><a href="#">Puma</a></div>
-          <div class="ft-col"><h4>Skate</h4><a href="#">Vans</a><a href="#">Etnies</a><a href="#">DC Shoes</a><a href="#">Converse</a></div>
-          <div class="ft-col"><h4>Info</h4><a href="#">Envíos</a><a href="#">Devoluciones</a><a href="#">Guía de Tallas</a><a href="#">Contacto</a></div>
+          <div class="ft-col">
+            <h4>Colección</h4>
+            <a href="#coleccion">Jordan Retro 3</a>
+            <a href="#coleccion">Jordan Retro 4</a>
+            <a href="#drops">Lanzamientos Exclusivos</a>
+            <a href="#coleccion">Ver Todo</a>
+          </div>
+          <div class="ft-col">
+            <h4>Compra</h4>
+            <a href="#marcas">Más Compradas</a>
+            <a href="#drops">Collabs Exclusivas</a>
+            <a id="ftWaLink" href="#">Pedir por WhatsApp</a>
+          </div>
+          <div class="ft-col">
+            <h4>Legal</h4>
+            <a href="privacidad.html">Política de Privacidad</a>
+            <a href="cookies.html">Política de Cookies</a>
+            <a href="#contacto">Contacto</a>
+          </div>
         </div>
       </div>
       <div class="footer-bottom">
         <div class="ft-scan-line"></div>
         <div class="ft-bottom-row">
-          <span>© 2025 BLVD. Todos los derechos reservados.</span>
-          <span>Hecho para quienes caminan diferente. ✦</span>
+          <span>© 2025 UnderShoes. Todos los derechos reservados.</span>
+          <span>Hecho para quienes caminan diferente</span>
         </div>
       </div>
     </div>
   </footer>
+
+  <!-- ======== BOTÓN FLOTANTE WHATSAPP ======== -->
+  <a class="wa-float" id="waFloatBtn" href="#" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">
+    <svg class="wa-float-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+      <path d="M12 0C5.373 0 0 5.373 0 12c0 2.118.554 4.107 1.523 5.831L.057 23.571a.5.5 0 0 0 .612.612l5.741-1.466A11.94 11.94 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.907 0-3.698-.5-5.248-1.377l-.376-.214-3.904.998 1.015-3.805-.234-.389A9.958 9.958 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/>
+    </svg>
+    <span class="wa-float-label">WhatsApp</span>
+  </a>
 
   <!-- ======== MODAL OSCURO — Estilo imagen 1 (SneakSpeaks) ======== -->
   <div class="modal-overlay" id="modalOverlay" role="dialog" aria-modal="true">
@@ -436,10 +363,12 @@
         <div class="modal-gallery">
           <div class="modal-shoe-stage">
             <img src="" alt="" id="modalMainImg" class="modal-main-img">
+            <div class="modal-video-wrap" id="modalVideoWrap">
+              <video id="modalVideo" class="modal-video" playsinline></video>
+            </div>
             <div class="modal-shoe-glow"></div>
           </div>
           <div class="modal-angles-row">
-            <div class="m-360-badge"><span>360</span><sup>°</sup></div>
             <div class="modal-thumbs-row" id="modalThumbs"></div>
           </div>
         </div>
@@ -449,16 +378,56 @@
           <div class="md-brand" id="mdBrand"></div>
           <h2 class="md-name" id="mdName"></h2>
           <div class="md-price" id="mdPrice"></div>
+          <div class="md-desc" id="mdDesc"></div>
           <div class="md-sep"></div>
           <div class="md-sizes-lbl">Selecciona tu talla (EU)</div>
           <div class="md-sizes" id="mdSizes"></div>
+          <div class="md-sep"></div>
+
+          <!-- Cantidad -->
+          <div class="md-qty-wrap">
+            <span class="md-qty-lbl">Cantidad</span>
+            <div class="md-qty-ctrl">
+              <button class="md-qty-btn" id="mdQtyMinus">−</button>
+              <span class="md-qty-val" id="mdQtyVal">1</span>
+              <button class="md-qty-btn" id="mdQtyPlus">+</button>
+            </div>
+          </div>
+
           <button class="btn-pill btn-pill-blue md-cta">Agregar al carrito →</button>
           <div class="md-sep"></div>
           <div class="md-tags" id="mdTags"></div>
+
+          <!-- Perks destacados -->
           <div class="md-perks">
-            <div class="perk"><span class="perk-dot">✦</span> Envío gratis en pedidos +$300.000</div>
-            <div class="perk"><span class="perk-dot">✦</span> Autenticidad 100% garantizada</div>
-            <div class="perk"><span class="perk-dot">✦</span> Devoluciones gratis en 30 días</div>
+            <div class="perk perk-ship">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M1 3h15v13H1zM16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+              <div class="perk-text">
+                <strong>Envío Gratis</strong>
+                <span>A todo Colombia, sin mínimo</span>
+              </div>
+            </div>
+            <div class="perk perk-gift">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 12 20 22 4 22 4 12"/><rect x="2" y="7" width="20" height="5"/><line x1="12" y1="22" x2="12" y2="7"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/></svg>
+              <div class="perk-text">
+                <strong>Caja Original + Obsequio</strong>
+                <span>Incluido en cada compra</span>
+              </div>
+            </div>
+            <div class="perk perk-auth">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+              <div class="perk-text">
+                <strong>100% Auténtico</strong>
+                <span>Garantía de autenticidad total</span>
+              </div>
+            </div>
+            <div class="perk perk-warranty">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg>
+              <div class="perk-text">
+                <strong>Garantía Incluida</strong>
+                <span>30 días contra defectos de fábrica</span>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -466,6 +435,211 @@
     </div>
   </div>
 
-  <script src="js/main.js"></script>
+  <!-- ======== CART PANEL ======== -->
+  <div class="cart-overlay" id="cartOverlay"></div>
+  <aside class="cart-panel" id="cartPanel" aria-label="Carrito de compras">
+    <div class="cart-header">
+      <h3 class="cart-title">Tu Carrito</h3>
+      <button class="cart-close" id="cartClose" aria-label="Cerrar carrito">✕</button>
+    </div>
+    <div class="cart-items" id="cartItems"></div>
+    <div class="cart-empty" id="cartEmpty">
+      <svg width="48" height="48" viewBox="0 0 24 24" fill="none" style="opacity:0.25">
+        <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <line x1="3" y1="6" x2="21" y2="6" stroke="currentColor" stroke-width="1.5"/>
+        <path d="M16 10a4 4 0 01-8 0" stroke="currentColor" stroke-width="1.5"/>
+      </svg>
+      <p>Tu carrito está vacío</p>
+      <button class="btn-pill btn-pill-blue" id="cartEmptyExplore">Ver Colección →</button>
+    </div>
+    <div class="cart-footer" id="cartFooter">
+      <div class="cart-total-row">
+        <span>Total</span>
+        <span class="cart-total" id="cartTotal">$0 COP</span>
+      </div>
+      <button class="btn-pill cart-checkout-btn cart-wa-btn" id="cartCheckoutWA">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" fill="currentColor" style="flex-shrink:0"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.118.554 4.107 1.523 5.831L.057 23.571a.5.5 0 0 0 .612.612l5.741-1.466A11.94 11.94 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.907 0-3.698-.5-5.248-1.377l-.376-.214-3.904.998 1.015-3.805-.234-.389A9.958 9.958 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+        Pagar por WhatsApp →
+      </button>
+      <button class="btn-pill btn-pill-ghost cart-continue-btn" id="cartContinueBtn">Seguir comprando</button>
+    </div>
+  </aside>
+
+  <!-- ======== CHECKOUT MODAL ======== -->
+  <div class="checkout-overlay" id="checkoutOverlay">
+    <div class="checkout-box">
+      <button class="checkout-x" id="checkoutClose" aria-label="Cerrar">✕</button>
+
+      <!-- Step 1: Formulario -->
+      <div id="checkoutForm">
+        <h3 class="checkout-title">Finalizar Pedido</h3>
+        <p class="checkout-sub">Confirma tus datos y te contactamos para coordinar la entrega</p>
+        <div class="checkout-summary" id="checkoutSummary"></div>
+        <div class="checkout-fields">
+          <div class="cf-group">
+            <label for="ckName">Nombre completo</label>
+            <input type="text" id="ckName" placeholder="Tu nombre completo" autocomplete="name">
+          </div>
+          <div class="cf-group">
+            <label for="ckPhone">WhatsApp / Teléfono</label>
+            <input type="tel" id="ckPhone" placeholder="+57 300 000 0000" autocomplete="tel">
+          </div>
+          <div class="cf-group">
+            <label for="ckCity">Ciudad</label>
+            <input type="text" id="ckCity" placeholder="Bogotá, Medellín, Cali..." autocomplete="address-level2">
+          </div>
+          <div class="cf-group">
+            <label for="ckAddress">Dirección de entrega</label>
+            <input type="text" id="ckAddress" placeholder="Cra 10 # 20-30, Apto 401" autocomplete="street-address">
+          </div>
+        </div>
+        <div class="checkout-total-row">
+          <span>Total del pedido</span>
+          <span class="checkout-total-val" id="checkoutTotal">$0 COP</span>
+        </div>
+        <button class="btn-pill btn-pill-blue checkout-submit-btn" id="checkoutSubmit">Confirmar Pedido →</button>
+        <div class="checkout-perks">
+          <span>Pago contra entrega</span>
+          <span>·</span>
+          <span>Envío gratis a todo Colombia</span>
+          <span>·</span>
+          <span>Autenticidad garantizada</span>
+        </div>
+      </div>
+
+      <!-- Step 2: Éxito -->
+      <div id="checkoutSuccess" class="checkout-success">
+        <div class="ck-icon">✓</div>
+        <h3 class="checkout-title">¡Pedido recibido!</h3>
+        <p class="checkout-sub">Te contactaremos en menos de 2 horas para confirmar.</p>
+        <a class="btn-pill btn-pill-blue" id="checkoutWA" href="#" target="_blank" rel="noopener">Confirmar por WhatsApp →</a>
+        <button class="btn-pill btn-pill-ghost" id="checkoutDone">Cerrar</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======== NOTIFY MODAL (LANZAMIENTOS) ======== -->
+  <div class="email-modal-overlay" id="emailModalOverlay">
+    <div class="email-modal-box">
+      <button class="email-modal-x" id="emailModalClose" aria-label="Cerrar">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+
+      <div class="em-icon-wrap">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/>
+          <path d="M13.73 21a2 2 0 0 1-3.46 0"/>
+        </svg>
+      </div>
+
+      <h3 class="em-title">Sé el primero</h3>
+      <p class="em-sub">Recibe el aviso de cada lanzamiento exclusivo antes que nadie</p>
+
+      <div class="em-form">
+
+        <div class="em-field">
+          <svg class="em-field-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          <input type="text" id="emName" placeholder="Tu nombre" class="em-input" autocomplete="given-name">
+        </div>
+
+        <div class="em-field">
+          <svg class="em-field-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 7l-10 7L2 7"/></svg>
+          <input type="email" id="emEmail" placeholder="tu@correo.com" class="em-input" autocomplete="email">
+        </div>
+
+        <div class="em-field">
+          <svg class="em-field-icon" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.118.554 4.107 1.523 5.831L.057 23.571a.5.5 0 0 0 .612.612l5.741-1.466A11.94 11.94 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.907 0-3.698-.5-5.248-1.377l-.376-.214-3.904.998 1.015-3.805-.234-.389A9.958 9.958 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+          <input type="tel" id="emPhone" placeholder="+57 300 000 0000" class="em-input" autocomplete="tel">
+        </div>
+
+        <button class="btn-pill em-btn" id="emSubmit">Quiero estar al día →</button>
+      </div>
+
+      <p class="em-fine">Sin spam · Solo lanzamientos reales</p>
+    </div>
+  </div>
+
+  <!-- ======== MOBILE PRODUCT LANDING (solo mobile) ======== -->
+  <div class="mob-product" id="mobProduct" aria-hidden="true">
+
+    <!-- Header fijo -->
+    <div class="mob-prod-header">
+      <button class="mob-prod-back" id="mobProdBack">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><polyline points="15 18 9 12 15 6"/></svg>
+        Volver
+      </button>
+      <span class="mob-prod-header-brand" id="mobProdHeaderBrand"></span>
+      <button class="mob-prod-close" id="mobProdClose" aria-label="Cerrar">
+        <span class="mob-prod-close-inner">✕</span>
+      </button>
+    </div>
+
+    <!-- Área de scroll: galería + info se mueven juntos -->
+    <div class="mob-prod-scroll" id="mobProdScroll">
+
+      <!-- Galería imagen -->
+      <div class="mob-prod-gallery">
+        <div class="mob-prod-stage">
+          <img src="" alt="" id="mobProdImg" class="mob-prod-img" onerror="this.style.opacity='0'">
+        </div>
+        <div class="mob-prod-thumbs" id="mobProdThumbs"></div>
+      </div>
+
+      <!-- Info -->
+      <div class="mob-prod-info" id="mobProdInfo">
+        <div class="mob-prod-brand" id="mobProdBrand"></div>
+        <h1 class="mob-prod-name" id="mobProdName"></h1>
+        <div class="mob-prod-price" id="mobProdPrice"></div>
+
+        <div class="mob-prod-sep"></div>
+
+        <div class="mob-prod-sizes-lbl">Selecciona tu talla (EU)</div>
+        <div class="mob-prod-sizes" id="mobProdSizes"></div>
+
+        <div class="mob-prod-sep"></div>
+
+        <!-- Cantidad -->
+        <div class="mob-prod-qty">
+          <span class="mob-qty-lbl">Cantidad</span>
+          <div class="mob-qty-ctrl">
+            <button class="mob-qty-btn" id="mobQtyMinus">−</button>
+            <span class="mob-qty-val" id="mobQtyVal">1</span>
+            <button class="mob-qty-btn" id="mobQtyPlus">+</button>
+          </div>
+        </div>
+
+        <div class="mob-prod-sep"></div>
+
+        <!-- Perks -->
+        <div class="mob-prod-perks">
+          <div class="mob-perk">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M1 3h15v13H1zM16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+            <div class="mob-perk-text"><strong>Envío Gratis</strong><span>A todo Colombia, sin mínimo</span></div>
+          </div>
+          <div class="mob-perk">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#39FFDB" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 12 20 22 4 22 4 12"/><rect x="2" y="7" width="20" height="5"/><line x1="12" y1="22" x2="12" y2="7"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/></svg>
+            <div class="mob-perk-text"><strong>Caja Original + Obsequio</strong><span>Incluido en cada compra</span></div>
+          </div>
+          <div class="mob-perk">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.75)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+            <div class="mob-perk-text"><strong>100% Auténtico</strong><span>Garantía de autenticidad total</span></div>
+          </div>
+          <div class="mob-perk">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FBBF24" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg>
+            <div class="mob-perk-text"><strong>Garantía Incluida</strong><span>30 días contra defectos de fábrica</span></div>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /mob-prod-scroll -->
+
+    <!-- CTA al fondo — elemento normal del flex, no position:fixed -->
+    <div class="mob-prod-footer">
+      <button class="mob-prod-cta" id="mobProdCta">Selecciona una talla</button>
+    </div>
+
+  </div>
+
+  <script src="js/main.js" defer></script>
 </body>
 </html>
