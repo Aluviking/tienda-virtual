@@ -2,3 +2,13 @@ node_modules/
 .env
 .env.local
 .vercel
+
+# Windows metadata
+desktop.ini
+Thumbs.db
+*.ini
+
+# Screenshots y archivos de dev local
+imagenes/Captura*
+preview.bat
+HISTORIAL_PROYECTO.md

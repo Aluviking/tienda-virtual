@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Política de Cookies — UnderShoes</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --black: #000000; --dark: #111110; --white: #FFFFFF;
+      --cream: #FAFAF8; --blue: #1C6FFF; --mid-gray: #B0AFAB;
+      --font-head: 'Bebas Neue', sans-serif;
+      --font-body: 'Space Grotesk', sans-serif;
+    }
+    body { font-family: var(--font-body); background: var(--cream); color: #1a1a18; line-height: 1.7; }
+    a { color: var(--blue); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .top-bar { background: var(--black); padding: 18px 60px; display: flex; align-items: center; justify-content: space-between; }
+    .top-logo { font-family: var(--font-head); font-size: 26px; letter-spacing: 0.04em; color: var(--white); text-decoration: none; }
+    .top-logo span { color: var(--blue); }
+    .top-back { font-size: 12px; color: rgba(255,255,255,0.5); text-decoration: none; letter-spacing: 0.08em; transition: color 0.2s; }
+    .top-back:hover { color: var(--white); text-decoration: none; }
+
+    .doc-hero { background: var(--black); padding: 64px 60px 52px; border-bottom: 1px solid rgba(255,255,255,0.07); }
+    .doc-label { font-size: 9px; letter-spacing: 0.24em; text-transform: uppercase; color: rgba(255,255,255,0.35); margin-bottom: 12px; }
+    .doc-title { font-family: var(--font-head); font-size: clamp(48px, 7vw, 88px); color: var(--white); line-height: 1; letter-spacing: 0.01em; }
+    .doc-meta { margin-top: 20px; font-size: 11px; color: rgba(255,255,255,0.35); letter-spacing: 0.05em; }
+
+    .doc-body { max-width: 760px; margin: 0 auto; padding: 64px 40px 100px; }
+    .doc-body h2 { font-family: var(--font-head); font-size: 28px; letter-spacing: 0.02em; color: var(--black); margin: 40px 0 12px; }
+    .doc-body h3 { font-size: 15px; font-weight: 700; color: #1a1a18; margin: 24px 0 8px; }
+    .doc-body p { font-size: 14px; color: #3a3a38; margin-bottom: 14px; }
+    .doc-body ul { font-size: 14px; color: #3a3a38; padding-left: 20px; margin-bottom: 14px; }
+    .doc-body ul li { margin-bottom: 6px; }
+    .doc-body .highlight-box { background: var(--white); border: 1px solid #E8E7E3; border-radius: 10px; padding: 20px 24px; margin: 24px 0; }
+    .doc-body .highlight-box p { margin-bottom: 0; }
+    .sep { height: 1px; background: #E8E7E3; margin: 32px 0; }
+
+    /* Tabla de cookies */
+    .cookie-table { width: 100%; border-collapse: collapse; font-size: 13px; margin: 16px 0 24px; }
+    .cookie-table th { background: var(--black); color: var(--white); padding: 10px 14px; text-align: left; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; }
+    .cookie-table td { padding: 10px 14px; border-bottom: 1px solid #E8E7E3; color: #3a3a38; vertical-align: top; }
+    .cookie-table tr:last-child td { border-bottom: none; }
+    .cookie-table tr:nth-child(even) td { background: rgba(0,0,0,0.02); }
+    .badge { display: inline-block; padding: 2px 8px; border-radius: 999px; font-size: 10px; font-weight: 600; }
+    .badge-required { background: #111; color: #fff; }
+    .badge-functional { background: #E8F4FF; color: #1C6FFF; }
+    .badge-analytics { background: #FFF4E0; color: #B05000; }
+
+    .doc-footer { background: var(--dark); padding: 32px 60px; text-align: center; }
+    .doc-footer p { font-size: 12px; color: rgba(255,255,255,0.3); }
+    .doc-footer a { color: rgba(255,255,255,0.5); }
+
+    @media (max-width: 768px) {
+      .top-bar { padding: 16px 20px; }
+      .doc-hero { padding: 48px 20px 40px; }
+      .doc-body { padding: 40px 20px 80px; }
+      .doc-footer { padding: 24px 20px; }
+      .cookie-table { font-size: 11px; }
+      .cookie-table th, .cookie-table td { padding: 8px 10px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="top-bar">
+    <a href="index.html" class="top-logo">Under<span>Shoes</span></a>
+    <a href="index.html" class="top-back">← Volver a la tienda</a>
+  </div>
+
+  <div class="doc-hero">
+    <div class="doc-label">Documento Legal</div>
+    <h1 class="doc-title">Política de<br>Cookies</h1>
+    <p class="doc-meta">Última actualización: 1 de julio de 2025 · Versión 1.0</p>
+  </div>
+
+  <div class="doc-body">
+
+    <div class="highlight-box">
+      <p>UnderShoes utiliza cookies y tecnologías similares para garantizar el correcto funcionamiento de la tienda, recordar tu carrito de compras y mejorar tu experiencia de navegación. Esta política explica qué cookies usamos y cómo puedes controlarlas.</p>
+    </div>
+
+    <h2>1. ¿Qué son las Cookies?</h2>
+    <p>Las cookies son pequeños archivos de texto que se almacenan en tu dispositivo cuando visitas un sitio web. Nos permiten recordar información sobre tu visita, como los productos que añadiste al carrito o tus preferencias de navegación.</p>
+    <p>Las cookies no contienen virus ni malware y no pueden acceder a información de tu dispositivo más allá de lo que tú mismo compartes con el sitio.</p>
+
+    <div class="sep"></div>
+
+    <h2>2. Tipos de Cookies que Usamos</h2>
+
+    <h3>2.1 Cookies Estrictamente Necesarias</h3>
+    <p>Estas cookies son imprescindibles para el funcionamiento de la tienda. Sin ellas, no podrías navegar ni usar el carrito de compras. No pueden desactivarse.</p>
+
+    <table class="cookie-table">
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Finalidad</th>
+          <th>Duración</th>
+          <th>Tipo</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>undershoes_cart</code></td>
+          <td>Almacena los productos de tu carrito de compras localmente</td>
+          <td>Sesión / Persistente</td>
+          <td><span class="badge badge-required">Necesaria</span></td>
+        </tr>
+        <tr>
+          <td><code>localStorage</code></td>
+          <td>Guarda preferencias de la tienda en tu navegador</td>
+          <td>Hasta que limpies caché</td>
+          <td><span class="badge badge-required">Necesaria</span></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>2.2 Cookies Funcionales</h3>
+    <p>Mejoran la experiencia del usuario recordando tus preferencias. Pueden desactivarse, aunque algunas funciones podrían verse afectadas.</p>
+
+    <table class="cookie-table">
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Finalidad</th>
+          <th>Duración</th>
+          <th>Tipo</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>lang_pref</code></td>
+          <td>Recuerda el idioma de preferencia</td>
+          <td>1 año</td>
+          <td><span class="badge badge-functional">Funcional</span></td>
+        </tr>
+        <tr>
+          <td><code>last_viewed</code></td>
+          <td>Recuerda los últimos productos visualizados</td>
+          <td>30 días</td>
+          <td><span class="badge badge-functional">Funcional</span></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>2.3 Cookies de Análisis</h3>
+    <p>Nos ayudan a entender cómo los visitantes interactúan con la tienda para mejorar nuestros productos y servicios. Los datos son anónimos y agregados.</p>
+
+    <table class="cookie-table">
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Finalidad</th>
+          <th>Duración</th>
+          <th>Tipo</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>_ga</code></td>
+          <td>Google Analytics — distingue usuarios únicos (si aplica)</td>
+          <td>2 años</td>
+          <td><span class="badge badge-analytics">Analítica</span></td>
+        </tr>
+        <tr>
+          <td><code>_gid</code></td>
+          <td>Google Analytics — distingue usuarios por sesión</td>
+          <td>24 horas</td>
+          <td><span class="badge badge-analytics">Analítica</span></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="sep"></div>
+
+    <h2>3. Cookies de Terceros</h2>
+    <p>Algunas cookies son instaladas por servicios de terceros que aparecen en nuestro sitio:</p>
+    <ul>
+      <li><strong>Google Fonts:</strong> Carga las tipografías del sitio. Política: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a></li>
+      <li><strong>WhatsApp / Meta:</strong> Cuando haces clic en nuestros botones de WhatsApp. Política: <a href="https://www.whatsapp.com/legal/privacy-policy" target="_blank" rel="noopener">WhatsApp Privacy Policy</a></li>
+    </ul>
+    <p>UnderShoes no controla las cookies de terceros. Te recomendamos revisar sus políticas de privacidad.</p>
+
+    <div class="sep"></div>
+
+    <h2>4. Cómo Controlar las Cookies</h2>
+    <p>Puedes gestionar o eliminar las cookies desde la configuración de tu navegador:</p>
+    <ul>
+      <li><strong>Google Chrome:</strong> Configuración → Privacidad y seguridad → Cookies</li>
+      <li><strong>Mozilla Firefox:</strong> Opciones → Privacidad y seguridad → Cookies</li>
+      <li><strong>Safari:</strong> Preferencias → Privacidad → Cookies</li>
+      <li><strong>Microsoft Edge:</strong> Configuración → Privacidad → Cookies</li>
+    </ul>
+    <p>Ten en cuenta que deshabilitar las cookies estrictamente necesarias puede impedir el correcto funcionamiento del carrito de compras.</p>
+
+    <div class="sep"></div>
+
+    <h2>5. Almacenamiento Local (localStorage)</h2>
+    <p>Adicionalmente a las cookies, UnderShoes utiliza el <strong>almacenamiento local del navegador (localStorage)</strong> para guardar el contenido de tu carrito de compras de forma persistente. Esta información se almacena únicamente en tu dispositivo y no se transmite a nuestros servidores. Puedes borrarlo limpiando los datos del sitio en tu navegador.</p>
+
+    <div class="sep"></div>
+
+    <h2>6. Consentimiento</h2>
+    <p>Al continuar navegando en UnderShoes, aceptas el uso de cookies necesarias para el funcionamiento de la tienda. Para cookies de análisis o funcionales no esenciales, puedes optar por no aceptarlas a través de la configuración de tu navegador.</p>
+    <p>De acuerdo con la Ley 1581 de 2012 y la normativa colombiana aplicable, tus datos derivados de cookies serán tratados conforme a nuestra <a href="privacidad.html">Política de Privacidad</a>.</p>
+
+    <div class="sep"></div>
+
+    <h2>7. Actualizaciones</h2>
+    <p>Esta política puede actualizarse para reflejar cambios en la tecnología o en la legislación aplicable. La fecha de última modificación siempre estará indicada en la parte superior de este documento.</p>
+
+    <div class="highlight-box">
+      <p>¿Tienes preguntas sobre el uso de cookies en UnderShoes? Contáctanos por WhatsApp desde nuestra <a href="index.html">tienda</a> y te respondemos con gusto.</p>
+    </div>
+
+  </div>
+
+  <div class="doc-footer">
+    <p>© 2025 UnderShoes. Todos los derechos reservados. · <a href="privacidad.html">Privacidad</a> · <a href="cookies.html">Cookies</a> · <a href="index.html">Tienda</a></p>
+  </div>
+
+</body>
+</html>
