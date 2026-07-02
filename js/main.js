@@ -10,9 +10,9 @@ const PRODUCTS = [
     tags: ["Lifestyle","Exclusivo","Limited"],
     description: "Silueta oscura total en el icónico Air Jordan 4. Diseño monocromático que fusiona elegancia y actitud callejera. Envío gratis · Con caja y obsequio incluido · Garantía incluida.",
     imgs: [
-      "IMG/💥RETRO 4 ALL BLACK 💥36-39💥40-44💥/💥RETRO 4 ALL BLACK 💥36-39💥40-44💥.png",
-      "IMG/💥RETRO 4 ALL BLACK 💥36-39💥40-44💥/💥RETRO 4 ALL BLACK 💥36-39💥40-44💥 parte lateral.png",
-      "IMG/💥RETRO 4 ALL BLACK 💥36-39💥40-44💥/💥RETRO 4 ALL BLACK 💥36-39💥40-44💥 parte atras.png",
+      "IMG/💥RETRO 4 ALL BLACK 💥36-39💥40-44💥/💥RETRO 4 ALL BLACK 💥36-39💥40-44💥.webp",
+      "IMG/💥RETRO 4 ALL BLACK 💥36-39💥40-44💥/💥RETRO 4 ALL BLACK 💥36-39💥40-44💥 parte lateral.webp",
+      "IMG/💥RETRO 4 ALL BLACK 💥36-39💥40-44💥/💥RETRO 4 ALL BLACK 💥36-39💥40-44💥 parte atras.webp",
     ],
     video: "IMG/💥RETRO 4 ALL BLACK 💥36-39💥40-44💥/video.mp4"
   },
@@ -22,9 +22,9 @@ const PRODUCTS = [
     tags: ["Lifestyle","Exclusivo","Limited"],
     description: "Colores eléctricos en la silueta más legendaria del baloncesto. Energía pura en cada paso. Envío gratis · Con caja y obsequio incluido · Garantía incluida.",
     imgs: [
-      "IMG/🔥JORDAN RETRO 4 THUNDERBOLT🔥36-39🔥40-44🔥/🔥JORDAN RETRO 4 THUNDERBOLT🔥36-39🔥40-44🔥.png",
-      "IMG/🔥JORDAN RETRO 4 THUNDERBOLT🔥36-39🔥40-44🔥/🔥JORDAN RETRO 4 THUNDERBOLT🔥36-39🔥40-44🔥 parte lateral.png",
-      "IMG/🔥JORDAN RETRO 4 THUNDERBOLT🔥36-39🔥40-44🔥/🔥JORDAN RETRO 4 THUNDERBOLT🔥36-39🔥40-44🔥 parte atras.png",
+      "IMG/🔥JORDAN RETRO 4 THUNDERBOLT🔥36-39🔥40-44🔥/🔥JORDAN RETRO 4 THUNDERBOLT🔥36-39🔥40-44🔥.webp",
+      "IMG/🔥JORDAN RETRO 4 THUNDERBOLT🔥36-39🔥40-44🔥/🔥JORDAN RETRO 4 THUNDERBOLT🔥36-39🔥40-44🔥 parte lateral.webp",
+      "IMG/🔥JORDAN RETRO 4 THUNDERBOLT🔥36-39🔥40-44🔥/🔥JORDAN RETRO 4 THUNDERBOLT🔥36-39🔥40-44🔥 parte atras.webp",
     ],
     video: "IMG/🔥JORDAN RETRO 4 THUNDERBOLT🔥36-39🔥40-44🔥/video.mp4"
   },
@@ -34,9 +34,9 @@ const PRODUCTS = [
     tags: ["Lifestyle","Exclusivo","Limited"],
     description: "Paleta militar en el clásico Air Jordan 4. Un colorway atemporal con carácter urbano que nunca pasa de moda. Envío gratis · Con caja y obsequio incluido · Garantía incluida.",
     imgs: [
-      "IMG/🔥JORDAN RETRO 4 🔥36-39🔥/🔥JORDAN RETRO 4 🔥36-39🔥.png",
-      "IMG/🔥JORDAN RETRO 4 🔥36-39🔥/🔥JORDAN RETRO 4 🔥36-39🔥 parte lateral.png",
-      "IMG/🔥JORDAN RETRO 4 🔥36-39🔥/🔥JORDAN RETRO 4 🔥36-39🔥 parte tracera.png",
+      "IMG/🔥JORDAN RETRO 4 🔥36-39🔥/🔥JORDAN RETRO 4 🔥36-39🔥.webp",
+      "IMG/🔥JORDAN RETRO 4 🔥36-39🔥/🔥JORDAN RETRO 4 🔥36-39🔥 parte lateral.webp",
+      "IMG/🔥JORDAN RETRO 4 🔥36-39🔥/🔥JORDAN RETRO 4 🔥36-39🔥 parte tracera.webp",
     ],
     video: "IMG/🔥JORDAN RETRO 4 🔥36-39🔥/video.mp4"
   },
@@ -46,9 +46,9 @@ const PRODUCTS = [
     tags: ["Lifestyle","Exclusivo","Limited"],
     description: "El Air Jordan 4 en su versión más icónica. Tono military que marcó historia en las canchas y se tomó las calles. Envío gratis · Con caja y obsequio incluido · Garantía incluida.",
     imgs: [
-      "IMG/🔥RETRO 4 MILITARY 🔥40-44🔥/🔥RETRO 4 MILITARY 🔥40-44🔥.png",
-      "IMG/🔥RETRO 4 MILITARY 🔥40-44🔥/🔥RETRO 4 MILITARY 🔥40-44🔥 parte lateral.png",
-      "IMG/🔥RETRO 4 MILITARY 🔥40-44🔥/🔥RETRO 4 MILITARY 🔥40-44🔥 parte atras.png",
+      "IMG/🔥RETRO 4 MILITARY 🔥40-44🔥/🔥RETRO 4 MILITARY 🔥40-44🔥.webp",
+      "IMG/🔥RETRO 4 MILITARY 🔥40-44🔥/🔥RETRO 4 MILITARY 🔥40-44🔥 parte lateral.webp",
+      "IMG/🔥RETRO 4 MILITARY 🔥40-44🔥/🔥RETRO 4 MILITARY 🔥40-44🔥 parte atras.webp",
     ],
     video: "IMG/🔥RETRO 4 MILITARY 🔥40-44🔥/video.mp4"
   },
@@ -58,9 +58,9 @@ const PRODUCTS = [
     tags: ["Lifestyle","Exclusivo","Limited"],
     description: "Blanco y negro perfecto en el Air Jordan 4. Clean, minimalista y siempre vigente. El tenis que combina con todo. Envío gratis · Con caja y obsequio incluido · Garantía incluida.",
     imgs: [
-      "IMG/🔥RETRO 4 🐼 🔥40-44🔥/🔥RETRO 4 🐼 🔥40-44🔥.png",
-      "IMG/🔥RETRO 4 🐼 🔥40-44🔥/🔥RETRO 4 🐼 🔥40-44🔥 parte lateral.png",
-      "IMG/🔥RETRO 4 🐼 🔥40-44🔥/🔥RETRO 4 🐼 🔥40-44🔥 parte atras.png",
+      "IMG/🔥RETRO 4 🐼 🔥40-44🔥/🔥RETRO 4 🐼 🔥40-44🔥.webp",
+      "IMG/🔥RETRO 4 🐼 🔥40-44🔥/🔥RETRO 4 🐼 🔥40-44🔥 parte lateral.webp",
+      "IMG/🔥RETRO 4 🐼 🔥40-44🔥/🔥RETRO 4 🐼 🔥40-44🔥 parte atras.webp",
     ],
     video: "IMG/🔥RETRO 4 🐼 🔥40-44🔥/video.mp4"
   },
@@ -70,9 +70,9 @@ const PRODUCTS = [
     tags: ["Lifestyle","Exclusivo","Limited"],
     description: "El Air Jordan 3 que le dio alas a una leyenda. Icono del juego redefinido para las calles, con la comodidad y el estilo que solo Jordan da. Envío gratis · Con caja y obsequio incluido · Garantía incluida.",
     imgs: [
-      "IMG/🔥JORDAN RETRO 3 EL VUELO 🔥36-39🔥40-45🔥/🔥JORDAN RETRO 3 EL VUELO 🔥36-39🔥40-45🔥.png",
-      "IMG/🔥JORDAN RETRO 3 EL VUELO 🔥36-39🔥40-45🔥/🔥JORDAN RETRO 3 EL VUELO 🔥36-39🔥40-45🔥 PARTE LATERAL.png",
-      "IMG/🔥JORDAN RETRO 3 EL VUELO 🔥36-39🔥40-45🔥/🔥JORDAN RETRO 3 EL VUELO 🔥36-39🔥40-45🔥 PARTE ATRAS.png",
+      "IMG/🔥JORDAN RETRO 3 EL VUELO 🔥36-39🔥40-45🔥/🔥JORDAN RETRO 3 EL VUELO 🔥36-39🔥40-45🔥.webp",
+      "IMG/🔥JORDAN RETRO 3 EL VUELO 🔥36-39🔥40-45🔥/🔥JORDAN RETRO 3 EL VUELO 🔥36-39🔥40-45🔥 PARTE LATERAL.webp",
+      "IMG/🔥JORDAN RETRO 3 EL VUELO 🔥36-39🔥40-45🔥/🔥JORDAN RETRO 3 EL VUELO 🔥36-39🔥40-45🔥 PARTE ATRAS.webp",
     ],
     video: "IMG/🔥JORDAN RETRO 3 EL VUELO 🔥36-39🔥40-45🔥/video.mp4"
   },
@@ -82,9 +82,9 @@ const PRODUCTS = [
     tags: ["Lifestyle","Exclusivo","Limited"],
     description: "Tonos tierra que equilibran lo natural y lo urbano. El AJ3 en su expresión más terrosa, ideal para un look auténtico y versátil. Envío gratis · Con caja y obsequio incluido · Garantía incluida.",
     imgs: [
-      "IMG/🔥RETRO 3 MÉDIUM OLIVE 🔥36-39🔥40-44🔥/🔥RETRO 3 MÉDIUM OLIVE 🔥36-39🔥40-44🔥.png",
-      "IMG/🔥RETRO 3 MÉDIUM OLIVE 🔥36-39🔥40-44🔥/🔥RETRO 3 MÉDIUM OLIVE 🔥36-39🔥40-44🔥 parte lateral.png",
-      "IMG/🔥RETRO 3 MÉDIUM OLIVE 🔥36-39🔥40-44🔥/🔥RETRO 3 MÉDIUM OLIVE 🔥36-39🔥40-44🔥 parte atras.png",
+      "IMG/🔥RETRO 3 MÉDIUM OLIVE 🔥36-39🔥40-44🔥/🔥RETRO 3 MÉDIUM OLIVE 🔥36-39🔥40-44🔥.webp",
+      "IMG/🔥RETRO 3 MÉDIUM OLIVE 🔥36-39🔥40-44🔥/🔥RETRO 3 MÉDIUM OLIVE 🔥36-39🔥40-44🔥 parte lateral.webp",
+      "IMG/🔥RETRO 3 MÉDIUM OLIVE 🔥36-39🔥40-44🔥/🔥RETRO 3 MÉDIUM OLIVE 🔥36-39🔥40-44🔥 parte atras.webp",
     ],
     video: "IMG/🔥RETRO 3 MÉDIUM OLIVE 🔥36-39🔥40-44🔥/video.mp4"
   },
@@ -94,9 +94,9 @@ const PRODUCTS = [
     tags: ["Lifestyle","Exclusivo","Limited"],
     description: "Feminidad y estilo urbano en un Air Jordan 3. Detalles florales vintage que hacen historia en el streetwear femenino. Envío gratis · Con caja y obsequio incluido · Garantía incluida.",
     imgs: [
-      "IMG/🔥RETRO 3 VINTAGE FLORAL 🔥36-39🔥/🔥RETRO 3 VINTAGE FLORAL 🔥36-39🔥.png",
-      "IMG/🔥RETRO 3 VINTAGE FLORAL 🔥36-39🔥/🔥RETRO 3 VINTAGE FLORAL 🔥36-39🔥 parte lateral.png",
-      "IMG/🔥RETRO 3 VINTAGE FLORAL 🔥36-39🔥/🔥RETRO 3 VINTAGE FLORAL 🔥36-39🔥 parte atras.png",
+      "IMG/🔥RETRO 3 VINTAGE FLORAL 🔥36-39🔥/🔥RETRO 3 VINTAGE FLORAL 🔥36-39🔥.webp",
+      "IMG/🔥RETRO 3 VINTAGE FLORAL 🔥36-39🔥/🔥RETRO 3 VINTAGE FLORAL 🔥36-39🔥 parte lateral.webp",
+      "IMG/🔥RETRO 3 VINTAGE FLORAL 🔥36-39🔥/🔥RETRO 3 VINTAGE FLORAL 🔥36-39🔥 parte atras.webp",
     ],
     video: "IMG/🔥RETRO 3 VINTAGE FLORAL 🔥36-39🔥/video.mp4"
   },
@@ -106,9 +106,9 @@ const PRODUCTS = [
     tags: ["Lifestyle","Exclusivo","Limited"],
     description: "Tonos cálidos de rust y sail que contrastan con la silueta clásica del AJ3. Suavidad y actitud en un solo tenis. Envío gratis · Con caja y obsequio incluido · Garantía incluida.",
     imgs: [
-      "IMG/🔥RETRO 3 SAIL RUST PINK 🔥36-39🔥/🔥RETRO 3 SAIL RUST PINK 🔥36-39🔥.png",
-      "IMG/🔥RETRO 3 SAIL RUST PINK 🔥36-39🔥/🔥RETRO 3 SAIL RUST PINK 🔥36-39🔥 parte lateral.png",
-      "IMG/🔥RETRO 3 SAIL RUST PINK 🔥36-39🔥/🔥RETRO 3 SAIL RUST PINK 🔥36-39🔥 parte atras.png",
+      "IMG/🔥RETRO 3 SAIL RUST PINK 🔥36-39🔥/🔥RETRO 3 SAIL RUST PINK 🔥36-39🔥.webp",
+      "IMG/🔥RETRO 3 SAIL RUST PINK 🔥36-39🔥/🔥RETRO 3 SAIL RUST PINK 🔥36-39🔥 parte lateral.webp",
+      "IMG/🔥RETRO 3 SAIL RUST PINK 🔥36-39🔥/🔥RETRO 3 SAIL RUST PINK 🔥36-39🔥 parte atras.webp",
     ],
     video: "IMG/🔥RETRO 3 SAIL RUST PINK 🔥36-39🔥/video.mp4"
   },
@@ -118,9 +118,9 @@ const PRODUCTS = [
     tags: ["Lifestyle","Exclusivo","Limited"],
     description: "La colaboración de lujo más codiciada del Air Jordan 3. Materiales premium y detalles exclusivos de la boutique A Ma Maniére. Alta costura en las calles. Envío gratis · Con caja y obsequio incluido · Garantía incluida.",
     imgs: [
-      "IMG/🔥RETRO 3 AMAMMANIERE 🔥36-40🔥40-45🔥/🔥RETRO 3 AMAMMANIERE 🔥36-40🔥40-45🔥.png",
-      "IMG/🔥RETRO 3 AMAMMANIERE 🔥36-40🔥40-45🔥/🔥RETRO 3 AMAMMANIERE 🔥36-40🔥40-45🔥 parte lateral.png",
-      "IMG/🔥RETRO 3 AMAMMANIERE 🔥36-40🔥40-45🔥/🔥RETRO 3 AMAMMANIERE 🔥36-40🔥40-45🔥 parte atras.png",
+      "IMG/🔥RETRO 3 AMAMMANIERE 🔥36-40🔥40-45🔥/🔥RETRO 3 AMAMMANIERE 🔥36-40🔥40-45🔥.webp",
+      "IMG/🔥RETRO 3 AMAMMANIERE 🔥36-40🔥40-45🔥/🔥RETRO 3 AMAMMANIERE 🔥36-40🔥40-45🔥 parte lateral.webp",
+      "IMG/🔥RETRO 3 AMAMMANIERE 🔥36-40🔥40-45🔥/🔥RETRO 3 AMAMMANIERE 🔥36-40🔥40-45🔥 parte atras.webp",
     ],
   },
   {
@@ -129,9 +129,9 @@ const PRODUCTS = [
     tags: ["Lifestyle","Exclusivo","Limited"],
     description: "Inspirado en el sol naciente japonés. Una edición con identidad cultural única que mezcla la estética oriental con el ADN legendario del Jordan 3. Envío gratis · Con caja y obsequio incluido · Garantía incluida.",
     imgs: [
-      "IMG/🔥RETRO 3 RISING SUN 🔥40-44🔥/🔥RETRO 3 RISING SUN 🔥40-44🔥.png",
-      "IMG/🔥RETRO 3 RISING SUN 🔥40-44🔥/🔥RETRO 3 RISING SUN 🔥40-44🔥 parte lateral.png",
-      "IMG/🔥RETRO 3 RISING SUN 🔥40-44🔥/🔥RETRO 3 RISING SUN 🔥40-44🔥 parte atras.png",
+      "IMG/🔥RETRO 3 RISING SUN 🔥40-44🔥/🔥RETRO 3 RISING SUN 🔥40-44🔥.webp",
+      "IMG/🔥RETRO 3 RISING SUN 🔥40-44🔥/🔥RETRO 3 RISING SUN 🔥40-44🔥 parte lateral.webp",
+      "IMG/🔥RETRO 3 RISING SUN 🔥40-44🔥/🔥RETRO 3 RISING SUN 🔥40-44🔥 parte atras.webp",
     ],
   },
   {
@@ -140,9 +140,9 @@ const PRODUCTS = [
     tags: ["Lifestyle","Exclusivo","Limited"],
     description: "Un Air Jordan 3 dedicado al amor con detalles en rojo y blanco. La edición más romántica del catálogo Jordan, perfecta para regalar o lucir. Envío gratis · Con caja y obsequio incluido · Garantía incluida.",
     imgs: [
-      "IMG/🔥RETRO 3 SAN VALENTÍN DAYS 🔥36-39🔥/🔥RETRO 3 SAN VALENTÍN DAYS 🔥36-39🔥.png",
-      "IMG/🔥RETRO 3 SAN VALENTÍN DAYS 🔥36-39🔥/🔥RETRO 3 SAN VALENTÍN DAYS 🔥36-39🔥 parte lateral.png",
-      "IMG/🔥RETRO 3 SAN VALENTÍN DAYS 🔥36-39🔥/🔥RETRO 3 SAN VALENTÍN DAYS 🔥36-39🔥 parte atras.png",
+      "IMG/🔥RETRO 3 SAN VALENTÍN DAYS 🔥36-39🔥/🔥RETRO 3 SAN VALENTÍN DAYS 🔥36-39🔥.webp",
+      "IMG/🔥RETRO 3 SAN VALENTÍN DAYS 🔥36-39🔥/🔥RETRO 3 SAN VALENTÍN DAYS 🔥36-39🔥 parte lateral.webp",
+      "IMG/🔥RETRO 3 SAN VALENTÍN DAYS 🔥36-39🔥/🔥RETRO 3 SAN VALENTÍN DAYS 🔥36-39🔥 parte atras.webp",
     ],
   },
   {
@@ -151,9 +151,9 @@ const PRODUCTS = [
     tags: ["Lifestyle","Exclusivo","Limited"],
     description: "Una de las colaboraciones más raras en la historia de Jordan Brand. Eminem x AJ3, edición de colección que pocos tienen y todos quieren. Envío gratis · Con caja y obsequio incluido · Garantía incluida.",
     imgs: [
-      "IMG/🔥RETRO 3 EMINEM 🔥36-39🔥40-44🔥/🔥RETRO 3 EMINEM 🔥36-39🔥40-44🔥.png",
-      "IMG/🔥RETRO 3 EMINEM 🔥36-39🔥40-44🔥/🔥RETRO 3 EMINEM 🔥36-39🔥40-44🔥 parte lateral.png",
-      "IMG/🔥RETRO 3 EMINEM 🔥36-39🔥40-44🔥/🔥RETRO 3 EMINEM 🔥36-39🔥40-44🔥 parte atras.png",
+      "IMG/🔥RETRO 3 EMINEM 🔥36-39🔥40-44🔥/🔥RETRO 3 EMINEM 🔥36-39🔥40-44🔥.webp",
+      "IMG/🔥RETRO 3 EMINEM 🔥36-39🔥40-44🔥/🔥RETRO 3 EMINEM 🔥36-39🔥40-44🔥 parte lateral.webp",
+      "IMG/🔥RETRO 3 EMINEM 🔥36-39🔥40-44🔥/🔥RETRO 3 EMINEM 🔥36-39🔥40-44🔥 parte atras.webp",
     ],
   },
   {
@@ -162,9 +162,9 @@ const PRODUCTS = [
     tags: ["Lifestyle","Exclusivo","Limited"],
     description: "La collab más hyped de Travis Scott con Jordan Brand. El Cactus Jack en la silueta del AJ3, sinónimo de exclusividad máxima y cultura pop. Envío gratis · Con caja y obsequio incluido · Garantía incluida.",
     imgs: [
-      "IMG/🔥RETRO 3 TRAVIS SCOTT🔥36-40🔥40-45🔥/🔥RETRO 3 TRAVIS SCOTT🔥36-40🔥40-45🔥.png",
-      "IMG/🔥RETRO 3 TRAVIS SCOTT🔥36-40🔥40-45🔥/🔥RETRO 3 TRAVIS SCOTT🔥36-40🔥40-45🔥 parte lateral.png",
-      "IMG/🔥RETRO 3 TRAVIS SCOTT🔥36-40🔥40-45🔥/🔥RETRO 3 TRAVIS SCOTT🔥36-40🔥40-45🔥 parte atras.png",
+      "IMG/🔥RETRO 3 TRAVIS SCOTT🔥36-40🔥40-45🔥/🔥RETRO 3 TRAVIS SCOTT🔥36-40🔥40-45🔥.webp",
+      "IMG/🔥RETRO 3 TRAVIS SCOTT🔥36-40🔥40-45🔥/🔥RETRO 3 TRAVIS SCOTT🔥36-40🔥40-45🔥 parte lateral.webp",
+      "IMG/🔥RETRO 3 TRAVIS SCOTT🔥36-40🔥40-45🔥/🔥RETRO 3 TRAVIS SCOTT🔥36-40🔥40-45🔥 parte atras.webp",
     ],
   },
   {
@@ -173,9 +173,9 @@ const PRODUCTS = [
     tags: ["Lifestyle","Exclusivo","Limited"],
     description: "Colorway crudo y natural en el AJ3. Tonos arena y muslin que hacen de este tenis un must-have atemporal para cualquier guardarropa. Envío gratis · Con caja y obsequio incluido · Garantía incluida.",
     imgs: [
-      "IMG/🔥JORDAN RETRO 3 MUSLIN 🔥36-40🔥40-45🔥/🔥JORDAN RETRO 3 MUSLIN 🔥36-40🔥40-45🔥.png",
-      "IMG/🔥JORDAN RETRO 3 MUSLIN 🔥36-40🔥40-45🔥/🔥JORDAN RETRO 3 MUSLIN 🔥36-40🔥40-45🔥  parte lateral.png",
-      "IMG/🔥JORDAN RETRO 3 MUSLIN 🔥36-40🔥40-45🔥/🔥JORDAN RETRO 3 MUSLIN 🔥36-40🔥40-45🔥  parte atras.png",
+      "IMG/🔥JORDAN RETRO 3 MUSLIN 🔥36-40🔥40-45🔥/🔥JORDAN RETRO 3 MUSLIN 🔥36-40🔥40-45🔥.webp",
+      "IMG/🔥JORDAN RETRO 3 MUSLIN 🔥36-40🔥40-45🔥/🔥JORDAN RETRO 3 MUSLIN 🔥36-40🔥40-45🔥  parte lateral.webp",
+      "IMG/🔥JORDAN RETRO 3 MUSLIN 🔥36-40🔥40-45🔥/🔥JORDAN RETRO 3 MUSLIN 🔥36-40🔥40-45🔥  parte atras.webp",
     ],
   },
   {
@@ -184,9 +184,9 @@ const PRODUCTS = [
     tags: ["Lifestyle","Exclusivo","Limited"],
     description: "Edición limitada inspirada en el zodiaco chino. Fusiona la silueta icónica del AJ3 con detalles exclusivos del Año del Tigre. Cultura, identidad y estilo asiático en cada paso. Envío gratis · Con caja y obsequio incluido · Garantía incluida.",
     imgs: [
-      "IMG/🔥RETRO 3 AÑO DEL TIGRE 🔥36-40🔥40-45🔥/🔥RETRO 3 AÑO DEL TIGRE 🔥36-40🔥40-45🔥.png",
-      "IMG/🔥RETRO 3 AÑO DEL TIGRE 🔥36-40🔥40-45🔥/🔥RETRO 3 AÑO DEL TIGRE 🔥36-40🔥40-45🔥 parte lateral.png",
-      "IMG/🔥RETRO 3 AÑO DEL TIGRE 🔥36-40🔥40-45🔥/🔥RETRO 3 AÑO DEL TIGRE 🔥36-40🔥40-45🔥 parte atras.png",
+      "IMG/🔥RETRO 3 AÑO DEL TIGRE 🔥36-40🔥40-45🔥/🔥RETRO 3 AÑO DEL TIGRE 🔥36-40🔥40-45🔥.webp",
+      "IMG/🔥RETRO 3 AÑO DEL TIGRE 🔥36-40🔥40-45🔥/🔥RETRO 3 AÑO DEL TIGRE 🔥36-40🔥40-45🔥 parte lateral.webp",
+      "IMG/🔥RETRO 3 AÑO DEL TIGRE 🔥36-40🔥40-45🔥/🔥RETRO 3 AÑO DEL TIGRE 🔥36-40🔥40-45🔥 parte atras.webp",
     ],
     video: "IMG/🔥RETRO 3 AÑO DEL TIGRE 🔥36-40🔥40-45🔥/video.mp4"
   },
@@ -196,8 +196,8 @@ const PRODUCTS = [
     tags: ["Lifestyle","Exclusivo","Limited"],
     description: "El colorway original y más legendario del Air Jordan 3. El tenis que revolucionó el juego en 1988 y sigue siendo referencia del sneaker culture. Envío gratis · Con caja y obsequio incluido · Garantía incluida.",
     imgs: [
-      "IMG/🔥RETRO 3 BLACK CEMENT🔥36-40🔥40-45🔥/🔥RETRO 3 BLACK CEMENT🔥36-40🔥40-45🔥.png",
-      "IMG/🔥RETRO 3 BLACK CEMENT🔥36-40🔥40-45🔥/🔥RETRO 3 BLACK CEMENT🔥36-40🔥40-45🔥 parte lateral.png",
+      "IMG/🔥RETRO 3 BLACK CEMENT🔥36-40🔥40-45🔥/🔥RETRO 3 BLACK CEMENT🔥36-40🔥40-45🔥.webp",
+      "IMG/🔥RETRO 3 BLACK CEMENT🔥36-40🔥40-45🔥/🔥RETRO 3 BLACK CEMENT🔥36-40🔥40-45🔥 parte lateral.webp",
     ],
   },
   {
@@ -206,9 +206,9 @@ const PRODUCTS = [
     tags: ["Lifestyle","Exclusivo","Limited"],
     description: "Edición especial en honor al Black History Month. El AJ3 con un mensaje cultural profundo y un diseño poderoso que rinde tributo a la herencia afroamericana. Envío gratis · Con caja y obsequio incluido · Garantía incluida.",
     imgs: [
-      "IMG/🔥RETRO 3 BLACK HISTORY 🔥36-40🔥40-45🔥/🔥RETRO 3 BLACK HISTORY 🔥36-40🔥40-45🔥.png",
-      "IMG/🔥RETRO 3 BLACK HISTORY 🔥36-40🔥40-45🔥/🔥RETRO 3 BLACK HISTORY 🔥36-40🔥40-45🔥 parte lateral.png",
-      "IMG/🔥RETRO 3 BLACK HISTORY 🔥36-40🔥40-45🔥/🔥RETRO 3 BLACK HISTORY 🔥36-40🔥40-45🔥 parte atras.png",
+      "IMG/🔥RETRO 3 BLACK HISTORY 🔥36-40🔥40-45🔥/🔥RETRO 3 BLACK HISTORY 🔥36-40🔥40-45🔥.webp",
+      "IMG/🔥RETRO 3 BLACK HISTORY 🔥36-40🔥40-45🔥/🔥RETRO 3 BLACK HISTORY 🔥36-40🔥40-45🔥 parte lateral.webp",
+      "IMG/🔥RETRO 3 BLACK HISTORY 🔥36-40🔥40-45🔥/🔥RETRO 3 BLACK HISTORY 🔥36-40🔥40-45🔥 parte atras.webp",
     ],
   },
   {
@@ -217,9 +217,9 @@ const PRODUCTS = [
     tags: ["Lifestyle","Exclusivo","Limited"],
     description: "Parte del icónico Fear Pack de Jordan Brand. Uno de los sets más codiciados de la historia, con detalles oscuros y una energía que pocos tenis transmiten. Envío gratis · Con caja y obsequio incluido · Garantía incluida.",
     imgs: [
-      "IMG/🔥RETRO 3 FEAR PACK 🔥36-40🔥40-45🔥/🔥RETRO 3 FEAR PACK 🔥36-40🔥40-45🔥.png",
-      "IMG/🔥RETRO 3 FEAR PACK 🔥36-40🔥40-45🔥/🔥RETRO 3 FEAR PACK 🔥36-40🔥40-45🔥 parte lateral.png",
-      "IMG/🔥RETRO 3 FEAR PACK 🔥36-40🔥40-45🔥/🔥RETRO 3 FEAR PACK 🔥36-40🔥40-45🔥 parte atras.png",
+      "IMG/🔥RETRO 3 FEAR PACK 🔥36-40🔥40-45🔥/🔥RETRO 3 FEAR PACK 🔥36-40🔥40-45🔥.webp",
+      "IMG/🔥RETRO 3 FEAR PACK 🔥36-40🔥40-45🔥/🔥RETRO 3 FEAR PACK 🔥36-40🔥40-45🔥 parte lateral.webp",
+      "IMG/🔥RETRO 3 FEAR PACK 🔥36-40🔥40-45🔥/🔥RETRO 3 FEAR PACK 🔥36-40🔥40-45🔥 parte atras.webp",
     ],
   },
   {
@@ -228,9 +228,9 @@ const PRODUCTS = [
     tags: ["Lifestyle","Exclusivo","Limited"],
     description: "La collab de J Balvin con Jordan Brand en el AJ3. Colores vibrantes que fusionan el reggaetón, la cultura latina y el mundo sneaker en un solo tenis. Envío gratis · Con caja y obsequio incluido · Garantía incluida.",
     imgs: [
-      "IMG/🔥RETRO 3 J BALVIN 🔥36-40🔥40-45🔥/🔥RETRO 3 J BALVIN 🔥36-40🔥40-45🔥.png",
-      "IMG/🔥RETRO 3 J BALVIN 🔥36-40🔥40-45🔥/🔥RETRO 3 J BALVIN 🔥36-40🔥40-45🔥 parte lateral.png",
-      "IMG/🔥RETRO 3 J BALVIN 🔥36-40🔥40-45🔥/🔥RETRO 3 J BALVIN 🔥36-40🔥40-45🔥 parte atras.png",
+      "IMG/🔥RETRO 3 J BALVIN 🔥36-40🔥40-45🔥/🔥RETRO 3 J BALVIN 🔥36-40🔥40-45🔥.webp",
+      "IMG/🔥RETRO 3 J BALVIN 🔥36-40🔥40-45🔥/🔥RETRO 3 J BALVIN 🔥36-40🔥40-45🔥 parte lateral.webp",
+      "IMG/🔥RETRO 3 J BALVIN 🔥36-40🔥40-45🔥/🔥RETRO 3 J BALVIN 🔥36-40🔥40-45🔥 parte atras.webp",
     ],
   },
   {
@@ -239,9 +239,9 @@ const PRODUCTS = [
     tags: ["Lifestyle","Exclusivo","Limited"],
     description: "El artista urbano más cotizado del mundo se une al AJ3. Una obra de arte que se usa en los pies. KAWS x Jordan, collab que define una generación. Envío gratis · Con caja y obsequio incluido · Garantía incluida.",
     imgs: [
-      "IMG/🔥RETRO 3 KAWS 🔥36-40🔥40-45🔥/🔥RETRO 3 KAWS 🔥36-40🔥40-45🔥.png",
-      "IMG/🔥RETRO 3 KAWS 🔥36-40🔥40-45🔥/🔥RETRO 3 KAWS 🔥36-40🔥40-45🔥 parte lateral.png",
-      "IMG/🔥RETRO 3 KAWS 🔥36-40🔥40-45🔥/🔥RETRO 3 KAWS 🔥36-40🔥40-45🔥 parte atras.png",
+      "IMG/🔥RETRO 3 KAWS 🔥36-40🔥40-45🔥/🔥RETRO 3 KAWS 🔥36-40🔥40-45🔥.webp",
+      "IMG/🔥RETRO 3 KAWS 🔥36-40🔥40-45🔥/🔥RETRO 3 KAWS 🔥36-40🔥40-45🔥 parte lateral.webp",
+      "IMG/🔥RETRO 3 KAWS 🔥36-40🔥40-45🔥/🔥RETRO 3 KAWS 🔥36-40🔥40-45🔥 parte atras.webp",
     ],
   },
   {
@@ -250,9 +250,9 @@ const PRODUCTS = [
     tags: ["Lifestyle","Exclusivo","Limited"],
     description: "Edición especial inspirada en la cultura coreana. Detalles únicos que mezclan el ADN del AJ3 con la estética del K-Style. Rare y difícil de conseguir. Envío gratis · Con caja y obsequio incluido · Garantía incluida.",
     imgs: [
-      "IMG/🔥RETRO 3 KOREA 🔥40-45🔥/🔥RETRO 3 KOREA 🔥40-45🔥.png",
-      "IMG/🔥RETRO 3 KOREA 🔥40-45🔥/🔥RETRO 3 KOREA 🔥40-45🔥 parte lateral.png",
-      "IMG/🔥RETRO 3 KOREA 🔥40-45🔥/🔥RETRO 3 KOREA 🔥40-45🔥 parte atras.png",
+      "IMG/🔥RETRO 3 KOREA 🔥40-45🔥/🔥RETRO 3 KOREA 🔥40-45🔥.webp",
+      "IMG/🔥RETRO 3 KOREA 🔥40-45🔥/🔥RETRO 3 KOREA 🔥40-45🔥 parte lateral.webp",
+      "IMG/🔥RETRO 3 KOREA 🔥40-45🔥/🔥RETRO 3 KOREA 🔥40-45🔥 parte atras.webp",
     ],
   },
   {
@@ -261,9 +261,9 @@ const PRODUCTS = [
     tags: ["Lifestyle","Exclusivo","Limited"],
     description: "Paleta verde jade que evoca suerte y exclusividad. Un AJ3 diferente a todo lo que has visto, con una energía fresca y única en el street style. Envío gratis · Con caja y obsequio incluido · Garantía incluida.",
     imgs: [
-      "IMG/🔥RETRO 3 LUCKY SHORT 🔥36-40🔥40-45🔥/🔥RETRO 3 LUCKY SHORT 🔥36-40🔥40-45🔥.png",
-      "IMG/🔥RETRO 3 LUCKY SHORT 🔥36-40🔥40-45🔥/🔥RETRO 3 LUCKY SHORT 🔥36-40🔥40-45🔥 parte lateral.png",
-      "IMG/🔥RETRO 3 LUCKY SHORT 🔥36-40🔥40-45🔥/🔥RETRO 3 LUCKY SHORT 🔥36-40🔥40-45🔥 parte atras.png",
+      "IMG/🔥RETRO 3 LUCKY SHORT 🔥36-40🔥40-45🔥/🔥RETRO 3 LUCKY SHORT 🔥36-40🔥40-45🔥.webp",
+      "IMG/🔥RETRO 3 LUCKY SHORT 🔥36-40🔥40-45🔥/🔥RETRO 3 LUCKY SHORT 🔥36-40🔥40-45🔥 parte lateral.webp",
+      "IMG/🔥RETRO 3 LUCKY SHORT 🔥36-40🔥40-45🔥/🔥RETRO 3 LUCKY SHORT 🔥36-40🔥40-45🔥 parte atras.webp",
     ],
   },
   {
@@ -272,9 +272,9 @@ const PRODUCTS = [
     tags: ["Lifestyle","Exclusivo","Limited"],
     description: "Elegancia y moda en el Air Jordan 3. Influenciado por el mundo de la alta costura con detalles sofisticados que elevan la silueta clásica a otro nivel. Envío gratis · Con caja y obsequio incluido · Garantía incluida.",
     imgs: [
-      "IMG/🔥RETRO 3 NINA CHANNEL 🔥36-40🔥40-45🔥/🔥RETRO 3 NINA CHANNEL 🔥36-40🔥40-45🔥.png",
-      "IMG/🔥RETRO 3 NINA CHANNEL 🔥36-40🔥40-45🔥/🔥RETRO 3 NINA CHANNEL 🔥36-40🔥40-45🔥 parte lateral.png",
-      "IMG/🔥RETRO 3 NINA CHANNEL 🔥36-40🔥40-45🔥/🔥RETRO 3 NINA CHANNEL 🔥36-40🔥40-45🔥 parte atres.png",
+      "IMG/🔥RETRO 3 NINA CHANNEL 🔥36-40🔥40-45🔥/🔥RETRO 3 NINA CHANNEL 🔥36-40🔥40-45🔥.webp",
+      "IMG/🔥RETRO 3 NINA CHANNEL 🔥36-40🔥40-45🔥/🔥RETRO 3 NINA CHANNEL 🔥36-40🔥40-45🔥 parte lateral.webp",
+      "IMG/🔥RETRO 3 NINA CHANNEL 🔥36-40🔥40-45🔥/🔥RETRO 3 NINA CHANNEL 🔥36-40🔥40-45🔥 parte atres.webp",
     ],
   },
   {
@@ -283,9 +283,9 @@ const PRODUCTS = [
     tags: ["Lifestyle","Exclusivo","Limited"],
     description: "Tonos oscuros y suaves que definen el lujo urbano. El AJ3 en su versión más misteriosa y sofisticada, para quienes saben que menos es más. Envío gratis · Con caja y obsequio incluido · Garantía incluida.",
     imgs: [
-      "IMG/🔥RETRO 3 OFF NOIR 🔥36-40🔥40-45🔥/🔥RETRO 3 OFF NOIR 🔥36-40🔥40-45🔥.png",
-      "IMG/🔥RETRO 3 OFF NOIR 🔥36-40🔥40-45🔥/🔥RETRO 3 OFF NOIR 🔥36-40🔥40-45🔥 parte lateral.png",
-      "IMG/🔥RETRO 3 OFF NOIR 🔥36-40🔥40-45🔥/🔥RETRO 3 OFF NOIR 🔥36-40🔥40-45🔥 parte atras.png",
+      "IMG/🔥RETRO 3 OFF NOIR 🔥36-40🔥40-45🔥/🔥RETRO 3 OFF NOIR 🔥36-40🔥40-45🔥.webp",
+      "IMG/🔥RETRO 3 OFF NOIR 🔥36-40🔥40-45🔥/🔥RETRO 3 OFF NOIR 🔥36-40🔥40-45🔥 parte lateral.webp",
+      "IMG/🔥RETRO 3 OFF NOIR 🔥36-40🔥40-45🔥/🔥RETRO 3 OFF NOIR 🔥36-40🔥40-45🔥 parte atras.webp",
     ],
   },
   {
@@ -294,9 +294,9 @@ const PRODUCTS = [
     tags: ["Lifestyle","Exclusivo","Limited"],
     description: "Verde bosque profundo en la silueta más icónica de Jordan. Un colorway natural y fresco que conecta con lo auténtico y destaca en cualquier look. Envío gratis · Con caja y obsequio incluido · Garantía incluida.",
     imgs: [
-      "IMG/🔥RETRO 3 PINE GREEN 🔥40-45🔥/🔥RETRO 3 PINE GREEN 🔥40-45🔥.png",
-      "IMG/🔥RETRO 3 PINE GREEN 🔥40-45🔥/🔥RETRO 3 PINE GREEN 🔥40-45🔥 parte lateral.png",
-      "IMG/🔥RETRO 3 PINE GREEN 🔥40-45🔥/🔥RETRO 3 PINE GREEN 🔥40-45🔥 parte atras.png",
+      "IMG/🔥RETRO 3 PINE GREEN 🔥40-45🔥/🔥RETRO 3 PINE GREEN 🔥40-45🔥.webp",
+      "IMG/🔥RETRO 3 PINE GREEN 🔥40-45🔥/🔥RETRO 3 PINE GREEN 🔥40-45🔥 parte lateral.webp",
+      "IMG/🔥RETRO 3 PINE GREEN 🔥40-45🔥/🔥RETRO 3 PINE GREEN 🔥40-45🔥 parte atras.webp",
     ],
   },
   {
@@ -305,9 +305,9 @@ const PRODUCTS = [
     tags: ["Lifestyle","Exclusivo","Limited"],
     description: "Blanco puro en el Air Jordan 3. Minimalismo total para quienes dejan hablar el silencio con estilo. Limpio, versátil y eterno. Envío gratis · Con caja y obsequio incluido · Garantía incluida.",
     imgs: [
-      "IMG/🔥RETRO 3 PURE WHITE 🔥36-40🔥40-45🔥/🔥RETRO 3 PURE WHITE 🔥36-40🔥40-45🔥.png",
-      "IMG/🔥RETRO 3 PURE WHITE 🔥36-40🔥40-45🔥/🔥RETRO 3 PURE WHITE 🔥36-40🔥40-45🔥 parte lateral.png",
-      "IMG/🔥RETRO 3 PURE WHITE 🔥36-40🔥40-45🔥/🔥RETRO 3 PURE WHITE 🔥36-40🔥40-45🔥 parte atras.png",
+      "IMG/🔥RETRO 3 PURE WHITE 🔥36-40🔥40-45🔥/🔥RETRO 3 PURE WHITE 🔥36-40🔥40-45🔥.webp",
+      "IMG/🔥RETRO 3 PURE WHITE 🔥36-40🔥40-45🔥/🔥RETRO 3 PURE WHITE 🔥36-40🔥40-45🔥 parte lateral.webp",
+      "IMG/🔥RETRO 3 PURE WHITE 🔥36-40🔥40-45🔥/🔥RETRO 3 PURE WHITE 🔥36-40🔥40-45🔥 parte atras.webp",
     ],
   },
   {
@@ -316,9 +316,9 @@ const PRODUCTS = [
     tags: ["Lifestyle","Exclusivo","Limited"],
     description: "El espíritu original del AJ3 en una versión de edición limitada. Rare Air porque lo que llevas en los pies no lo tiene cualquiera. Exclusivo por naturaleza. Envío gratis · Con caja y obsequio incluido · Garantía incluida.",
     imgs: [
-      "IMG/🔥RETRO 3 RARE AIR 🔥36-40🔥40-45🔥/🔥RETRO 3 RARE AIR 🔥36-40🔥40-45🔥.png",
-      "IMG/🔥RETRO 3 RARE AIR 🔥36-40🔥40-45🔥/🔥RETRO 3 RARE AIR 🔥36-40🔥40-45🔥 parte lateral.png",
-      "IMG/🔥RETRO 3 RARE AIR 🔥36-40🔥40-45🔥/🔥RETRO 3 RARE AIR 🔥36-40🔥40-45🔥 parte atras.png",
+      "IMG/🔥RETRO 3 RARE AIR 🔥36-40🔥40-45🔥/🔥RETRO 3 RARE AIR 🔥36-40🔥40-45🔥.webp",
+      "IMG/🔥RETRO 3 RARE AIR 🔥36-40🔥40-45🔥/🔥RETRO 3 RARE AIR 🔥36-40🔥40-45🔥 parte lateral.webp",
+      "IMG/🔥RETRO 3 RARE AIR 🔥36-40🔥40-45🔥/🔥RETRO 3 RARE AIR 🔥36-40🔥40-45🔥 parte atras.webp",
     ],
   },
   {
@@ -327,9 +327,9 @@ const PRODUCTS = [
     tags: ["Lifestyle","Exclusivo","Limited"],
     description: "La versión más oscura de la collab Travis Scott x Jordan. Cactus Jack en negro total. Exclusividad y actitud en su máxima expresión. Envío gratis · Con caja y obsequio incluido · Garantía incluida.",
     imgs: [
-      "IMG/🔥RETRO 3 TRAVIS BLACK 🔥36-40🔥40-45🔥/🔥RETRO 3 TRAVIS BLACK 🔥36-40🔥40-45🔥.png",
-      "IMG/🔥RETRO 3 TRAVIS BLACK 🔥36-40🔥40-45🔥/🔥RETRO 3 TRAVIS BLACK 🔥36-40🔥40-45🔥 parte lateral.png",
-      "IMG/🔥RETRO 3 TRAVIS BLACK 🔥36-40🔥40-45🔥/🔥RETRO 3 TRAVIS BLACK 🔥36-40🔥40-45🔥 parte atras.png",
+      "IMG/🔥RETRO 3 TRAVIS BLACK 🔥36-40🔥40-45🔥/🔥RETRO 3 TRAVIS BLACK 🔥36-40🔥40-45🔥.webp",
+      "IMG/🔥RETRO 3 TRAVIS BLACK 🔥36-40🔥40-45🔥/🔥RETRO 3 TRAVIS BLACK 🔥36-40🔥40-45🔥 parte lateral.webp",
+      "IMG/🔥RETRO 3 TRAVIS BLACK 🔥36-40🔥40-45🔥/🔥RETRO 3 TRAVIS BLACK 🔥36-40🔥40-45🔥 parte atras.webp",
     ],
   },
   {
@@ -338,9 +338,9 @@ const PRODUCTS = [
     tags: ["Lifestyle","Exclusivo","Limited"],
     description: "Tono violeta mineral en la silueta clásica del AJ3. Un colorway único que mezcla feminidad y actitud urbana. Difícil de encontrar y fácil de amar. Envío gratis · Con caja y obsequio incluido · Garantía incluida.",
     imgs: [
-      "IMG/🔥RETRO 3 VIOLET ORE 🔥36-39🔥/🔥RETRO 3 VIOLET ORE 🔥36-39🔥.png",
-      "IMG/🔥RETRO 3 VIOLET ORE 🔥36-39🔥/🔥RETRO 3 VIOLET ORE 🔥36-39🔥 parte lateral.png",
-      "IMG/🔥RETRO 3 VIOLET ORE 🔥36-39🔥/🔥RETRO 3 VIOLET ORE 🔥36-39🔥 parte atras.png",
+      "IMG/🔥RETRO 3 VIOLET ORE 🔥36-39🔥/🔥RETRO 3 VIOLET ORE 🔥36-39🔥.webp",
+      "IMG/🔥RETRO 3 VIOLET ORE 🔥36-39🔥/🔥RETRO 3 VIOLET ORE 🔥36-39🔥 parte lateral.webp",
+      "IMG/🔥RETRO 3 VIOLET ORE 🔥36-39🔥/🔥RETRO 3 VIOLET ORE 🔥36-39🔥 parte atras.webp",
     ],
   },
 ];

@@ -12,3 +12,9 @@ Thumbs.db
 imagenes/Captura*
 preview.bat
 HISTORIAL_PROYECTO.md
+
+# Imágenes fuente (se sirven en WebP)
+IMG/**/*.png
+IMG/**/*.jpg
+IMG/**/*.jpeg
+IMG/**/*.mp4
