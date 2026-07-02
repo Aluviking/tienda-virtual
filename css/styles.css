@@ -507,7 +507,9 @@ button { cursor: pointer; background: none; border: none; font-family: inherit; 
   .hero-ghost { display: none; }
   .hero-season-tag { display: none; }
   .hero-heading { display: none; }
-  .hero-tagline { font-size: 13px; letter-spacing: 0.06em; color: rgba(255,255,255,0.8); margin-bottom: 14px; }
+  .hero-tagline { font-size: 13px; letter-spacing: 0.06em; color: rgba(255,255,255,0.95); margin-bottom: 14px; }
+  .hero-bg-img { object-position: center top; }
+  .hero-overlay { background: linear-gradient(to bottom, rgba(0,0,0,0.30) 0%, rgba(0,0,0,0.12) 30%, rgba(0,0,0,0.75) 65%, rgba(0,0,0,0.97) 100%); }
   .hero-actions { flex-direction: row; gap: 10px; }
   .hero-actions .btn-pill { flex: 1; text-align: center; justify-content: center; padding: 13px 10px; font-size: 11px; }
   .hero-actions .btn-pill-ghost { background: rgba(0,0,0,0.4); border-color: rgba(255,255,255,0.6); }
@@ -534,7 +536,7 @@ button { cursor: pointer; background: none; border: none; font-family: inherit; 
 
   /* Cards */
   .cards-section { padding: 32px 0; }
-  .cards-grid { padding: 8px 12px 12px; grid-template-columns: repeat(2,1fr); gap: 8px; }
+  .cards-grid { padding: 8px 12px 12px; grid-template-columns: 1fr; gap: 12px; }
   .section-header[style] { padding-left: 16px !important; padding-right: 16px !important; }
 
   /* Filtros */
@@ -616,7 +618,7 @@ button { cursor: pointer; background: none; border: none; font-family: inherit; 
 /* ---- MÓVIL PEQUEÑO (≤480px) ---- */
 @media (max-width: 480px) {
   .hero-tagline { font-size: 12px; }
-  .cards-grid { grid-template-columns: repeat(2,1fr); gap: 6px; padding: 8px 10px; }
+  .cards-grid { grid-template-columns: 1fr; gap: 12px; padding: 8px 12px; }
   .section-title { font-size: clamp(28px, 8vw, 48px); }
   .collage-grid { grid-auto-rows: 44vw; }
   .triptych-section .tri-panel { min-height: 72vw; }

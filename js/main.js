@@ -1259,19 +1259,15 @@ function submitCheckout() {
   msg += `Dirección: ${address}`;
 
   const waLink = `https://wa.me/${BLVD_WA}?text=${encodeURIComponent(msg)}`;
-  const waBtn = document.getElementById('checkoutWA');
-  if (waBtn) waBtn.href = waLink;
 
-  /* Mostrar éxito */
-  const form = document.getElementById('checkoutForm');
-  const succ = document.getElementById('checkoutSuccess');
-  if (form) form.style.display = 'none';
-  if (succ) succ.style.display = 'flex';
+  /* Abrir WhatsApp de inmediato */
+  window.open(waLink, '_blank');
 
-  /* Limpiar carrito */
+  /* Limpiar carrito y cerrar */
   saveCart([]);
   updateCartCount();
   renderCart();
+  closeCheckout();
 }
 
 function initCheckout() {
