@@ -1260,8 +1260,14 @@ function submitCheckout() {
 
   const waLink = `https://wa.me/${BLVD_WA}?text=${encodeURIComponent(msg)}`;
 
-  /* Abrir WhatsApp de inmediato */
-  window.open(waLink, '_blank');
+  /* Abrir WhatsApp de inmediato — anchor click evita bloqueo de popups en móvil */
+  const _a = document.createElement('a');
+  _a.href = waLink;
+  _a.target = '_blank';
+  _a.rel = 'noopener noreferrer';
+  document.body.appendChild(_a);
+  _a.click();
+  document.body.removeChild(_a);
 
   /* Limpiar carrito y cerrar */
   saveCart([]);
