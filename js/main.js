@@ -798,10 +798,20 @@ function buildWACartMsg() {
   return msg;
 }
 
+function openWA(url) {
+  const _a = document.createElement('a');
+  _a.href = url;
+  _a.target = '_blank';
+  _a.rel = 'noopener noreferrer';
+  document.body.appendChild(_a);
+  _a.click();
+  document.body.removeChild(_a);
+}
+
 function openWACart() {
   const msg = buildWACartMsg();
   if (!msg) { showToast('Tu carrito está vacío'); return; }
-  window.open(`https://wa.me/${BLVD_WA}?text=${encodeURIComponent(msg)}`, '_blank');
+  openWA(`https://wa.me/${BLVD_WA}?text=${encodeURIComponent(msg)}`);
 }
 
 function initCart() {
@@ -820,12 +830,12 @@ function initCart() {
     e.preventDefault();
     const msg = buildWACartMsg();
     const text = msg || '¡Hola UnderShoes! 👟 Quiero conocer más sobre sus productos.';
-    window.open(`https://wa.me/${BLVD_WA}?text=${encodeURIComponent(text)}`, '_blank');
+    openWA(`https://wa.me/${BLVD_WA}?text=${encodeURIComponent(text)}`);
   });
   /* Link WhatsApp footer */
   document.getElementById('ftWaLink')?.addEventListener('click', e => {
     e.preventDefault();
-    window.open(`https://wa.me/${BLVD_WA}?text=${encodeURIComponent('¡Hola UnderShoes! 👟 Quiero ver el catálogo y hacer un pedido.')}`, '_blank');
+    openWA(`https://wa.me/${BLVD_WA}?text=${encodeURIComponent('¡Hola UnderShoes! 👟 Quiero ver el catálogo y hacer un pedido.')}`);
   });
   updateCartCount();
   renderCart();
@@ -958,6 +968,18 @@ function initMobProduct() {
     if (!currentMobSize) { showToast('Selecciona una talla primero'); return; }
     addToCart(currentMobProduct, currentMobSize, currentMobQty);
     showToast(`${currentMobProduct.name} agregado al carrito`);
+    closeMobProduct();
+  });
+
+  document.getElementById('mobProdContinue')?.addEventListener('click', () => {
+    closeMobProduct();
+  });
+
+  document.getElementById('mobProdWA')?.addEventListener('click', () => {
+    if (!currentMobSize) { showToast('Selecciona una talla primero'); return; }
+    addToCart(currentMobProduct, currentMobSize, currentMobQty);
+    const msg = buildWACartMsg();
+    openWA(`https://wa.me/${BLVD_WA}?text=${encodeURIComponent(msg)}`);
     closeMobProduct();
   });
 }
@@ -1121,6 +1143,34 @@ function initModal() {
     showToast(`${currentModalProduct.name} — Talla ${selectedBtn.textContent} ×${currentModalQty} agregado`);
     closeModal();
     setTimeout(openCart, 350);
+  });
+
+  /* Seguir comprando — cerrar modal */
+  document.querySelector('.md-continue')?.addEventListener('click', () => {
+    closeModal();
+  });
+
+  /* Pagar — agregar al carrito e ir directo a WhatsApp */
+  document.querySelector('.md-wa-cta')?.addEventListener('click', () => {
+    if (!currentModalProduct) return;
+    const selectedBtn = document.querySelector('.md-size-btn.selected');
+    if (!selectedBtn) {
+      const sizesEl = document.getElementById('mdSizes');
+      sizesEl?.classList.add('shake-anim');
+      setTimeout(() => sizesEl?.classList.remove('shake-anim'), 400);
+      const lbl = document.querySelector('.md-sizes-lbl');
+      if (lbl) {
+        const orig = lbl.textContent;
+        lbl.textContent = '⚠ Selecciona una talla primero';
+        lbl.style.color = '#ff5555';
+        setTimeout(() => { lbl.textContent = orig; lbl.style.color = ''; }, 2500);
+      }
+      return;
+    }
+    addToCart(currentModalProduct, +selectedBtn.textContent, currentModalQty);
+    const msg = buildWACartMsg();
+    openWA(`https://wa.me/${BLVD_WA}?text=${encodeURIComponent(msg)}`);
+    closeModal();
   });
 }
 

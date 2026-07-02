@@ -450,6 +450,10 @@ button { cursor: pointer; background: none; border: none; font-family: inherit; 
 .md-qty-btn:hover { background: rgba(255,255,255,0.13); }
 .md-qty-val { min-width: 34px; text-align: center; font-size: 13px; font-weight: 600; color: var(--white); }
 .md-cta { width: 100%; justify-content: center; padding: 10px; font-size: 12px; }
+.md-footer-row { display: flex; gap: 7px; margin-top: 7px; }
+.md-footer-row .btn-pill { flex: 1; justify-content: center; padding: 9px 8px; font-size: 11px; }
+.md-wa-cta { background: #25D366; color: #fff; border: none; font-weight: 700; }
+.md-wa-cta:hover { background: #1ebe5d; }
 .md-tags { display: flex; flex-wrap: wrap; gap: 4px; margin-bottom: 6px; }
 .md-tag { padding: 2px 8px; border-radius: var(--r-pill); border: 1px solid rgba(255,255,255,0.1); font-size: 7px; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.4); background: rgba(255,255,255,0.04); }
 /* Perks — destacados */
@@ -1233,6 +1237,29 @@ select:focus-visible {
     box-shadow: 0 8px 32px rgba(28,111,255,0.4);
   }
   .mob-prod-cta.ready:active { transform: scale(0.98); }
+
+  /* Fila secundaria: Seguir comprando + Pagar */
+  .mob-prod-footer-row {
+    display: flex; gap: 10px; margin-top: 10px;
+  }
+  .mob-prod-continue {
+    flex: 1; padding: 13px 8px;
+    border-radius: var(--r-pill);
+    background: rgba(255,255,255,0.06);
+    color: rgba(255,255,255,0.75);
+    font-size: 12px; font-weight: 600; letter-spacing: 0.05em;
+    border: 1.5px solid rgba(255,255,255,0.12);
+    cursor: pointer; transition: background 0.2s;
+  }
+  .mob-prod-continue:active { background: rgba(255,255,255,0.12); }
+  .mob-prod-wa {
+    flex: 1; padding: 13px 8px;
+    border-radius: var(--r-pill);
+    background: #25D366; color: #fff;
+    font-size: 13px; font-weight: 700; letter-spacing: 0.07em;
+    border: none; cursor: pointer; transition: background 0.2s;
+  }
+  .mob-prod-wa:active { background: #1ebe5d; transform: scale(0.98); }
 }
 
 /* ================================================
