@@ -1379,8 +1379,6 @@ function initCheckout() {
     if (e.target === e.currentTarget) closeCheckout();
   });
   document.getElementById('checkoutSubmit')?.addEventListener('click', submitCheckout);
-  /* "Finalizar Compra" en el panel del carrito */
-  document.querySelector('.cart-checkout-btn')?.addEventListener('click', openCheckout);
   document.addEventListener('keydown', e => { if (e.key === 'Escape') closeCheckout(); });
 }
 
