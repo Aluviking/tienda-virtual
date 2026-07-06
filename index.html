@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>UnderShoes — Urban Footwear</title>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="shortcut icon" href="/favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -11,6 +13,13 @@
   <link rel="preload" as="image" href="IMG/BANNERS/BANNERS HERO 5.webp" media="(min-width: 769px)" fetchpriority="high">
   <link rel="preload" as="image" href="IMG/BANNERS/BANNERS HERO MOBIL 5.webp" media="(max-width: 768px)" fetchpriority="high">
   <link rel="stylesheet" href="css/styles.css">
+  <!-- PWA -->
+  <link rel="manifest" href="/manifest.json">
+  <meta name="theme-color" content="#02081e">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="UnderShoes">
+  <link rel="apple-touch-icon" href="/icons/icon-192.png">
 </head>
 <body>
 
@@ -309,11 +318,6 @@
         <div class="ft-brand">
           <div class="ft-logo">Under<span>Shoes</span></div>
           <p class="ft-tag">Zapatillas Jordan auténticas<br>Tu par te está esperando</p>
-          <div class="ft-socials">
-            <a href="#" class="ft-social" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="1.5"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/></svg></a>
-            <a href="#" class="ft-social" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="none"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-            <a href="#" class="ft-social" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="none"><path d="M21 12a9 9 0 1 1-9-9 9 9 0 0 1 9 9z" stroke="currentColor" stroke-width="1.5"/><path d="M9 10c0 3 2 5 5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></a>
-          </div>
         </div>
         <div class="ft-nav">
           <div class="ft-col">
@@ -652,5 +656,20 @@
   </div>
 
   <script src="js/main.js" defer></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      // Detectar si ya había un SW activo antes de registrar
+      const hadController = !!navigator.serviceWorker.controller;
+
+      // Cuando el SW cambia (nueva versión activada), recargar la página
+      navigator.serviceWorker.addEventListener('controllerchange', () => {
+        if (hadController) window.location.reload();
+      });
+
+      navigator.serviceWorker.register('/sw.js').catch(err =>
+        console.warn('SW no registrado:', err)
+      );
+    }
+  </script>
 </body>
 </html>
