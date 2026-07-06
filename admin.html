@@ -164,7 +164,7 @@
   <div class="top-bar">
     <div class="top-bar-brand">Under<span>Shoes</span> Admin</div>
     <div style="display:flex;gap:8px;align-items:center">
-      <button class="btn-logout" id="btnPrueba" onclick="sendPrueba()">Prueba</button>
+      <button class="btn-logout" id="btnModo" onclick="togglePrueba()">Modo Prueba: OFF</button>
       <button class="btn-logout" onclick="recargar()">Actualizar</button>
       <button class="btn-logout" onclick="logout()">Cerrar sesión</button>
     </div>
@@ -419,22 +419,24 @@
     });
   });
 
-  async function sendPrueba() {
-    const btn = document.getElementById('btnPrueba');
-    btn.textContent = 'Enviando...';
-    btn.disabled = true;
-    try {
-      await fetch('/api/track', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ event_type: 'prueba' })
-      });
-      await recargar();
-    } finally {
-      btn.textContent = 'Prueba';
-      btn.disabled = false;
-    }
+  function updateModoBtn() {
+    const btn = document.getElementById('btnModo');
+    if (!btn) return;
+    const on = localStorage.getItem('us_prueba') === '1';
+    btn.textContent   = on ? 'Modo Prueba: ON' : 'Modo Prueba: OFF';
+    btn.style.color   = on ? '#25D366' : '';
+    btn.style.borderColor = on ? '#25D366' : '';
   }
+
+  function togglePrueba() {
+    const on = localStorage.getItem('us_prueba') === '1';
+    if (on) localStorage.removeItem('us_prueba');
+    else    localStorage.setItem('us_prueba', '1');
+    updateModoBtn();
+  }
+
+  // Sincronizar estado del botón al cargar el panel
+  window.addEventListener('load', updateModoBtn);
 
   async function recargar() {
     try {

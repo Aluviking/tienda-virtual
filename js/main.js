@@ -798,11 +798,22 @@ function buildWACartMsg() {
 }
 
 function trackEvent(data) {
+  const enPrueba = localStorage.getItem('us_prueba') === '1';
+  const payload  = enPrueba ? { event_type: 'prueba' } : data;
   fetch('/api/track', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify(data)
+    body: JSON.stringify(payload)
   }).catch(() => {}); // fire and forget — no bloquea la UI
+}
+
+function initPruebaBanner() {
+  if (localStorage.getItem('us_prueba') !== '1') return;
+  const bar = document.createElement('div');
+  bar.id = 'prueba-bar';
+  bar.style.cssText = 'position:fixed;bottom:0;left:0;right:0;z-index:99999;background:#f59e0b;color:#000;text-align:center;font-size:12px;font-weight:700;letter-spacing:0.08em;padding:6px;pointer-events:none';
+  bar.textContent = 'MODO PRUEBA ACTIVO — los clics no se cuentan como reales';
+  document.body.appendChild(bar);
 }
 
 function openWA(url) {
@@ -1460,6 +1471,7 @@ function initEmailModal() {
 
 /* -------------------- INIT -------------------- */
 document.addEventListener('DOMContentLoaded', () => {
+  initPruebaBanner();
   initNavbar();
   initHeroAngles();
   initShoe3D();
