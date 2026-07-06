@@ -25,13 +25,15 @@ module.exports = async (req, res) => {
   const now   = new Date();
   const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
 
-  const todayEvents = events.filter(e => new Date(e.created_at) >= today);
+  // Excluir pruebas de todas las métricas reales
+  const realEvents  = events.filter(e => e.event_type !== 'prueba');
+  const todayEvents = realEvents.filter(e => new Date(e.created_at) >= today);
 
-  const count      = (type) => events.filter(e => e.event_type === type).length;
+  const count      = (type) => realEvents.filter(e => e.event_type === type).length;
   const countToday = (type) => todayEvents.filter(e => e.event_type === type).length;
 
-  // Pedidos = eventos que tienen artículos en el carrito
-  const pedidos   = events.filter(e => e.cart_items && e.cart_items.length > 0);
+  // Pedidos = eventos reales con artículos en el carrito
+  const pedidos   = realEvents.filter(e => e.cart_items && e.cart_items.length > 0);
   const valorTotal = pedidos.reduce((s, e) => s + (e.cart_total || 0), 0);
 
   // Top productos: sumar qty de cada producto en todos los pedidos
