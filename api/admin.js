@@ -1,9 +1,10 @@
 const { createClient } = require('@supabase/supabase-js');
 
 module.exports = async (req, res) => {
-  if (req.method !== 'GET') return res.status(405).end();
+  // Acepta POST para no exponer la clave en la URL ni en logs del servidor
+  if (req.method !== 'POST') return res.status(405).end();
 
-  const { password } = req.query;
+  const { password } = req.body || {};
   if (!password || password !== process.env.ADMIN_PASSWORD) {
     return res.status(401).json({ error: 'No autorizado' });
   }
@@ -26,21 +27,18 @@ module.exports = async (req, res) => {
 
   const todayEvents = events.filter(e => new Date(e.created_at) >= today);
 
-  // Contar tipos
-  const count = (type) => events.filter(e => e.event_type === type).length;
+  const count      = (type) => events.filter(e => e.event_type === type).length;
   const countToday = (type) => todayEvents.filter(e => e.event_type === type).length;
 
-  // Pedidos = eventos con cart_items (tienen productos)
-  const pedidos = events.filter(e => e.cart_items && e.cart_items.length > 0);
-
-  // Valor total estimado (suma de cart_total de todos los pedidos)
+  // Pedidos = eventos que tienen artículos en el carrito
+  const pedidos   = events.filter(e => e.cart_items && e.cart_items.length > 0);
   const valorTotal = pedidos.reduce((s, e) => s + (e.cart_total || 0), 0);
 
-  // Top productos: desplegar cart_items y agrupar por nombre
+  // Top productos: sumar qty de cada producto en todos los pedidos
   const productCount = {};
   pedidos.forEach(e => {
     (e.cart_items || []).forEach(item => {
-      const key = item.name || item.product_name || 'Desconocido';
+      const key = `${item.brand ? item.brand + ' ' : ''}${item.name || 'Desconocido'}`.trim();
       productCount[key] = (productCount[key] || 0) + (item.qty || 1);
     });
   });
@@ -49,18 +47,21 @@ module.exports = async (req, res) => {
     .slice(0, 10)
     .map(([name, qty]) => ({ name, qty }));
 
+  // total_wa = todas las aperturas de WA (todos los eventos disparan openWA)
+  const totalWA   = count('pagar_producto') + count('pagar_carrito') + count('pagar_checkout') + count('wapp_flotante');
+  const hoyWA     = countToday('pagar_producto') + countToday('pagar_carrito') + countToday('pagar_checkout') + countToday('wapp_flotante');
+
   return res.status(200).json({
     stats: {
-      pagar_producto:  count('pagar_producto'),
-      pagar_carrito:   count('pagar_carrito'),
-      pagar_checkout:  count('pagar_checkout'),
-      wapp_flotante:   count('wapp_flotante'),
-      total_wa:        events.length,
-      pedidos_total:   pedidos.length,
-      valor_total:     valorTotal,
-      // hoy
-      hoy_pagar:       countToday('pagar_producto') + countToday('pagar_carrito') + countToday('pagar_checkout'),
-      hoy_wa:          todayEvents.length,
+      pagar_producto: count('pagar_producto'),
+      pagar_carrito:  count('pagar_carrito'),
+      pagar_checkout: count('pagar_checkout'),
+      wapp_flotante:  count('wapp_flotante'),
+      total_wa:       totalWA,
+      pedidos_total:  pedidos.length,
+      valor_total:    valorTotal,
+      hoy_pagar:      countToday('pagar_producto') + countToday('pagar_carrito') + countToday('pagar_checkout'),
+      hoy_wa:         hoyWA,
     },
     topProductos,
     events,

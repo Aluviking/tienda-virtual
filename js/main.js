@@ -850,6 +850,7 @@ function initCart() {
   /* Link WhatsApp footer */
   document.getElementById('ftWaLink')?.addEventListener('click', e => {
     e.preventDefault();
+    trackEvent({ event_type: 'wapp_flotante' });
     openWA(`https://wa.me/${BLVD_WA}?text=${encodeURIComponent('¡Hola UnderShoes! 👟 Quiero ver el catálogo y hacer un pedido.')}`);
   });
   updateCartCount();

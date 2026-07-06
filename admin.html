@@ -341,13 +341,21 @@
     }
   }
 
+  function adminFetch(pwd) {
+    return fetch('/api/admin', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ password: pwd })
+    });
+  }
+
   async function login() {
     const pwd = document.getElementById('pwdInput').value;
     if (!pwd) return;
     document.getElementById('loginErr').style.display = 'none';
     document.getElementById('loadingScreen').style.display = 'flex';
     try {
-      const res = await fetch('/api/admin?password=' + encodeURIComponent(pwd));
+      const res = await adminFetch(pwd);
       if (!res.ok) throw new Error('bad');
       const data = await res.json();
       savedPwd = pwd;
@@ -384,7 +392,7 @@
       return;
     }
     try {
-      const res = await fetch('/api/admin?password=' + encodeURIComponent(savedPwd));
+      const res = await adminFetch(savedPwd);
       if (!res.ok) throw new Error('expired');
       const data = await res.json();
       document.getElementById('loginScreen').style.display = 'none';
