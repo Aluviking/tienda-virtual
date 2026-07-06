@@ -784,17 +784,16 @@ function buildWACartMsg() {
   const cart = getCart();
   if (!cart.length) return null;
   let total = 0;
-  let msg = `¡Hola UnderShoes! 🔥\n\n`;
-  msg += `Quiero pagar ya estos artículos:\n\n`;
+  let msg = `Hola UnderShoes, me gustaria llevarme lo siguiente:\n\n`;
   cart.forEach(item => {
     total += item.price * item.qty;
-    msg += `👟 *${item.brand} ${item.name}*\n`;
-    msg += `   Talla: ${item.size}`;
-    if (item.qty > 1) msg += ` | Cantidad: ×${item.qty}`;
-    msg += ` | ${formatPrice(item.price * item.qty)}\n\n`;
+    msg += `${item.brand} ${item.name}\n`;
+    msg += `Talla: ${item.size}`;
+    if (item.qty > 1) msg += ` — Cantidad: ${item.qty}`;
+    msg += ` — ${formatPrice(item.price * item.qty)}\n\n`;
   });
-  msg += `💰 *TOTAL: ${formatPrice(total)} COP*\n\n`;
-  msg += `¡Estoy listo para pagar! ¿Cómo procedo? 🙌`;
+  msg += `Total: ${formatPrice(total)}\n\n`;
+  msg += `Por favor enviarme el link de pago para proceder.`;
   return msg;
 }
 
@@ -843,7 +842,7 @@ function initCart() {
   document.getElementById('waFloatBtn')?.addEventListener('click', e => {
     e.preventDefault();
     const msg = buildWACartMsg();
-    const text = msg || '¡Hola UnderShoes! 👟 Quiero conocer más sobre sus productos.';
+    const text = msg || 'Hola UnderShoes, quisiera recibir informacion sobre sus productos.';
     trackEvent({ event_type: 'wapp_flotante' });
     openWA(`https://wa.me/${BLVD_WA}?text=${encodeURIComponent(text)}`);
   });
@@ -851,7 +850,7 @@ function initCart() {
   document.getElementById('ftWaLink')?.addEventListener('click', e => {
     e.preventDefault();
     trackEvent({ event_type: 'wapp_flotante' });
-    openWA(`https://wa.me/${BLVD_WA}?text=${encodeURIComponent('¡Hola UnderShoes! 👟 Quiero ver el catálogo y hacer un pedido.')}`);
+    openWA(`https://wa.me/${BLVD_WA}?text=${encodeURIComponent('Hola UnderShoes, quisiera ver el catalogo y realizar un pedido.')}`);
   });
   updateCartCount();
   renderCart();
@@ -1335,18 +1334,19 @@ function submitCheckout() {
 
   /* Construir mensaje WhatsApp */
   const cart = getCart();
-  let msg = `¡Hola UnderShoes! 🔥 Quiero confirmar este pedido:\n\n`;
+  let msg = `Hola UnderShoes, quisiera confirmar el siguiente pedido:\n\n`;
   let total = 0;
   cart.forEach(item => {
     total += item.price * item.qty;
-    msg += `• ${item.brand} ${item.name} — Talla ${item.size}${item.qty > 1 ? ' ×' + item.qty : ''} — ${formatPrice(item.price * item.qty)}\n`;
+    msg += `${item.brand} ${item.name} — Talla ${item.size}${item.qty > 1 ? ' — Cantidad: ' + item.qty : ''} — ${formatPrice(item.price * item.qty)}\n`;
   });
-  msg += `\n*Total: ${formatPrice(total)}*\n\n`;
-  msg += `📋 *Datos de entrega:*\n`;
+  msg += `\nTotal: ${formatPrice(total)}\n\n`;
+  msg += `Datos de entrega:\n`;
   msg += `Nombre: ${name}\n`;
-  msg += `Teléfono: ${phone}\n`;
+  msg += `Telefono: ${phone}\n`;
   msg += `Ciudad: ${city}\n`;
-  msg += `Dirección: ${address}`;
+  msg += `Direccion: ${address}\n\n`;
+  msg += `Quedo atento para recibir el link de pago.`;
 
   trackEvent({
     event_type: 'pagar_checkout',
