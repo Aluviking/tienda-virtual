@@ -1470,8 +1470,43 @@ function initEmailModal() {
 }
 
 /* -------------------- INIT -------------------- */
+/* -------------------- PWA INSTALL BANNER -------------------- */
+function initPWAInstall() {
+  if (localStorage.getItem('pwa_dismissed') === '1') return;
+
+  let deferredPrompt = null;
+  const banner      = document.getElementById('pwaBanner');
+  const installBtn  = document.getElementById('pwaBannerInstall');
+  const closeBtn    = document.getElementById('pwaBannerClose');
+
+  window.addEventListener('beforeinstallprompt', (e) => {
+    e.preventDefault();
+    deferredPrompt = e;
+    setTimeout(() => banner?.classList.add('visible'), 1500);
+  });
+
+  installBtn?.addEventListener('click', async () => {
+    if (!deferredPrompt) return;
+    deferredPrompt.prompt();
+    const { outcome } = await deferredPrompt.userChoice;
+    deferredPrompt = null;
+    banner?.classList.remove('visible');
+  });
+
+  closeBtn?.addEventListener('click', () => {
+    banner?.classList.remove('visible');
+    localStorage.setItem('pwa_dismissed', '1');
+  });
+
+  window.addEventListener('appinstalled', () => {
+    banner?.classList.remove('visible');
+    deferredPrompt = null;
+  });
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   initPruebaBanner();
+  initPWAInstall();
   initNavbar();
   initHeroAngles();
   initShoe3D();

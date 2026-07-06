@@ -655,6 +655,70 @@
 
   </div>
 
+  <!-- PWA Install Banner -->
+  <div class="pwa-banner" id="pwaBanner">
+    <div class="pwa-banner-icon">
+      <svg viewBox="0 0 32 32" width="44" height="44" style="display:block;border-radius:8px">
+        <rect width="32" height="32" rx="5" fill="#02081e"/>
+        <rect x="5" y="5" width="5.5" height="17" rx="1" fill="#fff"/>
+        <rect x="21.5" y="5" width="5.5" height="17" rx="1" fill="#fff"/>
+        <rect x="5" y="18" width="22" height="5.5" rx="3" fill="#fff"/>
+        <rect x="5" y="27" width="22" height="3" rx="1.5" fill="#00c8ff"/>
+      </svg>
+    </div>
+    <div class="pwa-banner-text">
+      <strong>UnderShoes</strong>
+      <span>Instala la app en tu dispositivo</span>
+    </div>
+    <button class="pwa-banner-install" id="pwaBannerInstall">Instalar</button>
+    <button class="pwa-banner-close" id="pwaBannerClose" aria-label="Cerrar">✕</button>
+  </div>
+
+  <style>
+    .pwa-banner {
+      position: fixed;
+      bottom: -110px;
+      left: 0; right: 0;
+      z-index: 9998;
+      background: #080f2a;
+      border-top: 1px solid rgba(0,200,255,0.18);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 14px 20px;
+      transition: bottom 0.45s cubic-bezier(0.34,1.4,0.64,1);
+      box-shadow: 0 -6px 32px rgba(0,0,0,0.5);
+    }
+    .pwa-banner.visible { bottom: 0; }
+    .pwa-banner-text { flex: 1; min-width: 0; }
+    .pwa-banner-text strong { display: block; color: #fff; font-size: 0.9rem; font-family: inherit; }
+    .pwa-banner-text span { color: rgba(255,255,255,0.55); font-size: 0.78rem; }
+    .pwa-banner-install {
+      background: #00c8ff;
+      color: #02081e;
+      border: none;
+      border-radius: 20px;
+      padding: 9px 20px;
+      font-weight: 700;
+      font-size: 0.85rem;
+      cursor: pointer;
+      flex-shrink: 0;
+      letter-spacing: 0.02em;
+    }
+    .pwa-banner-install:hover { background: #33d6ff; }
+    .pwa-banner-close {
+      background: none;
+      border: none;
+      color: rgba(255,255,255,0.4);
+      font-size: 1.1rem;
+      cursor: pointer;
+      padding: 4px 6px;
+      flex-shrink: 0;
+      line-height: 1;
+    }
+    .pwa-banner-close:hover { color: rgba(255,255,255,0.8); }
+  </style>
+
   <script src="js/main.js" defer></script>
   <script>
     if ('serviceWorker' in navigator) {
