@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin — UnderShoes</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --dark: #02081e; --dark2: #080f2a; --dark3: #0d1540;
+      --blue: #1c6fff; --green: #25D366; --yellow: #FBBF24;
+      --white: #fff; --muted: rgba(255,255,255,0.55);
+      --border: rgba(255,255,255,0.08);
+      --r: 12px;
+    }
+    body { background: var(--dark); color: var(--white); font-family: system-ui, -apple-system, sans-serif; min-height: 100vh; }
+
+    /* ---- LOGIN ---- */
+    #loginScreen {
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      min-height: 100vh; gap: 20px; padding: 24px;
+    }
+    .login-logo { font-size: 28px; font-weight: 900; letter-spacing: -0.03em; }
+    .login-logo span { color: var(--blue); }
+    .login-box {
+      background: var(--dark2); border: 1px solid var(--border);
+      border-radius: var(--r); padding: 32px; width: 100%; max-width: 360px;
+      display: flex; flex-direction: column; gap: 14px;
+    }
+    .login-box h2 { font-size: 16px; color: var(--muted); font-weight: 500; }
+    .login-box input {
+      background: rgba(255,255,255,0.06); border: 1px solid var(--border);
+      border-radius: 8px; padding: 12px 16px; color: var(--white);
+      font-size: 15px; outline: none; transition: border-color 0.2s;
+    }
+    .login-box input:focus { border-color: var(--blue); }
+    .btn-login {
+      background: var(--blue); color: #fff; border: none;
+      border-radius: 8px; padding: 13px; font-size: 15px; font-weight: 700;
+      cursor: pointer; transition: opacity 0.2s;
+    }
+    .btn-login:hover { opacity: 0.85; }
+    .login-err { color: #ff5555; font-size: 13px; display: none; }
+
+    /* ---- DASHBOARD ---- */
+    #dashboard { display: none; }
+    .top-bar {
+      background: var(--dark2); border-bottom: 1px solid var(--border);
+      padding: 14px 24px; display: flex; align-items: center; justify-content: space-between;
+      position: sticky; top: 0; z-index: 10;
+    }
+    .top-bar-brand { font-weight: 900; font-size: 16px; letter-spacing: -0.02em; }
+    .top-bar-brand span { color: var(--blue); }
+    .btn-logout {
+      background: rgba(255,255,255,0.07); border: 1px solid var(--border);
+      color: var(--muted); border-radius: 6px; padding: 6px 14px; font-size: 12px;
+      cursor: pointer; transition: all 0.2s;
+    }
+    .btn-logout:hover { background: rgba(255,255,255,0.13); color: var(--white); }
+
+    .content { padding: 24px; max-width: 1200px; margin: 0 auto; }
+
+    /* ---- STAT CARDS ---- */
+    .cards { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-bottom: 28px; }
+    @media (max-width: 900px) { .cards { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 500px) { .cards { grid-template-columns: 1fr 1fr; gap: 10px; } }
+    .card {
+      background: var(--dark2); border: 1px solid var(--border);
+      border-radius: var(--r); padding: 20px 18px;
+    }
+    .card-label { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin-bottom: 8px; }
+    .card-value { font-size: 32px; font-weight: 900; line-height: 1; }
+    .card-sub { font-size: 12px; color: var(--muted); margin-top: 4px; }
+    .card-value.blue { color: var(--blue); }
+    .card-value.green { color: var(--green); }
+    .card-value.yellow { color: var(--yellow); }
+
+    /* ---- TABS ---- */
+    .tabs { display: flex; gap: 4px; margin-bottom: 20px; }
+    .tab {
+      padding: 8px 18px; border-radius: 8px; font-size: 13px; font-weight: 600;
+      cursor: pointer; border: 1px solid var(--border); background: transparent;
+      color: var(--muted); transition: all 0.2s;
+    }
+    .tab.active { background: var(--blue); color: #fff; border-color: var(--blue); }
+    .tab-panel { display: none; }
+    .tab-panel.active { display: block; }
+
+    /* ---- TOP PRODUCTOS ---- */
+    .top-prods { display: grid; gap: 8px; }
+    .prod-row {
+      background: var(--dark2); border: 1px solid var(--border);
+      border-radius: 8px; padding: 12px 16px;
+      display: flex; align-items: center; justify-content: space-between; gap: 12px;
+    }
+    .prod-rank { font-size: 11px; color: var(--muted); min-width: 28px; font-weight: 700; }
+    .prod-name { flex: 1; font-size: 14px; font-weight: 600; }
+    .prod-qty {
+      background: var(--blue); color: #fff; border-radius: 20px;
+      padding: 3px 12px; font-size: 12px; font-weight: 700;
+    }
+    .prod-bar-wrap { flex: 1; height: 6px; background: rgba(255,255,255,0.08); border-radius: 3px; overflow: hidden; }
+    .prod-bar { height: 100%; background: var(--blue); border-radius: 3px; transition: width 0.5s; }
+
+    /* ---- TABLE ---- */
+    .tbl-wrap { overflow-x: auto; border-radius: var(--r); border: 1px solid var(--border); }
+    table { width: 100%; border-collapse: collapse; font-size: 13px; }
+    thead th {
+      background: var(--dark3); padding: 11px 14px; text-align: left;
+      font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted);
+      white-space: nowrap;
+    }
+    tbody tr { border-top: 1px solid var(--border); transition: background 0.15s; }
+    tbody tr:hover { background: rgba(255,255,255,0.03); }
+    tbody td { padding: 11px 14px; vertical-align: top; }
+    .badge {
+      display: inline-block; padding: 2px 9px; border-radius: 20px;
+      font-size: 10px; font-weight: 700; white-space: nowrap;
+    }
+    .badge-pagar  { background: rgba(28,111,255,0.2);  color: #6fa3ff; }
+    .badge-carrito{ background: rgba(251,191,36,0.2);  color: #fbbf24; }
+    .badge-checkout{background: rgba(37,211,102,0.2); color: #25d366; }
+    .badge-wa     { background: rgba(255,255,255,0.1); color: var(--muted); }
+    .cart-mini { font-size: 11px; color: var(--muted); margin-top: 3px; line-height: 1.5; }
+    .no-data { text-align: center; padding: 48px; color: var(--muted); font-size: 14px; }
+
+    /* ---- LOADING ---- */
+    #loadingScreen {
+      display: none; position: fixed; inset: 0; background: var(--dark);
+      align-items: center; justify-content: center; z-index: 99;
+      font-size: 15px; color: var(--muted);
+    }
+    .spinner {
+      width: 22px; height: 22px; border: 2px solid var(--border);
+      border-top-color: var(--blue); border-radius: 50%;
+      animation: spin 0.6s linear infinite; margin-right: 10px;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+  </style>
+</head>
+<body>
+
+<!-- Login -->
+<div id="loginScreen">
+  <div class="login-logo">Under<span>Shoes</span></div>
+  <div class="login-box">
+    <h2>Panel administrativo</h2>
+    <input type="password" id="pwdInput" placeholder="Contraseña" autocomplete="current-password">
+    <button class="btn-login" onclick="login()">Entrar</button>
+    <span class="login-err" id="loginErr">Contraseña incorrecta</span>
+  </div>
+</div>
+
+<!-- Loading -->
+<div id="loadingScreen" style="display:flex">
+  <div class="spinner"></div>Cargando...
+</div>
+
+<!-- Dashboard -->
+<div id="dashboard">
+
+  <div class="top-bar">
+    <div class="top-bar-brand">Under<span>Shoes</span> Admin</div>
+    <button class="btn-logout" onclick="logout()">Cerrar sesión</button>
+  </div>
+
+  <div class="content">
+
+    <!-- Stats -->
+    <div class="cards">
+      <div class="card">
+        <div class="card-label">Pagar (total)</div>
+        <div class="card-value blue" id="sPagarTotal">—</div>
+        <div class="card-sub" id="sPagarHoy">— hoy</div>
+      </div>
+      <div class="card">
+        <div class="card-label">Aperturas WhatsApp</div>
+        <div class="card-value green" id="sWaTotal">—</div>
+        <div class="card-sub" id="sWaHoy">— hoy</div>
+      </div>
+      <div class="card">
+        <div class="card-label">Pedidos con productos</div>
+        <div class="card-value yellow" id="sPedidos">—</div>
+        <div class="card-sub">con artículos en carrito</div>
+      </div>
+      <div class="card">
+        <div class="card-label">Valor estimado total</div>
+        <div class="card-value" id="sValor">—</div>
+        <div class="card-sub">suma de todos los pedidos</div>
+      </div>
+    </div>
+
+    <!-- Tabs -->
+    <div class="tabs">
+      <button class="tab active" onclick="switchTab('actividad', this)">Actividad reciente</button>
+      <button class="tab" onclick="switchTab('pedidos', this)">Pedidos</button>
+      <button class="tab" onclick="switchTab('productos', this)">Top productos</button>
+    </div>
+
+    <!-- Tab: Actividad -->
+    <div class="tab-panel active" id="tab-actividad">
+      <div class="tbl-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Fecha</th>
+              <th>Tipo</th>
+              <th>Producto / Carrito</th>
+              <th>Talla</th>
+              <th>Valor</th>
+            </tr>
+          </thead>
+          <tbody id="tbActividad"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Tab: Pedidos -->
+    <div class="tab-panel" id="tab-pedidos">
+      <div class="tbl-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Fecha</th>
+              <th>Tipo</th>
+              <th>Artículos pedidos</th>
+              <th>Total</th>
+            </tr>
+          </thead>
+          <tbody id="tbPedidos"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Tab: Productos -->
+    <div class="tab-panel" id="tab-productos">
+      <div class="top-prods" id="topProds"></div>
+    </div>
+
+  </div>
+</div>
+
+<script>
+  let savedPwd = sessionStorage.getItem('adm_pwd') || '';
+
+  function fmtPrice(v) {
+    if (!v) return '—';
+    return '$' + Number(v).toLocaleString('es-CO') + ' COP';
+  }
+
+  function timeAgo(iso) {
+    const diff = Date.now() - new Date(iso).getTime();
+    const m = Math.floor(diff / 60000);
+    if (m < 1)  return 'hace un momento';
+    if (m < 60) return `hace ${m} min`;
+    const h = Math.floor(m / 60);
+    if (h < 24) return `hace ${h}h`;
+    const d = Math.floor(h / 24);
+    return `hace ${d} días`;
+  }
+
+  function badgeType(t) {
+    const map = {
+      pagar_producto:  ['badge-pagar',   '🛒 Producto'],
+      pagar_carrito:   ['badge-carrito', '🛍 Carrito'],
+      pagar_checkout:  ['badge-checkout','✅ Checkout'],
+      wapp_flotante:   ['badge-wa',      '💬 WA Flotante'],
+    };
+    const [cls, label] = map[t] || ['badge-wa', t];
+    return `<span class="badge ${cls}">${label}</span>`;
+  }
+
+  function renderCartMini(items) {
+    if (!items || !items.length) return '';
+    return items.map(i =>
+      `<div>• ${i.brand ? i.brand + ' ' : ''}${i.name} T${i.size}${i.qty > 1 ? ' ×' + i.qty : ''} — ${fmtPrice(i.price * i.qty)}</div>`
+    ).join('');
+  }
+
+  function renderDashboard({ stats, topProductos, events }) {
+    // Cards
+    const pagar = (stats.pagar_producto || 0) + (stats.pagar_carrito || 0) + (stats.pagar_checkout || 0);
+    document.getElementById('sPagarTotal').textContent = pagar;
+    document.getElementById('sPagarHoy').textContent   = (stats.hoy_pagar || 0) + ' hoy';
+    document.getElementById('sWaTotal').textContent    = stats.total_wa || 0;
+    document.getElementById('sWaHoy').textContent      = (stats.hoy_wa || 0) + ' hoy';
+    document.getElementById('sPedidos').textContent    = stats.pedidos_total || 0;
+    document.getElementById('sValor').textContent      = fmtPrice(stats.valor_total);
+
+    // Tab actividad
+    const tbA = document.getElementById('tbActividad');
+    if (!events.length) {
+      tbA.innerHTML = '<tr><td colspan="5" class="no-data">Sin actividad aún</td></tr>';
+    } else {
+      tbA.innerHTML = events.map(e => `
+        <tr>
+          <td style="white-space:nowrap;color:var(--muted)">${timeAgo(e.created_at)}</td>
+          <td>${badgeType(e.event_type)}</td>
+          <td>
+            ${e.product_name ? `<strong>${e.product_brand || ''} ${e.product_name}</strong>` : ''}
+            <div class="cart-mini">${renderCartMini(e.cart_items)}</div>
+          </td>
+          <td style="white-space:nowrap">${e.size ? 'T' + e.size : '—'}</td>
+          <td style="white-space:nowrap">${fmtPrice(e.cart_total || e.unit_price)}</td>
+        </tr>
+      `).join('');
+    }
+
+    // Tab pedidos (sólo con cart_items)
+    const pedidos = events.filter(e => e.cart_items && e.cart_items.length > 0);
+    const tbP = document.getElementById('tbPedidos');
+    if (!pedidos.length) {
+      tbP.innerHTML = '<tr><td colspan="4" class="no-data">Aún no hay pedidos registrados</td></tr>';
+    } else {
+      tbP.innerHTML = pedidos.map(e => `
+        <tr>
+          <td style="white-space:nowrap;color:var(--muted)">${timeAgo(e.created_at)}</td>
+          <td>${badgeType(e.event_type)}</td>
+          <td><div class="cart-mini">${renderCartMini(e.cart_items)}</div></td>
+          <td style="white-space:nowrap;font-weight:700">${fmtPrice(e.cart_total)}</td>
+        </tr>
+      `).join('');
+    }
+
+    // Tab top productos
+    const tp = document.getElementById('topProds');
+    if (!topProductos.length) {
+      tp.innerHTML = '<div class="no-data">Sin datos de productos aún</div>';
+    } else {
+      const maxQty = topProductos[0].qty;
+      tp.innerHTML = topProductos.map((p, i) => `
+        <div class="prod-row">
+          <span class="prod-rank">#${i + 1}</span>
+          <span class="prod-name">${p.name}</span>
+          <div class="prod-bar-wrap">
+            <div class="prod-bar" style="width:${(p.qty / maxQty * 100).toFixed(0)}%"></div>
+          </div>
+          <span class="prod-qty">${p.qty} veces</span>
+        </div>
+      `).join('');
+    }
+  }
+
+  async function login() {
+    const pwd = document.getElementById('pwdInput').value;
+    if (!pwd) return;
+    document.getElementById('loginErr').style.display = 'none';
+    document.getElementById('loadingScreen').style.display = 'flex';
+    try {
+      const res = await fetch('/api/admin?password=' + encodeURIComponent(pwd));
+      if (!res.ok) throw new Error('bad');
+      const data = await res.json();
+      savedPwd = pwd;
+      sessionStorage.setItem('adm_pwd', pwd);
+      document.getElementById('loginScreen').style.display = 'none';
+      document.getElementById('loadingScreen').style.display = 'none';
+      document.getElementById('dashboard').style.display = 'block';
+      renderDashboard(data);
+    } catch {
+      document.getElementById('loadingScreen').style.display = 'none';
+      document.getElementById('loginErr').style.display = 'block';
+    }
+  }
+
+  function logout() {
+    sessionStorage.removeItem('adm_pwd');
+    savedPwd = '';
+    document.getElementById('dashboard').style.display = 'none';
+    document.getElementById('loginScreen').style.display = 'flex';
+    document.getElementById('pwdInput').value = '';
+  }
+
+  function switchTab(name, btn) {
+    document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+    document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById('tab-' + name).classList.add('active');
+  }
+
+  // Auto-login si hay sesión guardada
+  window.addEventListener('load', async () => {
+    if (!savedPwd) {
+      document.getElementById('loadingScreen').style.display = 'none';
+      return;
+    }
+    try {
+      const res = await fetch('/api/admin?password=' + encodeURIComponent(savedPwd));
+      if (!res.ok) throw new Error('expired');
+      const data = await res.json();
+      document.getElementById('loginScreen').style.display = 'none';
+      document.getElementById('loadingScreen').style.display = 'none';
+      document.getElementById('dashboard').style.display = 'block';
+      renderDashboard(data);
+    } catch {
+      document.getElementById('loadingScreen').style.display = 'none';
+      sessionStorage.removeItem('adm_pwd');
+    }
+  });
+
+  // Enter en el input
+  document.addEventListener('DOMContentLoaded', () => {
+    document.getElementById('pwdInput')?.addEventListener('keydown', e => {
+      if (e.key === 'Enter') login();
+    });
+  });
+</script>
+</body>
+</html>

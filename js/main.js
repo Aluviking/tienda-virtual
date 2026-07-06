@@ -798,6 +798,14 @@ function buildWACartMsg() {
   return msg;
 }
 
+function trackEvent(data) {
+  fetch('/api/track', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(data)
+  }).catch(() => {}); // fire and forget — no bloquea la UI
+}
+
 function openWA(url) {
   const _a = document.createElement('a');
   _a.href = url;
@@ -811,6 +819,12 @@ function openWA(url) {
 function openWACart() {
   const msg = buildWACartMsg();
   if (!msg) { showToast('Tu carrito está vacío'); return; }
+  const cart = getCart();
+  trackEvent({
+    event_type: 'pagar_carrito',
+    cart_items: cart,
+    cart_total: cart.reduce((s, i) => s + i.price * i.qty, 0)
+  });
   openWA(`https://wa.me/${BLVD_WA}?text=${encodeURIComponent(msg)}`);
 }
 
@@ -830,6 +844,7 @@ function initCart() {
     e.preventDefault();
     const msg = buildWACartMsg();
     const text = msg || '¡Hola UnderShoes! 👟 Quiero conocer más sobre sus productos.';
+    trackEvent({ event_type: 'wapp_flotante' });
     openWA(`https://wa.me/${BLVD_WA}?text=${encodeURIComponent(text)}`);
   });
   /* Link WhatsApp footer */
@@ -978,6 +993,18 @@ function initMobProduct() {
   document.getElementById('mobProdWA')?.addEventListener('click', () => {
     if (!currentMobSize) { showToast('Selecciona una talla primero'); return; }
     addToCart(currentMobProduct, currentMobSize, currentMobQty);
+    const cart = getCart();
+    trackEvent({
+      event_type:    'pagar_producto',
+      product_id:    String(currentMobProduct.id),
+      product_name:  currentMobProduct.name,
+      product_brand: currentMobProduct.brand,
+      size:          String(currentMobSize),
+      qty:           currentMobQty,
+      unit_price:    currentMobProduct.price,
+      cart_items:    cart,
+      cart_total:    cart.reduce((s, i) => s + i.price * i.qty, 0)
+    });
     const msg = buildWACartMsg();
     openWA(`https://wa.me/${BLVD_WA}?text=${encodeURIComponent(msg)}`);
     closeMobProduct();
@@ -1168,6 +1195,18 @@ function initModal() {
       return;
     }
     addToCart(currentModalProduct, +selectedBtn.textContent, currentModalQty);
+    const cart = getCart();
+    trackEvent({
+      event_type:    'pagar_producto',
+      product_id:    String(currentModalProduct.id),
+      product_name:  currentModalProduct.name,
+      product_brand: currentModalProduct.brand,
+      size:          selectedBtn.textContent,
+      qty:           currentModalQty,
+      unit_price:    currentModalProduct.price,
+      cart_items:    cart,
+      cart_total:    cart.reduce((s, i) => s + i.price * i.qty, 0)
+    });
     const msg = buildWACartMsg();
     openWA(`https://wa.me/${BLVD_WA}?text=${encodeURIComponent(msg)}`);
     closeModal();
@@ -1232,7 +1271,7 @@ function initStats() {
 }
 
 /* -------------------- CHECKOUT -------------------- */
-const BLVD_WA = '573025958035';
+const BLVD_WA = '573184252314';
 
 function openCheckout() {
   const cart = getCart();
@@ -1307,6 +1346,12 @@ function submitCheckout() {
   msg += `Teléfono: ${phone}\n`;
   msg += `Ciudad: ${city}\n`;
   msg += `Dirección: ${address}`;
+
+  trackEvent({
+    event_type: 'pagar_checkout',
+    cart_items: cart,
+    cart_total: total
+  });
 
   const waLink = `https://wa.me/${BLVD_WA}?text=${encodeURIComponent(msg)}`;
 
