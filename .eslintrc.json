@@ -7,6 +7,10 @@
   "extends": "eslint:recommended",
   "rules": {
     "no-unused-vars": "warn",
-    "no-console": "off"
+    "no-console": "off",
+    "no-var": "error",
+    "eqeqeq": ["warn", "always"],
+    "no-eval": "error",
+    "no-implied-eval": "error"
   }
 }

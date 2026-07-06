@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "npx serve . -p 5173 -s",
     "start": "npx serve . -p 3000 -s",
-    "lint": "eslint js/main.js api/subscribe.js",
+    "lint": "eslint js/main.js api/",
     "build": "npm run lint"
   },
   "dependencies": {
