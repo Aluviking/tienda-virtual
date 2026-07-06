@@ -166,6 +166,7 @@
     <div style="display:flex;gap:8px;align-items:center">
       <button class="btn-logout" id="btnModo" onclick="togglePrueba()">Modo Prueba: OFF</button>
       <button class="btn-logout" onclick="recargar()">Actualizar</button>
+      <button class="btn-logout" id="btnLimpiar" onclick="limpiarDatos()" style="color:#ff5555;border-color:rgba(255,85,85,0.4)">Limpiar datos</button>
       <button class="btn-logout" onclick="logout()">Cerrar sesión</button>
     </div>
   </div>
@@ -437,6 +438,27 @@
 
   // Sincronizar estado del botón al cargar el panel
   window.addEventListener('load', updateModoBtn);
+
+  async function limpiarDatos() {
+    if (!confirm('¿Seguro que quieres borrar TODOS los registros de actividad? Esta accion no se puede deshacer.')) return;
+    const btn = document.getElementById('btnLimpiar');
+    btn.textContent = 'Borrando...';
+    btn.disabled = true;
+    try {
+      const res = await fetch('/api/clear', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ password: savedPwd })
+      });
+      if (!res.ok) throw new Error('error');
+      await recargar();
+    } catch {
+      alert('Error al limpiar. Intenta de nuevo.');
+    } finally {
+      btn.textContent = 'Limpiar datos';
+      btn.disabled = false;
+    }
+  }
 
   async function recargar() {
     try {
