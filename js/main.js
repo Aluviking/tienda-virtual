@@ -345,6 +345,16 @@ const PRODUCTS = [
   },
 ];
 
+/* ── Conversión EU → US (Nike/Jordan) ─────────────────────────── */
+const EU_US_WOMEN = {35:5, 36:5.5, 37:6, 38:7, 39:7.5, 40:8.5, 41:9.5, 42:10};
+const EU_US_MEN   = {38:6, 39:6.5, 40:7, 41:8, 42:8.5, 43:9.5, 44:10, 45:11, 46:12};
+
+function euToUs(eu, map) {
+  const us = map[eu];
+  if (!us) return null;
+  return Number.isInteger(us) ? `US ${us}` : `US ${us}`;
+}
+
 function formatPrice(p) {
   if (p == null) return 'Consultar precio';
   return '$' + p.toLocaleString('es-CO') + ' COP';
@@ -932,7 +942,7 @@ function openMobProduct(product) {
   if (sizesEl) {
     sizesEl.innerHTML = '';
     const hasBoth = product.sizesWomen?.length && product.sizesMen?.length;
-    const addGroup = (sizes, label, genderClass) => {
+    const addGroup = (sizes, label, genderClass, usMap) => {
       if (!sizes?.length) return;
       if (label) {
         const lbl = document.createElement('div');
@@ -943,7 +953,8 @@ function openMobProduct(product) {
       sizes.forEach(s => {
         const btn = document.createElement('button');
         btn.className = 'mob-size-btn';
-        btn.textContent = s;
+        const usLabel = usMap ? euToUs(s, usMap) : null;
+        btn.innerHTML = `<span class="size-eu">${s}</span>${usLabel ? `<span class="size-us">${usLabel}</span>` : ''}`;
         btn.addEventListener('click', () => {
           sizesEl.querySelectorAll('.mob-size-btn').forEach(b => b.classList.remove('active'));
           btn.classList.add('active');
@@ -953,8 +964,8 @@ function openMobProduct(product) {
         sizesEl.appendChild(btn);
       });
     };
-    addGroup(product.sizesWomen, hasBoth ? 'Mujer' : null, 'women');
-    addGroup(product.sizesMen,   hasBoth ? 'Hombre' : null, 'men');
+    addGroup(product.sizesWomen, hasBoth ? 'Mujer' : null, 'women', EU_US_WOMEN);
+    addGroup(product.sizesMen,   hasBoth ? 'Hombre' : null, 'men',  EU_US_MEN);
   }
 
   updateMobCta();
@@ -1099,7 +1110,7 @@ function openModal(product) {
   /* Tallas Mujer / Hombre */
   const sizesEl = document.getElementById('mdSizes');
   sizesEl.innerHTML = '';
-  const addSizeGroup = (label, sizes) => {
+  const addSizeGroup = (label, sizes, usMap) => {
     if (!sizes || sizes.length === 0) return;
     const lbl = document.createElement('div');
     lbl.className = 'md-size-gender-lbl';
@@ -1107,7 +1118,9 @@ function openModal(product) {
     sizesEl.appendChild(lbl);
     sizes.forEach(s => {
       const btn = document.createElement('button');
-      btn.className = 'md-size-btn'; btn.textContent = s;
+      btn.className = 'md-size-btn';
+      const usLabel = usMap ? euToUs(s, usMap) : null;
+      btn.innerHTML = `<span class="size-eu">${s}</span>${usLabel ? `<span class="size-us">${usLabel}</span>` : ''}`;
       btn.addEventListener('click', () => {
         sizesEl.querySelectorAll('.md-size-btn').forEach(b => b.classList.remove('selected'));
         btn.classList.add('selected');
@@ -1115,8 +1128,8 @@ function openModal(product) {
       sizesEl.appendChild(btn);
     });
   };
-  addSizeGroup('Mujer', product.sizesWomen);
-  addSizeGroup('Hombre', product.sizesMen);
+  addSizeGroup('Mujer', product.sizesWomen, EU_US_WOMEN);
+  addSizeGroup('Hombre', product.sizesMen,  EU_US_MEN);
 
   /* Tags */
   document.getElementById('mdTags').innerHTML =
