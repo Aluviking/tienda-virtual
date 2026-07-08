@@ -1123,7 +1123,7 @@ function openModal(product) {
     sizes.forEach(s => {
       const btn = document.createElement('button');
       btn.className = 'md-size-btn';
-      const usLabel = usMap ? euToUs(s, usMap) : null;
+      const usLabel = sizeSubLabel(s, usMap);
       btn.innerHTML = `<span class="size-eu">${s}</span>${usLabel ? `<span class="size-us">${usLabel}</span>` : ''}`;
       btn.addEventListener('click', () => {
         sizesEl.querySelectorAll('.md-size-btn').forEach(b => b.classList.remove('selected'));
