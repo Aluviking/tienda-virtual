@@ -434,7 +434,7 @@ button { cursor: pointer; background: none; border: none; font-family: inherit; 
 .md-brand { font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--blue); margin-bottom: 2px; }
 .md-name { font-family: var(--font-head); font-size: 26px; letter-spacing: 0.01em; color: var(--white); margin-bottom: 2px; line-height: 1.0; }
 .md-price { font-size: 17px; font-weight: 700; color: var(--white); }
-.md-desc { font-size: 10px; color: rgba(255,255,255,0.72); margin-top: 3px; display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden; line-height: 1.5; }
+.md-desc { font-size: 10px; color: rgba(255,255,255,0.72); margin-top: 3px; line-height: 1.5; }
 .md-sep { height: 1px; background: rgba(255,255,255,0.07); margin: 7px 0; }
 .md-sizes-lbl { font-size: 8px; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(255,255,255,0.62); margin-bottom: 5px; }
 .md-sizes { display: flex; flex-wrap: wrap; gap: 4px; margin-bottom: 6px; align-items: center; }
@@ -624,7 +624,7 @@ button { cursor: pointer; background: none; border: none; font-family: inherit; 
   }
   .md-name { font-size: 20px; }
   .md-price { font-size: 15px; }
-  .md-desc { -webkit-line-clamp: 2; font-size: 11px; }
+  .md-desc { -webkit-line-clamp: unset; display: block; overflow: visible; font-size: 11px; }
   .md-sep { margin: 6px 0; }
   .md-size-btn { padding: 5px 8px; min-width: 36px; }
   .md-cta { width: 100%; justify-content: center; padding: 12px; }
