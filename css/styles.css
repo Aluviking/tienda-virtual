@@ -439,7 +439,7 @@ button { cursor: pointer; background: none; border: none; font-family: inherit; 
 .md-sizes-lbl { font-size: 8px; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(255,255,255,0.62); margin-bottom: 5px; }
 .md-sizes { display: flex; flex-wrap: wrap; gap: 4px; margin-bottom: 6px; align-items: center; }
 .md-size-gender-lbl { width: 100%; font-size: 7px; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(255,255,255,0.62); margin-top: 3px; margin-bottom: 2px; }
-.md-size-btn { display:flex; flex-direction:column; align-items:center; padding: 5px 8px; border-radius: 6px; border: 1.5px solid rgba(255,255,255,0.1); background: rgba(255,255,255,0.04); transition: all 0.2s; cursor: pointer; min-width: 38px; }
+.md-size-btn { display:flex; flex-direction:column; align-items:center; padding: 5px 7px; border-radius: 6px; border: 1.5px solid rgba(255,255,255,0.1); background: rgba(255,255,255,0.04); transition: all 0.2s; cursor: pointer; min-width: 44px; }
 .md-size-btn:hover { border-color: rgba(255,255,255,0.35); background: rgba(255,255,255,0.1); }
 .md-size-btn.selected { background: var(--white); border-color: var(--white); }
 .md-size-btn .size-eu { font-size: 10px; font-weight: 600; color: rgba(255,255,255,0.85); line-height: 1.2; }
@@ -1174,11 +1174,11 @@ select:focus-visible {
     border: 1.5px solid rgba(255,255,255,0.24);
     background: rgba(255,255,255,0.06);
     font-family: var(--font-body); cursor: pointer;
-    transition: all 0.15s; min-width: 58px; text-align: center;
+    transition: all 0.15s; min-width: 70px; text-align: center;
     gap: 1px;
   }
   .mob-size-btn .size-eu { font-size: 15px; font-weight: 600; color: var(--white); line-height: 1.2; }
-  .mob-size-btn .size-us { font-size: 10px; font-weight: 400; color: rgba(255,255,255,0.45); line-height: 1.1; }
+  .mob-size-btn .size-us { font-size: 9.5px; font-weight: 400; color: rgba(255,255,255,0.45); line-height: 1.2; white-space: nowrap; }
   .mob-size-btn:active { background: rgba(255,255,255,0.14); }
   .mob-size-btn.active {
     background: var(--white);

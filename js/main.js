@@ -345,14 +345,18 @@ const PRODUCTS = [
   },
 ];
 
-/* ── Conversión EU → US (Nike/Jordan) ─────────────────────────── */
+/* ── Conversión EU → US + CM (Nike/Jordan) ─────────────────────── */
 const EU_US_WOMEN = {35:5, 36:5.5, 37:6, 38:7, 39:7.5, 40:8.5, 41:9.5, 42:10};
 const EU_US_MEN   = {38:6, 39:6.5, 40:7, 41:8, 42:8.5, 43:9.5, 44:10, 45:11, 46:12};
+const EU_CM       = {35:22, 36:22.5, 37:23.5, 38:24, 39:25, 40:25.5, 41:26, 42:26.5, 43:27.5, 44:28, 45:29};
 
-function euToUs(eu, map) {
-  const us = map[eu];
-  if (!us) return null;
-  return Number.isInteger(us) ? `US ${us}` : `US ${us}`;
+function sizeSubLabel(eu, usMap) {
+  const us = usMap ? usMap[eu] : null;
+  const cm = EU_CM[eu];
+  const usPart = us != null ? `US ${us}` : null;
+  const cmPart = cm != null ? `${cm}cm` : null;
+  if (usPart && cmPart) return `${usPart} · ${cmPart}`;
+  return usPart || cmPart || null;
 }
 
 function formatPrice(p) {
@@ -953,7 +957,7 @@ function openMobProduct(product) {
       sizes.forEach(s => {
         const btn = document.createElement('button');
         btn.className = 'mob-size-btn';
-        const usLabel = usMap ? euToUs(s, usMap) : null;
+        const usLabel = sizeSubLabel(s, usMap);
         btn.innerHTML = `<span class="size-eu">${s}</span>${usLabel ? `<span class="size-us">${usLabel}</span>` : ''}`;
         btn.addEventListener('click', () => {
           sizesEl.querySelectorAll('.mob-size-btn').forEach(b => b.classList.remove('active'));
