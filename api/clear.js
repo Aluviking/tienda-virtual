@@ -1,5 +1,3 @@
-const { createClient } = require('@supabase/supabase-js');
-
 module.exports = async (req, res) => {
   if (req.method !== 'POST') return res.status(405).end();
 
@@ -8,16 +6,19 @@ module.exports = async (req, res) => {
     return res.status(401).json({ error: 'No autorizado' });
   }
 
-  const supabase = createClient(
-    process.env.SUPABASE_URL,
-    process.env.SUPABASE_SERVICE_ROLE_KEY
-  );
-
-  const { error } = await supabase
-    .from('events')
-    .delete()
-    .neq('id', '00000000-0000-0000-0000-000000000000'); // borrar todos los registros
-
-  if (error) return res.status(500).json({ error: error.message });
-  return res.status(200).json({ ok: true });
+  try {
+    await fetch(`https://api.github.com/gists/${process.env.GIST_ID}`, {
+      method: 'PATCH',
+      headers: {
+        'Authorization': `Bearer ${process.env.GITHUB_TOKEN}`,
+        'Accept': 'application/vnd.github+json',
+        'Content-Type': 'application/json',
+        'X-GitHub-Api-Version': '2022-11-28',
+      },
+      body: JSON.stringify({ files: { 'events.json': { content: '[]' } } }),
+    });
+    return res.status(200).json({ ok: true });
+  } catch (e) {
+    return res.status(500).json({ error: 'Error al limpiar datos' });
+  }
 };
