@@ -831,13 +831,8 @@ function initPruebaBanner() {
 }
 
 function openWA(url) {
-  const _a = document.createElement('a');
-  _a.href = url;
-  _a.target = '_blank';
-  _a.rel = 'noopener noreferrer';
-  document.body.appendChild(_a);
-  _a.click();
-  document.body.removeChild(_a);
+  const opened = window.open(url, '_blank', 'noopener,noreferrer');
+  if (!opened) window.location.href = url;
 }
 
 function openWACart() {
@@ -1222,14 +1217,15 @@ function initModal() {
       }
       return;
     }
-    addToCart(currentModalProduct, +selectedBtn.textContent, currentModalQty);
+    const sizeVal = +(selectedBtn.querySelector('.size-eu')?.textContent ?? selectedBtn.textContent);
+    addToCart(currentModalProduct, sizeVal, currentModalQty);
     const cart = getCart();
     trackEvent({
       event_type:    'pagar_producto',
       product_id:    String(currentModalProduct.id),
       product_name:  currentModalProduct.name,
       product_brand: currentModalProduct.brand,
-      size:          selectedBtn.textContent,
+      size:          String(sizeVal),
       qty:           currentModalQty,
       unit_price:    currentModalProduct.price,
       cart_items:    cart,

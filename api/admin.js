@@ -1,9 +1,6 @@
-const { createClient } = require('@supabase/supabase-js');
-
-// Protección básica contra fuerza bruta en memoria (se reinicia con cada cold start)
 const attempts = new Map();
 const MAX_ATTEMPTS = 10;
-const WINDOW_MS = 15 * 60 * 1000; // 15 minutos
+const WINDOW_MS = 15 * 60 * 1000;
 
 function isRateLimited(ip) {
   const now = Date.now();
@@ -19,11 +16,24 @@ function recordAttempt(ip) {
   attempts.set(ip, { count: entry.count + 1, start: entry.start });
 }
 
+async function gistRead() {
+  const res = await fetch(`https://api.github.com/gists/${process.env.GIST_ID}`, {
+    headers: {
+      'Authorization': `Bearer ${process.env.GITHUB_TOKEN}`,
+      'Accept': 'application/vnd.github+json',
+      'X-GitHub-Api-Version': '2022-11-28',
+    },
+  });
+  if (!res.ok) return [];
+  const gist = await res.json();
+  try { return JSON.parse(gist.files['events.json']?.content || '[]'); }
+  catch { return []; }
+}
+
 module.exports = async (req, res) => {
   if (req.method !== 'POST') return res.status(405).end();
 
   const ip = req.headers['x-forwarded-for']?.split(',')[0].trim() || 'unknown';
-
   if (isRateLimited(ip)) {
     return res.status(429).json({ error: 'Demasiados intentos. Espera 15 minutos.' });
   }
@@ -34,34 +44,8 @@ module.exports = async (req, res) => {
     return res.status(401).json({ error: 'No autorizado' });
   }
 
-  const supabase = createClient(
-    process.env.SUPABASE_URL,
-    process.env.SUPABASE_SERVICE_ROLE_KEY
-  );
-
   let events = [];
-  let dbError = null;
-  try {
-    const { data, error } = await supabase
-      .from('events')
-      .select('*')
-      .order('created_at', { ascending: false })
-      .limit(1000);
-    if (error) dbError = error.message;
-    else events = data || [];
-  } catch (e) {
-    dbError = e.message;
-  }
-
-  if (dbError && events.length === 0) {
-    return res.status(200).json({
-      stats: { pagar_producto:0, pagar_carrito:0, pagar_checkout:0, wapp_flotante:0,
-               total_wa:0, pedidos_total:0, valor_total:0, hoy_pagar:0, hoy_wa:0 },
-      topProductos: [],
-      events: [],
-      warning: 'Base de datos no disponible: ' + dbError,
-    });
-  }
+  try { events = await gistRead(); } catch {}
 
   const now   = new Date();
   const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
