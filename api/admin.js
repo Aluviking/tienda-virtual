@@ -39,13 +39,29 @@ module.exports = async (req, res) => {
     process.env.SUPABASE_SERVICE_ROLE_KEY
   );
 
-  const { data: events, error } = await supabase
-    .from('events')
-    .select('*')
-    .order('created_at', { ascending: false })
-    .limit(1000);
+  let events = [];
+  let dbError = null;
+  try {
+    const { data, error } = await supabase
+      .from('events')
+      .select('*')
+      .order('created_at', { ascending: false })
+      .limit(1000);
+    if (error) dbError = error.message;
+    else events = data || [];
+  } catch (e) {
+    dbError = e.message;
+  }
 
-  if (error) return res.status(500).json({ error: 'Error al obtener datos' });
+  if (dbError && events.length === 0) {
+    return res.status(200).json({
+      stats: { pagar_producto:0, pagar_carrito:0, pagar_checkout:0, wapp_flotante:0,
+               total_wa:0, pedidos_total:0, valor_total:0, hoy_pagar:0, hoy_wa:0 },
+      topProductos: [],
+      events: [],
+      warning: 'Base de datos no disponible: ' + dbError,
+    });
+  }
 
   const now   = new Date();
   const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());

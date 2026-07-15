@@ -287,7 +287,17 @@
     ).join('');
   }
 
-  function renderDashboard({ stats, topProductos, events }) {
+  function renderDashboard({ stats, topProductos, events, warning }) {
+    if (warning) {
+      const existing = document.getElementById('dbWarning');
+      if (!existing) {
+        const bar = document.createElement('div');
+        bar.id = 'dbWarning';
+        bar.style.cssText = 'background:#7c2d12;color:#fca5a5;padding:10px 24px;font-size:13px;text-align:center;';
+        bar.textContent = '⚠️ Base de datos pausada (Supabase free tier). Ve a supabase.com → Resume project para reactivarla.';
+        document.getElementById('dashboard').prepend(bar);
+      }
+    }
     // Cards
     const pagar = (stats.pagar_producto || 0) + (stats.pagar_carrito || 0) + (stats.pagar_checkout || 0);
     document.getElementById('sPagarTotal').textContent = pagar;
